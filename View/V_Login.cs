@@ -4,9 +4,9 @@ using Projek_PBO_B07.Context;
 using Projek_PBO_B07.Model;
 namespace Projek_PBO_B07
 {
-    public partial class Form1 : Form
+    public partial class V_Login : Form
     {
-        public Form1()
+        public V_Login()
         {
             InitializeComponent();
         }
@@ -46,7 +46,7 @@ namespace Projek_PBO_B07
             if (login != null)
             {
                 MessageBox.Show("Login berhasil!", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                ClearTextBox();
 
 
             }
@@ -59,6 +59,11 @@ namespace Projek_PBO_B07
                 MessageBox.Show("Username atau Password salah. Masukkan dengan benar!", "LOGIN FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+        public void ClearTextBox()
+        {
+            usernameText.Text = "";
+            passwordText.Text = "";
         }
     }
 }

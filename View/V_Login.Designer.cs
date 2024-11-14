@@ -1,6 +1,6 @@
 ﻿namespace Projek_PBO_B07
 {
-    partial class Form1
+    partial class V_Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_Login));
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
