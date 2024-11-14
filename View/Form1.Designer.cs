@@ -32,10 +32,10 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            usernametext = new TextBox();
+            usernameText = new TextBox();
             label6 = new Label();
             label7 = new Label();
-            passwordtext = new TextBox();
+            passwordText = new TextBox();
             loginbutton = new Button();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
@@ -79,13 +79,13 @@
             label5.TabIndex = 3;
             label5.Text = "Login";
             // 
-            // usernametext
+            // usernameText
             // 
-            usernametext.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            usernametext.Location = new Point(551, 328);
-            usernametext.Name = "usernametext";
-            usernametext.Size = new Size(349, 31);
-            usernametext.TabIndex = 4;
+            usernameText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            usernameText.Location = new Point(551, 328);
+            usernameText.Name = "usernameText";
+            usernameText.Size = new Size(349, 31);
+            usernameText.TabIndex = 4;
             // 
             // label6
             // 
@@ -109,13 +109,13 @@
             label7.TabIndex = 6;
             label7.Text = "Password";
             // 
-            // passwordtext
+            // passwordText
             // 
-            passwordtext.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            passwordtext.Location = new Point(551, 400);
-            passwordtext.Name = "passwordtext";
-            passwordtext.Size = new Size(349, 31);
-            passwordtext.TabIndex = 7;
+            passwordText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            passwordText.Location = new Point(551, 400);
+            passwordText.Name = "passwordText";
+            passwordText.Size = new Size(349, 31);
+            passwordText.TabIndex = 7;
             // 
             // loginbutton
             // 
@@ -169,10 +169,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(978, 624);
             Controls.Add(loginbutton);
-            Controls.Add(passwordtext);
+            Controls.Add(passwordText);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(usernametext);
+            Controls.Add(usernameText);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -191,10 +191,10 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox usernametext;
+        private TextBox usernameText;
         private Label label6;
         private Label label7;
-        private TextBox passwordtext;
+        private TextBox passwordText;
         private Button loginbutton;
         private PictureBox pictureBox1;
         private Panel panel1;
