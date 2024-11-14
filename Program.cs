@@ -1,3 +1,4 @@
+using Projek_PBO_B07.View;
 namespace Projek_PBO_B07
 {
     internal static class Program

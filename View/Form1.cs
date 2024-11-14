@@ -26,5 +26,15 @@ namespace Projek_PBO_B07
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
