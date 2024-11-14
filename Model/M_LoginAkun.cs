@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projek_PBO_B07.Model
 {
-    internal class LoginAkunModel
+    internal class M_LoginAkun
     {
         public string username { get; set; }
         public string password { get; set; }
@@ -25,7 +25,7 @@ namespace Projek_PBO_B07.Model
             get { return password; }
             set { password = value; }
         }
-        public LoginAkunModel(string username, string password) //Constructor
+        public M_LoginAkun(string username, string password) //Constructor
         {
             this.username = username;
             this.password = password;

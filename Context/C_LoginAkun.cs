@@ -9,12 +9,12 @@ using Projek_PBO_B07.Model;
 
 namespace Projek_PBO_B07.Context
 {
-    internal class LoginAkunContext : DataWrapper
+    internal class C_LoginAkun : DataWrapper
     {
 
-        public LoginAkunModel Validate(string username, string password)
+        public M_LoginAkun Validate(string username, string password)
         {
-            LoginAkunModel loginAkun = null;
+            M_LoginAkun loginAkun = null;
             string query = "SELECT * FROM akun WHERE username = @username AND psword = @password";
 
             // Parameter untuk query
@@ -28,7 +28,7 @@ namespace Projek_PBO_B07.Context
 
                 if (reader.Read())
                 {
-                    loginAkun = new LoginAkunModel(username, password);
+                    loginAkun = new M_LoginAkun(username, password);
                     loginAkun.Username = (string)reader["username"];
                     loginAkun.Password = (string)reader["psword"];
 

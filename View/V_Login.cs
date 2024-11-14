@@ -40,8 +40,8 @@ namespace Projek_PBO_B07
         {
 
 
-            LoginAkunContext loginakunContext = new LoginAkunContext();
-            LoginAkunModel login = loginakunContext.Validate(usernameText.Text, passwordText.Text);
+            C_LoginAkun loginakunContext = new C_LoginAkun();
+            M_LoginAkun login = loginakunContext.Validate(usernameText.Text, passwordText.Text);
 
             if (login != null)
             {
