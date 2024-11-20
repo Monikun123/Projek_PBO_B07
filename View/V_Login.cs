@@ -41,7 +41,7 @@ namespace Projek_PBO_B07
 
 
             C_LoginAkun loginakunContext = new C_LoginAkun();
-            M_LoginAkun login = loginakunContext.Validate(usernameText.Text, passwordText.Text);
+            M_User login = loginakunContext.Validate(usernameText.Text, passwordText.Text);
 
             if (login != null)
             {
@@ -64,6 +64,11 @@ namespace Projek_PBO_B07
         {
             usernameText.Text = "";
             passwordText.Text = "";
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

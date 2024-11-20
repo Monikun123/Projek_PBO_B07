@@ -163,7 +163,7 @@
             panel2.Size = new Size(978, 624);
             panel2.TabIndex = 9;
             // 
-            // Form1
+            // V_Login
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -178,7 +178,7 @@
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "Form1";
+            Name = "V_Login";
             Text = "Login";
             Load += MainFormLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

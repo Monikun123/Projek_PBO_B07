@@ -12,15 +12,15 @@ namespace Projek_PBO_B07.Context
     internal class C_LoginAkun : DataWrapper
     {
 
-        public M_LoginAkun Validate(string username, string password)
+        public M_User Validate(string email, string password)
         {
-            M_LoginAkun loginAkun = null;
-            string query = "SELECT * FROM akun WHERE username = @username AND psword = @password";
+            M_User loginAkun = null;
+            string query = "SELECT * FROM pengguna WHERE email = @email AND password = @password";
 
             // Parameter untuk query
             NpgsqlParameter[] parameters =
             {
-            new NpgsqlParameter("@username", username),
+            new NpgsqlParameter("@email", email),
             new NpgsqlParameter("@password", password)
             };
 
@@ -28,9 +28,9 @@ namespace Projek_PBO_B07.Context
 
                 if (reader.Read())
                 {
-                    loginAkun = new M_LoginAkun(username, password);
-                    loginAkun.Username = (string)reader["username"];
-                    loginAkun.Password = (string)reader["psword"];
+                    loginAkun = new M_User(email, password);
+                    loginAkun.Email = (string)reader["email"];
+                    loginAkun.Password = (string)reader["password"];
 
                 };
             return loginAkun;
