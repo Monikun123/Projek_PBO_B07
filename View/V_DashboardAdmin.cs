@@ -65,7 +65,7 @@ namespace Projek_PBO_B07.View
                 int totalTransaksi = C_DashboardAdmin.getTotalTransaksi();
 
                 // Perbarui teks pada label
-                lblTotalBuahBusuk.Text = $"{totalTransaksi}";
+                lblTotalTransaksi.Text = $"{totalTransaksi}";
             }
             catch (Exception ex)
             {
