@@ -12,7 +12,7 @@ namespace Projek_PBO_B07.Core
     {
         // Properti credential database dan koneksinya
         private static readonly string DB_HOST = "localhost";
-        private static readonly string DB_DATABASE = "projekfix";
+        private static readonly string DB_DATABASE = "projek2";
         private static readonly string DB_USERNAME = "postgres";
         private static readonly string DB_PASSWORD = "basic324";
         private static readonly string DB_PORT = "5432";

@@ -1,0 +1,342 @@
+﻿namespace Projek_PBO_B07.View
+{
+    partial class V_DashboardAdmin
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_DashboardAdmin));
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panel1 = new Panel();
+            label1 = new Label();
+            panel2 = new Panel();
+            label5 = new Label();
+            panel5 = new Panel();
+            label8 = new Label();
+            lblTotalBuahBusuk = new Label();
+            label4 = new Label();
+            pictureBox3 = new PictureBox();
+            panel4 = new Panel();
+            label7 = new Label();
+            lblTotalTransaksi = new Label();
+            label3 = new Label();
+            pictureBox2 = new PictureBox();
+            panel3 = new Panel();
+            label6 = new Label();
+            lblTotalStok = new Label();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.2686558F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.7313461F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(800, 450);
+            tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(247, 204, 92);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(164, 444);
+            panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoEllipsis = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(233, 78, 1);
+            label1.Location = new Point(28, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(108, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Fruities";
+            label1.Click += label1_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ControlLight;
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(panel3);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(173, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(624, 444);
+            panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(39, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(164, 26);
+            label5.TabIndex = 4;
+            label5.Text = "DASHBOARD";
+            // 
+            // panel5
+            // 
+            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel5.AutoSize = true;
+            panel5.BackColor = SystemColors.ButtonFace;
+            panel5.Controls.Add(label8);
+            panel5.Controls.Add(lblTotalBuahBusuk);
+            panel5.Controls.Add(label4);
+            panel5.Controls.Add(pictureBox3);
+            panel5.Location = new Point(408, 49);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(190, 59);
+            panel5.TabIndex = 3;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(69, 39);
+            label8.Name = "label8";
+            label8.Size = new Size(27, 15);
+            label8.TabIndex = 5;
+            label8.Text = "box";
+            // 
+            // lblTotalBuahBusuk
+            // 
+            lblTotalBuahBusuk.AutoSize = true;
+            lblTotalBuahBusuk.Location = new Point(71, 19);
+            lblTotalBuahBusuk.Name = "lblTotalBuahBusuk";
+            lblTotalBuahBusuk.Size = new Size(51, 25);
+            lblTotalBuahBusuk.TabIndex = 2;
+            lblTotalBuahBusuk.Text = "coba";
+            lblTotalBuahBusuk.Click += lblTotalBuahBusuk_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(71, 7);
+            label4.Name = "label4";
+            label4.Size = new Size(94, 15);
+            label4.TabIndex = 1;
+            label4.Text = "Total Buah Busuk";
+            label4.Click += label4_Click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.FromArgb(244, 204, 92);
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(12, 3);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(51, 51);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
+            // 
+            // panel4
+            // 
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel4.AutoSize = true;
+            panel4.BackColor = SystemColors.ButtonFace;
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(lblTotalTransaksi);
+            panel4.Controls.Add(label3);
+            panel4.Controls.Add(pictureBox2);
+            panel4.Location = new Point(227, 49);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(175, 59);
+            panel4.TabIndex = 2;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(69, 39);
+            label7.Name = "label7";
+            label7.Size = new Size(27, 15);
+            label7.TabIndex = 4;
+            label7.Text = "box";
+            // 
+            // lblTotalTransaksi
+            // 
+            lblTotalTransaksi.AutoSize = true;
+            lblTotalTransaksi.Location = new Point(69, 19);
+            lblTotalTransaksi.Name = "lblTotalTransaksi";
+            lblTotalTransaksi.Size = new Size(54, 25);
+            lblTotalTransaksi.TabIndex = 2;
+            lblTotalTransaksi.Text = "Coba";
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(71, 7);
+            label3.Name = "label3";
+            label3.Size = new Size(82, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Total Transaksi";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox2.BackColor = Color.FromArgb(244, 204, 92);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(12, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(51, 51);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // panel3
+            // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.AutoSize = true;
+            panel3.BackColor = SystemColors.Control;
+            panel3.Controls.Add(label6);
+            panel3.Controls.Add(lblTotalStok);
+            panel3.Controls.Add(label2);
+            panel3.Controls.Add(pictureBox1);
+            panel3.Location = new Point(27, 49);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(194, 59);
+            panel3.TabIndex = 1;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(69, 39);
+            label6.Name = "label6";
+            label6.Size = new Size(27, 15);
+            label6.TabIndex = 3;
+            label6.Text = "box";
+            // 
+            // lblTotalStok
+            // 
+            lblTotalStok.AutoSize = true;
+            lblTotalStok.Location = new Point(71, 19);
+            lblTotalStok.Name = "lblTotalStok";
+            lblTotalStok.Size = new Size(22, 25);
+            lblTotalStok.TabIndex = 2;
+            lblTotalStok.Text = "0";
+            lblTotalStok.Click += lblTotalStok_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(71, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Total Stok";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(244, 204, 92);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(51, 51);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // V_DashboardAdmin
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(tableLayoutPanel1);
+            Name = "V_DashboardAdmin";
+            Text = "DasshboardAdmin";
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
+        private Label label1;
+        private Panel panel2;
+        private PictureBox pictureBox1;
+        private Panel panel3;
+        private Label label2;
+        private Panel panel5;
+        private Label label4;
+        private PictureBox pictureBox3;
+        private Panel panel4;
+        private Label label3;
+        private PictureBox pictureBox2;
+        private Label label5;
+        private Label lblTotalBuahBusuk;
+        private Label lblTotalTransaksi;
+        private Label lblTotalStok;
+        private Label label6;
+        private Label label8;
+        private Label label7;
+    }
+}
