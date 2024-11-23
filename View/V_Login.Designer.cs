@@ -55,7 +55,6 @@
             label3.Size = new Size(211, 45);
             label3.TabIndex = 1;
             label3.Text = "FRUITIES";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -143,7 +142,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel1
             // 
@@ -180,7 +178,6 @@
             Controls.Add(panel2);
             Name = "V_Login";
             Text = "Login";
-            Load += MainFormLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
