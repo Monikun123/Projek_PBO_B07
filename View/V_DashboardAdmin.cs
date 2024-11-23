@@ -16,9 +16,7 @@ namespace Projek_PBO_B07.View
         public V_DashboardAdmin()
         {
             InitializeComponent();
-            getDataBuahBusuk();
-            getDataTotalTransaksi();
-            getDataTotalStok();
+            getDataBuahAll();
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -43,14 +41,22 @@ namespace Projek_PBO_B07.View
         {
 
         }
-        private void getDataBuahBusuk()
+        private void getDataBuahAll()
         {
             try
             {
-                // Panggil metode untuk mendapatkan total buah busuk
+
                 int totalBusuk = C_DashboardAdmin.getTotalBuahBusuk();
 
-                // Perbarui teks pada label
+                int totalTransaksi = C_DashboardAdmin.getTotalTransaksi();
+
+                int totalStok = C_DashboardAdmin.getDataStok();
+
+
+                lblTotalStok.Text = $"{totalStok}";
+
+                lblTotalTransaksi.Text = $"{totalTransaksi}";
+
                 lblTotalBuahBusuk.Text = $"{totalBusuk}";
             }
             catch (Exception ex)
@@ -58,36 +64,7 @@ namespace Projek_PBO_B07.View
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void getDataTotalTransaksi()
-        {
-            try
-            {
-                // Panggil metode untuk mendapatkan total buah busuk
-                int totalTransaksi = C_DashboardAdmin.getTotalTransaksi();
 
-                // Perbarui teks pada label
-                lblTotalTransaksi.Text = $"{totalTransaksi}";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void getDataTotalStok()
-        {
-            try
-            {
-                // Panggil metode untuk mendapatkan total buah busuk
-                int totalTransaksi = C_DashboardAdmin.getDataStok();
-
-                // Perbarui teks pada label
-                lblTotalStok.Text = $"{totalTransaksi}";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         private void button1_Click(object sender, EventArgs e)
         {
 
