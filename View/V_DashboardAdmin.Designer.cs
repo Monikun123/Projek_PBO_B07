@@ -49,6 +49,17 @@
             lblTotalStok = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            label9 = new Label();
+            pictureBox5 = new PictureBox();
+            panel6 = new Panel();
+            button1 = new Button();
+            RiwayatButton = new Button();
+            pictureBox6 = new PictureBox();
+            ProfilButton = new Button();
+            pictureBox7 = new PictureBox();
+            LogOutButton = new Button();
+            pictureBox8 = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -58,6 +69,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,8 +94,18 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(247, 204, 92);
-            panel1.Controls.Add(label1);
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(LogOutButton);
+            panel1.Controls.Add(pictureBox8);
+            panel1.Controls.Add(ProfilButton);
+            panel1.Controls.Add(pictureBox7);
+            panel1.Controls.Add(RiwayatButton);
+            panel1.Controls.Add(pictureBox6);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
@@ -92,7 +119,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(28, 16);
+            label1.Location = new Point(27, 18);
             label1.Name = "label1";
             label1.Size = new Size(108, 32);
             label1.TabIndex = 0;
@@ -291,6 +318,120 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.FromArgb(247, 204, 92);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(6, 88);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(44, 41);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(247, 204, 92);
+            label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(51, 104);
+            label9.Name = "label9";
+            label9.Size = new Size(107, 25);
+            label9.TabIndex = 5;
+            label9.Text = "Dashboard";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.White;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(6, 151);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(44, 41);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 6;
+            pictureBox5.TabStop = false;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(247, 204, 92);
+            panel6.Controls.Add(label1);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(164, 71);
+            panel6.TabIndex = 7;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(51, 151);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 41);
+            button1.TabIndex = 8;
+            button1.Text = "Produk";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // RiwayatButton
+            // 
+            RiwayatButton.Location = new Point(51, 213);
+            RiwayatButton.Name = "RiwayatButton";
+            RiwayatButton.Size = new Size(107, 41);
+            RiwayatButton.TabIndex = 10;
+            RiwayatButton.Text = "Riwayat";
+            RiwayatButton.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.White;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(6, 213);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(44, 41);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 9;
+            pictureBox6.TabStop = false;
+            // 
+            // ProfilButton
+            // 
+            ProfilButton.Location = new Point(51, 274);
+            ProfilButton.Name = "ProfilButton";
+            ProfilButton.Size = new Size(107, 41);
+            ProfilButton.TabIndex = 12;
+            ProfilButton.Text = "Profil";
+            ProfilButton.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.White;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(6, 274);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(44, 41);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 11;
+            pictureBox7.TabStop = false;
+            // 
+            // LogOutButton
+            // 
+            LogOutButton.BackColor = Color.Red;
+            LogOutButton.Location = new Point(51, 382);
+            LogOutButton.Name = "LogOutButton";
+            LogOutButton.Size = new Size(107, 41);
+            LogOutButton.TabIndex = 14;
+            LogOutButton.Text = "LogOut";
+            LogOutButton.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.Red;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(6, 382);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(44, 41);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 13;
+            pictureBox8.TabStop = false;
+            // 
             // V_DashboardAdmin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -313,6 +454,13 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
@@ -338,5 +486,16 @@
         private Label label6;
         private Label label8;
         private Label label7;
+        private Label label9;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private Panel panel6;
+        private Button ProfilButton;
+        private PictureBox pictureBox7;
+        private Button RiwayatButton;
+        private PictureBox pictureBox6;
+        private Button button1;
+        private Button LogOutButton;
+        private PictureBox pictureBox8;
     }
 }

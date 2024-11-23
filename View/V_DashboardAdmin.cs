@@ -73,7 +73,11 @@ namespace Projek_PBO_B07.View
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
 
 
