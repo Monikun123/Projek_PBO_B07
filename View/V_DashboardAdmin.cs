@@ -18,6 +18,7 @@ namespace Projek_PBO_B07.View
             InitializeComponent();
             getDataBuahBusuk();
             getDataTotalTransaksi();
+            getDataTotalStok();
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -72,7 +73,21 @@ namespace Projek_PBO_B07.View
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void getDataTotalStok()
+        {
+            try
+            {
+                // Panggil metode untuk mendapatkan total buah busuk
+                int totalTransaksi = C_DashboardAdmin.getDataStok();
 
+                // Perbarui teks pada label
+                lblTotalStok.Text = $"{totalTransaksi}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 

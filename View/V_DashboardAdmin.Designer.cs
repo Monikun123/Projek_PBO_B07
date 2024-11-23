@@ -292,9 +292,9 @@
             lblTotalStok.AutoSize = true;
             lblTotalStok.Location = new Point(71, 19);
             lblTotalStok.Name = "lblTotalStok";
-            lblTotalStok.Size = new Size(22, 25);
+            lblTotalStok.Size = new Size(54, 25);
             lblTotalStok.TabIndex = 2;
-            lblTotalStok.Text = "0";
+            lblTotalStok.Text = "Coba";
             lblTotalStok.Click += lblTotalStok_Click;
             // 
             // label2
