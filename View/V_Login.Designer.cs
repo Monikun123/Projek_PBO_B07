@@ -32,7 +32,7 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            usernameText = new TextBox();
+            emailText = new TextBox();
             label6 = new Label();
             label7 = new Label();
             passwordText = new TextBox();
@@ -78,13 +78,13 @@
             label5.TabIndex = 3;
             label5.Text = "Login";
             // 
-            // usernameText
+            // emailText
             // 
-            usernameText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            usernameText.Location = new Point(551, 328);
-            usernameText.Name = "usernameText";
-            usernameText.Size = new Size(349, 31);
-            usernameText.TabIndex = 4;
+            emailText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            emailText.Location = new Point(551, 328);
+            emailText.Name = "emailText";
+            emailText.Size = new Size(349, 31);
+            emailText.TabIndex = 4;
             // 
             // label6
             // 
@@ -93,9 +93,10 @@
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(551, 299);
             label6.Name = "label6";
-            label6.Size = new Size(115, 26);
+            label6.Size = new Size(73, 26);
             label6.TabIndex = 5;
-            label6.Text = "Username";
+            label6.Text = "Email";
+            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -170,7 +171,7 @@
             Controls.Add(passwordText);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(usernameText);
+            Controls.Add(emailText);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -188,7 +189,7 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox usernameText;
+        private TextBox emailText;
         private Label label6;
         private Label label7;
         private TextBox passwordText;
