@@ -31,7 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_DashboardAdmin));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            LogOutButton = new Button();
+            pictureBox8 = new PictureBox();
+            ProfilButton = new Button();
+            pictureBox7 = new PictureBox();
+            RiwayatButton = new Button();
+            pictureBox6 = new PictureBox();
+            button1 = new Button();
+            panel6 = new Panel();
             label1 = new Label();
+            pictureBox5 = new PictureBox();
+            label9 = new Label();
+            pictureBox4 = new PictureBox();
             panel2 = new Panel();
             label5 = new Label();
             panel5 = new Panel();
@@ -49,19 +60,14 @@
             lblTotalStok = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            label9 = new Label();
-            pictureBox5 = new PictureBox();
-            panel6 = new Panel();
-            button1 = new Button();
-            RiwayatButton = new Button();
-            pictureBox6 = new PictureBox();
-            ProfilButton = new Button();
-            pictureBox7 = new PictureBox();
-            LogOutButton = new Button();
-            pictureBox8 = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -69,12 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -89,7 +89,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(800, 450);
+            tableLayoutPanel1.Size = new Size(983, 495);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -109,8 +109,89 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(164, 444);
+            panel1.Size = new Size(203, 489);
             panel1.TabIndex = 0;
+            // 
+            // LogOutButton
+            // 
+            LogOutButton.BackColor = Color.Red;
+            LogOutButton.Location = new Point(51, 429);
+            LogOutButton.Name = "LogOutButton";
+            LogOutButton.Size = new Size(118, 41);
+            LogOutButton.TabIndex = 14;
+            LogOutButton.Text = "LogOut";
+            LogOutButton.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.Red;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(6, 429);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(44, 41);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 13;
+            pictureBox8.TabStop = false;
+            // 
+            // ProfilButton
+            // 
+            ProfilButton.Location = new Point(51, 274);
+            ProfilButton.Name = "ProfilButton";
+            ProfilButton.Size = new Size(118, 41);
+            ProfilButton.TabIndex = 12;
+            ProfilButton.Text = "Profil";
+            ProfilButton.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.White;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(6, 274);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(44, 41);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 11;
+            pictureBox7.TabStop = false;
+            // 
+            // RiwayatButton
+            // 
+            RiwayatButton.Location = new Point(51, 213);
+            RiwayatButton.Name = "RiwayatButton";
+            RiwayatButton.Size = new Size(118, 41);
+            RiwayatButton.TabIndex = 10;
+            RiwayatButton.Text = "Riwayat";
+            RiwayatButton.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.White;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(6, 213);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(44, 41);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 9;
+            pictureBox6.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(51, 151);
+            button1.Name = "button1";
+            button1.Size = new Size(118, 41);
+            button1.TabIndex = 8;
+            button1.Text = "Produk";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(247, 204, 92);
+            panel6.Controls.Add(label1);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(203, 71);
+            panel6.TabIndex = 7;
             // 
             // label1
             // 
@@ -119,12 +200,45 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(27, 18);
+            label1.Location = new Point(46, 18);
             label1.Name = "label1";
             label1.Size = new Size(108, 32);
             label1.TabIndex = 0;
             label1.Text = "Fruities";
             label1.Click += label1_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.White;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(6, 151);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(44, 41);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 6;
+            pictureBox5.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(247, 204, 92);
+            label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(51, 104);
+            label9.Name = "label9";
+            label9.Size = new Size(107, 25);
+            label9.TabIndex = 5;
+            label9.Text = "Dashboard";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.FromArgb(247, 204, 92);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(6, 88);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(44, 41);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
             // 
             // panel2
             // 
@@ -134,9 +248,9 @@
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(panel3);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(173, 3);
+            panel2.Location = new Point(212, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(624, 444);
+            panel2.Size = new Size(768, 489);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -160,16 +274,17 @@
             panel5.Controls.Add(lblTotalBuahBusuk);
             panel5.Controls.Add(label4);
             panel5.Controls.Add(pictureBox3);
-            panel5.Location = new Point(408, 49);
+            panel5.Location = new Point(27, 195);
             panel5.Name = "panel5";
-            panel5.Size = new Size(190, 59);
+            panel5.Size = new Size(319, 59);
             panel5.TabIndex = 3;
+            panel5.Paint += panel5_Paint;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(69, 39);
+            label8.Location = new Point(71, 39);
             label8.Name = "label8";
             label8.Size = new Size(27, 15);
             label8.TabIndex = 5;
@@ -216,16 +331,17 @@
             panel4.Controls.Add(lblTotalTransaksi);
             panel4.Controls.Add(label3);
             panel4.Controls.Add(pictureBox2);
-            panel4.Location = new Point(227, 49);
+            panel4.Location = new Point(27, 123);
             panel4.Name = "panel4";
-            panel4.Size = new Size(175, 59);
+            panel4.Size = new Size(319, 59);
             panel4.TabIndex = 2;
+            panel4.Paint += panel4_Paint;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(69, 39);
+            label7.Location = new Point(71, 39);
             label7.Name = "label7";
             label7.Size = new Size(27, 15);
             label7.TabIndex = 4;
@@ -253,7 +369,6 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox2.BackColor = Color.FromArgb(244, 204, 92);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(12, 3);
@@ -274,14 +389,14 @@
             panel3.Controls.Add(pictureBox1);
             panel3.Location = new Point(27, 49);
             panel3.Name = "panel3";
-            panel3.Size = new Size(194, 59);
+            panel3.Size = new Size(319, 59);
             panel3.TabIndex = 1;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(69, 39);
+            label6.Location = new Point(71, 39);
             label6.Name = "label6";
             label6.Size = new Size(27, 15);
             label6.TabIndex = 3;
@@ -318,131 +433,24 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.FromArgb(247, 204, 92);
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(6, 88);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(44, 41);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 4;
-            pictureBox4.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(247, 204, 92);
-            label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(51, 104);
-            label9.Name = "label9";
-            label9.Size = new Size(107, 25);
-            label9.TabIndex = 5;
-            label9.Text = "Dashboard";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = Color.White;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(6, 151);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(44, 41);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 6;
-            pictureBox5.TabStop = false;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.FromArgb(247, 204, 92);
-            panel6.Controls.Add(label1);
-            panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(0, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(164, 71);
-            panel6.TabIndex = 7;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(51, 151);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 41);
-            button1.TabIndex = 8;
-            button1.Text = "Produk";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // RiwayatButton
-            // 
-            RiwayatButton.Location = new Point(51, 213);
-            RiwayatButton.Name = "RiwayatButton";
-            RiwayatButton.Size = new Size(107, 41);
-            RiwayatButton.TabIndex = 10;
-            RiwayatButton.Text = "Riwayat";
-            RiwayatButton.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.BackColor = Color.White;
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(6, 213);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(44, 41);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 9;
-            pictureBox6.TabStop = false;
-            // 
-            // ProfilButton
-            // 
-            ProfilButton.Location = new Point(51, 274);
-            ProfilButton.Name = "ProfilButton";
-            ProfilButton.Size = new Size(107, 41);
-            ProfilButton.TabIndex = 12;
-            ProfilButton.Text = "Profil";
-            ProfilButton.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.BackColor = Color.White;
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(6, 274);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(44, 41);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 11;
-            pictureBox7.TabStop = false;
-            // 
-            // LogOutButton
-            // 
-            LogOutButton.BackColor = Color.Red;
-            LogOutButton.Location = new Point(51, 382);
-            LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(107, 41);
-            LogOutButton.TabIndex = 14;
-            LogOutButton.Text = "LogOut";
-            LogOutButton.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.BackColor = Color.Red;
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(6, 382);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(44, 41);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 13;
-            pictureBox8.TabStop = false;
-            // 
             // V_DashboardAdmin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(983, 495);
             Controls.Add(tableLayoutPanel1);
             Name = "V_DashboardAdmin";
             Text = "DasshboardAdmin";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel5.ResumeLayout(false);
@@ -454,13 +462,6 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
