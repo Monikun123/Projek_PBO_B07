@@ -43,7 +43,8 @@
             label9 = new Label();
             pictureBox4 = new PictureBox();
             panel2 = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            AddProdukButton = new Button();
+            label5 = new Label();
             dataGridView1 = new DataGridView();
             panel7 = new Panel();
             label7 = new Label();
@@ -60,8 +61,7 @@
             lblTotalStok = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            label5 = new Label();
-            AddProdukButton = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -70,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -78,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -218,7 +218,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = Color.Black;
+            pictureBox4.BackColor = Color.White;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(6, 88);
             pictureBox4.Name = "pictureBox4";
@@ -242,20 +242,27 @@
             panel2.Size = new Size(768, 489);
             panel2.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // AddProdukButton
             // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.2686558F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.7313461F));
-            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(983, 495);
-            tableLayoutPanel1.TabIndex = 1;
+            AddProdukButton.BackColor = Color.FromArgb(244, 204, 92);
+            AddProdukButton.Location = new Point(38, 123);
+            AddProdukButton.Name = "AddProdukButton";
+            AddProdukButton.Size = new Size(214, 34);
+            AddProdukButton.TabIndex = 11;
+            AddProdukButton.Text = "Menambahkan Produk";
+            AddProdukButton.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(25, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(116, 26);
+            label5.TabIndex = 10;
+            label5.Text = "PRODUK";
+            label5.Click += label5_Click;
             // 
             // dataGridView1
             // 
@@ -429,27 +436,20 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // label5
+            // tableLayoutPanel1
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(25, 18);
-            label5.Name = "label5";
-            label5.Size = new Size(116, 26);
-            label5.TabIndex = 10;
-            label5.Text = "PRODUK";
-            label5.Click += label5_Click;
-            // 
-            // AddProdukButton
-            // 
-            AddProdukButton.BackColor = Color.FromArgb(244, 204, 92);
-            AddProdukButton.Location = new Point(38, 123);
-            AddProdukButton.Name = "AddProdukButton";
-            AddProdukButton.Size = new Size(214, 34);
-            AddProdukButton.TabIndex = 11;
-            AddProdukButton.Text = "Menambahkan Produk";
-            AddProdukButton.UseVisualStyleBackColor = false;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.2686558F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.7313461F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(983, 495);
+            tableLayoutPanel1.TabIndex = 1;
             // 
             // V_Produk
             // 
@@ -470,7 +470,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
@@ -481,6 +480,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 

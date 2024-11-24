@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_DashboardAdmin));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            DashboardButton = new Button();
             LogOutButton = new Button();
             pictureBox8 = new PictureBox();
             ProfilButton = new Button();
@@ -41,7 +42,6 @@
             panel6 = new Panel();
             label1 = new Label();
             pictureBox5 = new PictureBox();
-            label9 = new Label();
             pictureBox4 = new PictureBox();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
@@ -97,6 +97,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(DashboardButton);
             panel1.Controls.Add(LogOutButton);
             panel1.Controls.Add(pictureBox8);
             panel1.Controls.Add(ProfilButton);
@@ -106,13 +107,22 @@
             panel1.Controls.Add(HalProdukButton);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(label9);
             panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(203, 489);
             panel1.TabIndex = 0;
+            // 
+            // DashboardButton
+            // 
+            DashboardButton.BackColor = Color.FromArgb(247, 204, 92);
+            DashboardButton.Location = new Point(51, 88);
+            DashboardButton.Name = "DashboardButton";
+            DashboardButton.Size = new Size(118, 41);
+            DashboardButton.TabIndex = 15;
+            DashboardButton.Text = "DashBoard";
+            DashboardButton.UseVisualStyleBackColor = false;
             // 
             // LogOutButton
             // 
@@ -219,17 +229,6 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(247, 204, 92);
-            label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(51, 104);
-            label9.Name = "label9";
-            label9.Size = new Size(107, 25);
-            label9.TabIndex = 5;
-            label9.Text = "Dashboard";
             // 
             // pictureBox4
             // 
@@ -454,7 +453,6 @@
             Text = "DasshboardAdmin";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -498,7 +496,6 @@
         private Label label6;
         private Label label8;
         private Label label7;
-        private Label label9;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private Panel panel6;
@@ -511,5 +508,6 @@
         private PictureBox pictureBox8;
         private Panel panel7;
         private DataGridView dataGridView1;
+        private Button DashboardButton;
     }
 }
