@@ -15,7 +15,7 @@ namespace Projek_PBO_B07.Context
         {
             string query = @"
         SELECT 
-            COALESCE(SUM(CAST(buah_busuk AS INTEGER)), 0) AS total_busuk
+            COALESCE(SUM(buah_busuk), 0) AS total_busuk
         FROM 
             riwayat;";
 
@@ -38,7 +38,7 @@ namespace Projek_PBO_B07.Context
         {
             string query = @"
         SELECT 
-            COALESCE(SUM(CAST(buah_terjual  AS INTEGER)), 0) AS buah_terjual
+            COALESCE(SUM(buah_terjual), 0) AS buah_terjual
         FROM 
             riwayat;";
 
