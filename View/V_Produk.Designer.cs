@@ -40,7 +40,6 @@
             panel6 = new Panel();
             label1 = new Label();
             pictureBox5 = new PictureBox();
-            label9 = new Label();
             pictureBox4 = new PictureBox();
             panel2 = new Panel();
             AddProdukButton = new Button();
@@ -62,6 +61,7 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            DashboardButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -83,6 +83,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(DashboardButton);
             panel1.Controls.Add(LogOutButton);
             panel1.Controls.Add(pictureBox8);
             panel1.Controls.Add(ProfilButton);
@@ -92,7 +93,6 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(label9);
             panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
@@ -204,17 +204,6 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.White;
-            label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(51, 104);
-            label9.Name = "label9";
-            label9.Size = new Size(107, 25);
-            label9.TabIndex = 5;
-            label9.Text = "Dashboard";
             // 
             // pictureBox4
             // 
@@ -451,6 +440,16 @@
             tableLayoutPanel1.Size = new Size(983, 495);
             tableLayoutPanel1.TabIndex = 1;
             // 
+            // DashboardButton
+            // 
+            DashboardButton.BackColor = Color.White;
+            DashboardButton.Location = new Point(51, 88);
+            DashboardButton.Name = "DashboardButton";
+            DashboardButton.Size = new Size(118, 41);
+            DashboardButton.TabIndex = 16;
+            DashboardButton.Text = "DashBoard";
+            DashboardButton.UseVisualStyleBackColor = false;
+            // 
             // V_Produk
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -460,7 +459,6 @@
             Name = "V_Produk";
             Text = "V_Produk";
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -496,7 +494,6 @@
         private Panel panel6;
         private Label label1;
         private PictureBox pictureBox5;
-        private Label label9;
         private PictureBox pictureBox4;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;
@@ -518,5 +515,6 @@
         private PictureBox pictureBox1;
         private Label label5;
         private Button AddProdukButton;
+        private Button DashboardButton;
     }
 }
