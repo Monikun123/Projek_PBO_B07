@@ -1,4 +1,5 @@
-﻿using Projek_PBO_B07.Controller;
+﻿using Projek_PBO_B07.Context;
+using Projek_PBO_B07.Controller;
 using System;
 using System.Data;
 using System.Drawing;
@@ -13,6 +14,7 @@ namespace Projek_PBO_B07.View
         public V_Riwayat()
         {
             InitializeComponent();
+            getDataBuahAll();
             controller = new C_Riwayat();  // Inisialisasi controller
             LoadData();  // Panggil method untuk memuat data saat form pertama kali dibuka
         }
@@ -94,14 +96,28 @@ namespace Projek_PBO_B07.View
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void getDataBuahAll()
         {
+            try
+            {
 
-        }
+                int totalBusuk = C_DashboardAdmin.getTotalBuahBusuk();
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
+                int totalTransaksi = C_DashboardAdmin.getTotalTransaksi();
 
+                int totalStok = C_DashboardAdmin.getDataStok();
+
+
+                lblTotalStok.Text = $"{totalStok}";
+
+                lblTotalTransaksi.Text = $"{totalTransaksi}";
+
+                lblTotalBuahBusuk.Text = $"{totalBusuk}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

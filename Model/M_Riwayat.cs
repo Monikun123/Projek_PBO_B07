@@ -65,5 +65,29 @@ namespace Projek_PBO_B07.Model
                 return null;
             }
         }
+        /*public static DataTable GetTransaksi()
+        {
+            string query = @"SELECT 
+    produk.ID_produk,
+    nama_buah.nama_buah,
+    nama_buah.harga AS harga_awal,
+    produk.stok,
+    produk.tanggal_masuk,
+    produk.tanggal_expired,
+    COALESCE(promosi.diskon, 0) AS diskon,
+    (nama_buah.harga - (nama_buah.harga * COALESCE(promosi.diskon, 0) / 100)) AS harga_setelah_diskon
+FROM 
+    produk
+JOIN 
+    nama_buah ON produk.ID_nama_buah = nama_buah.ID_nama_buah
+LEFT JOIN 
+    promosi ON produk.ID_promosi = promosi.ID_promosi
+ORDER BY 
+    produk.ID_produk;";
+
+            DataTable dataProduk = DataWrapper.queryExecutor(query);
+            return dataProduk;
+        }
+*/
     }
 }

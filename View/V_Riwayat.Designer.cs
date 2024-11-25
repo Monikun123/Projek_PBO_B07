@@ -41,7 +41,7 @@
             label9 = new Label();
             panel4 = new Panel();
             label3 = new Label();
-            label7 = new Label();
+            lblTotalTransaksi = new Label();
             label10 = new Label();
             pictureBox2 = new PictureBox();
             label5 = new Label();
@@ -181,7 +181,7 @@
             panel4.AutoSize = true;
             panel4.BackColor = SystemColors.ButtonFace;
             panel4.Controls.Add(label3);
-            panel4.Controls.Add(label7);
+            panel4.Controls.Add(lblTotalTransaksi);
             panel4.Controls.Add(label10);
             panel4.Controls.Add(pictureBox2);
             panel4.Location = new Point(244, 44);
@@ -199,14 +199,14 @@
             label3.TabIndex = 5;
             label3.Text = "transaksi";
             // 
-            // label7
+            // lblTotalTransaksi
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(71, 19);
-            label7.Name = "label7";
-            label7.Size = new Size(51, 25);
-            label7.TabIndex = 2;
-            label7.Text = "coba";
+            lblTotalTransaksi.AutoSize = true;
+            lblTotalTransaksi.Location = new Point(71, 19);
+            lblTotalTransaksi.Name = "lblTotalTransaksi";
+            lblTotalTransaksi.Size = new Size(51, 25);
+            lblTotalTransaksi.TabIndex = 2;
+            lblTotalTransaksi.Text = "coba";
             // 
             // label10
             // 
@@ -305,7 +305,7 @@
             panel3.Controls.Add(pictureBox1);
             panel3.Location = new Point(15, 44);
             panel3.Name = "panel3";
-            panel3.Size = new Size(743, 62);
+            panel3.Size = new Size(196, 62);
             panel3.TabIndex = 1;
             // 
             // label6
@@ -382,7 +382,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(203, 489);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // LogOutButton
             // 
@@ -511,7 +510,6 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
             // 
             // V_Riwayat
             // 
@@ -559,7 +557,7 @@
         private Label label9;
         private Panel panel4;
         private Label label3;
-        private Label label7;
+        private Label lblTotalTransaksi;
         private Label label10;
         private PictureBox pictureBox2;
         private Label label5;

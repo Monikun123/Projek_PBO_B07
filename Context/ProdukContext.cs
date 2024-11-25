@@ -31,8 +31,8 @@ LEFT JOIN
 ORDER BY 
     produk.ID_produk;";
 
-            DataTable dataMahasiswa = queryExecutor(query);
-            return dataMahasiswa;
+            DataTable dataProduk = queryExecutor(query);
+            return dataProduk;
         }
 
     }
