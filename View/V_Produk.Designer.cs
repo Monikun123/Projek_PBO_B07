@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_Produk));
             panel1 = new Panel();
+            DashboardButton = new Button();
             LogOutButton = new Button();
             pictureBox8 = new PictureBox();
             ProfilButton = new Button();
@@ -61,7 +62,6 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            DashboardButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -99,6 +99,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(203, 489);
             panel1.TabIndex = 0;
+            // 
+            // DashboardButton
+            // 
+            DashboardButton.BackColor = Color.White;
+            DashboardButton.Location = new Point(51, 88);
+            DashboardButton.Name = "DashboardButton";
+            DashboardButton.Size = new Size(118, 41);
+            DashboardButton.TabIndex = 16;
+            DashboardButton.Text = "DashBoard";
+            DashboardButton.UseVisualStyleBackColor = false;
             // 
             // LogOutButton
             // 
@@ -439,16 +449,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(983, 495);
             tableLayoutPanel1.TabIndex = 1;
-            // 
-            // DashboardButton
-            // 
-            DashboardButton.BackColor = Color.White;
-            DashboardButton.Location = new Point(51, 88);
-            DashboardButton.Name = "DashboardButton";
-            DashboardButton.Size = new Size(118, 41);
-            DashboardButton.TabIndex = 16;
-            DashboardButton.Text = "DashBoard";
-            DashboardButton.UseVisualStyleBackColor = false;
             // 
             // V_Produk
             // 
