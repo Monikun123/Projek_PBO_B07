@@ -19,9 +19,9 @@ namespace Projek_PBO_B07.Model
         [ForeignKey("M_Nama_Buah")]
         public int id_nama_buah {  get; set; }
         [Required]
-        public DateOnly tanggal_masuk {  get; set; }
+        public DateTime tanggal_masuk {  get; set; }
         [Required]
-        public DateOnly tanggal_expired {  get; set; }
+        public DateTime tanggal_expired {  get; set; }
         [Required]
         public int stok {  get; set; }
     }

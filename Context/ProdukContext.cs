@@ -5,6 +5,8 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using Projek_PBO_B07.Core;
+using Projek_PBO_B07.Model;
+using Npgsql;
 
 namespace Projek_PBO_B07.Context
 {
@@ -35,5 +37,26 @@ ORDER BY
             return dataProduk;
         }
 
+        public static void AddProduk(M_Produk Produk)
+        {
+            string query = $"INSERT INTO {table} (id_promosi, id_pengguna, id_nama_buah, tanggal_masuk, tanggal_expired, stok) " +
+                $"VALUES(@id_promosi, @id_pengguna, @id_nama_buah, @tanggal_masuk, @tanggal_expired, @stok)";
+
+
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@id_promosi", Produk.id_promosi),
+                new NpgsqlParameter("@id_pengguna",Produk.id_pengguna),
+                new NpgsqlParameter("@id_nama_buah", Produk.id_nama_buah),
+                new NpgsqlParameter("@tanggal_masuk", Produk.tanggal_masuk),
+                new NpgsqlParameter("@tanggal_expired", Produk.tanggal_expired),
+                new NpgsqlParameter("@stok", Produk.stok),
+            };
+
+            commandExecutor(query, parameters);
+
+        }
+
     }
-}
+ }
+

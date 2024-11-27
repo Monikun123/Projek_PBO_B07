@@ -110,5 +110,18 @@ namespace Projek_PBO_B07.View
                 MessageBox.Show($"Error dalam LoadDataMahasiswa: {ex.Message}\n{ex.StackTrace}");
             }
         }
+
+        private void AddProdukButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_FormTambahProduk formtambahproduk = new V_FormTambahProduk();
+            
+            if (formtambahproduk.ShowDialog() == DialogResult.OK)
+            {
+                getDataBuahAll();
+                LoadDataProduk();
+            }
+            this.Show();
+        }
     }
 }

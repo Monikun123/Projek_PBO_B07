@@ -250,6 +250,7 @@
             AddProdukButton.TabIndex = 11;
             AddProdukButton.Text = "Menambahkan Produk";
             AddProdukButton.UseVisualStyleBackColor = false;
+            AddProdukButton.Click += AddProdukButton_Click;
             // 
             // label5
             // 

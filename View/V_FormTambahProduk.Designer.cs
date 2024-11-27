@@ -34,7 +34,7 @@
             label5 = new Label();
             label4 = new Label();
             TanggalMasukDate = new DateTimePicker();
-            textBox1 = new TextBox();
+            StoktextBox = new TextBox();
             label3 = new Label();
             NamaBuahcomboBox = new ComboBox();
             label2 = new Label();
@@ -51,7 +51,7 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(TanggalMasukDate);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(StoktextBox);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(NamaBuahcomboBox);
             panel1.Controls.Add(label2);
@@ -71,12 +71,15 @@
             AddProdukButton.TabIndex = 12;
             AddProdukButton.Text = "Menambahkan Produk";
             AddProdukButton.UseVisualStyleBackColor = false;
+            AddProdukButton.Click += AddProdukButton_Click;
             // 
             // TanggalExpiredDate
             // 
+            TanggalExpiredDate.CustomFormat = "yyyy-MM-dd";
+            TanggalExpiredDate.Format = DateTimePickerFormat.Custom;
             TanggalExpiredDate.Location = new Point(392, 292);
             TanggalExpiredDate.Name = "TanggalExpiredDate";
-            TanggalExpiredDate.Size = new Size(300, 31);
+            TanggalExpiredDate.Size = new Size(168, 31);
             TanggalExpiredDate.TabIndex = 8;
             TanggalExpiredDate.Value = new DateTime(2024, 1, 1, 0, 0, 0, 0);
             // 
@@ -102,18 +105,20 @@
             // 
             // TanggalMasukDate
             // 
+            TanggalMasukDate.CustomFormat = "yyyy-MM-dd";
+            TanggalMasukDate.Format = DateTimePickerFormat.Custom;
             TanggalMasukDate.Location = new Point(36, 292);
             TanggalMasukDate.Name = "TanggalMasukDate";
-            TanggalMasukDate.Size = new Size(300, 31);
+            TanggalMasukDate.Size = new Size(157, 31);
             TanggalMasukDate.TabIndex = 5;
             TanggalMasukDate.Value = new DateTime(2024, 1, 1, 0, 0, 0, 0);
             // 
-            // textBox1
+            // StoktextBox
             // 
-            textBox1.Location = new Point(36, 207);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(182, 31);
-            textBox1.TabIndex = 4;
+            StoktextBox.Location = new Point(36, 207);
+            StoktextBox.Name = "StoktextBox";
+            StoktextBox.Size = new Size(182, 31);
+            StoktextBox.TabIndex = 4;
             // 
             // label3
             // 
@@ -187,7 +192,7 @@
         private Panel panel2;
         private Label label1;
         private DateTimePicker TanggalMasukDate;
-        private TextBox textBox1;
+        private TextBox StoktextBox;
         private Label label3;
         private ComboBox NamaBuahcomboBox;
         private Label label2;
