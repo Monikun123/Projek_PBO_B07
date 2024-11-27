@@ -1,6 +1,6 @@
 ﻿namespace Projek_PBO_B07.View
 {
-    partial class V_DashboardAdmin
+    partial class V_Produk
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_DashboardAdmin));
-            tableLayoutPanel1 = new TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_Produk));
             panel1 = new Panel();
             DashboardButton = new Button();
             LogOutButton = new Button();
@@ -38,19 +37,20 @@
             pictureBox7 = new PictureBox();
             RiwayatButton = new Button();
             pictureBox6 = new PictureBox();
-            HalProdukButton = new Button();
+            button1 = new Button();
             panel6 = new Panel();
             label1 = new Label();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             panel2 = new Panel();
+            AddProdukButton = new Button();
+            label5 = new Label();
             dataGridView1 = new DataGridView();
             panel7 = new Panel();
             label7 = new Label();
             pictureBox2 = new PictureBox();
             lblTotalTransaksi = new Label();
             label3 = new Label();
-            label5 = new Label();
             panel5 = new Panel();
             label8 = new Label();
             lblTotalBuahBusuk = new Label();
@@ -61,7 +61,7 @@
             lblTotalStok = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel1 = new TableLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -77,22 +77,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.2686558F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.7313461F));
-            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(983, 495);
-            tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -104,7 +90,7 @@
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(RiwayatButton);
             panel1.Controls.Add(pictureBox6);
-            panel1.Controls.Add(HalProdukButton);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox4);
@@ -116,11 +102,11 @@
             // 
             // DashboardButton
             // 
-            DashboardButton.BackColor = Color.FromArgb(247, 204, 92);
+            DashboardButton.BackColor = Color.White;
             DashboardButton.Location = new Point(51, 88);
             DashboardButton.Name = "DashboardButton";
             DashboardButton.Size = new Size(118, 41);
-            DashboardButton.TabIndex = 15;
+            DashboardButton.TabIndex = 16;
             DashboardButton.Text = "DashBoard";
             DashboardButton.UseVisualStyleBackColor = false;
             // 
@@ -185,15 +171,15 @@
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
             // 
-            // HalProdukButton
+            // button1
             // 
-            HalProdukButton.Location = new Point(51, 151);
-            HalProdukButton.Name = "HalProdukButton";
-            HalProdukButton.Size = new Size(118, 41);
-            HalProdukButton.TabIndex = 8;
-            HalProdukButton.Text = "Produk";
-            HalProdukButton.UseVisualStyleBackColor = true;
-            HalProdukButton.Click += HalProdukButton_Click;
+            button1.BackColor = Color.FromArgb(247, 204, 92);
+            button1.Location = new Point(51, 151);
+            button1.Name = "button1";
+            button1.Size = new Size(118, 41);
+            button1.TabIndex = 8;
+            button1.Text = "Produk";
+            button1.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -212,16 +198,15 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(46, 18);
+            label1.Location = new Point(47, 18);
             label1.Name = "label1";
             label1.Size = new Size(108, 32);
             label1.TabIndex = 0;
             label1.Text = "Fruities";
-            label1.Click += label1_Click;
             // 
             // pictureBox5
             // 
-            pictureBox5.BackColor = Color.White;
+            pictureBox5.BackColor = Color.FromArgb(247, 204, 92);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(6, 151);
             pictureBox5.Name = "pictureBox5";
@@ -232,7 +217,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = Color.FromArgb(247, 204, 92);
+            pictureBox4.BackColor = Color.White;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(6, 88);
             pictureBox4.Name = "pictureBox4";
@@ -244,9 +229,10 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLight;
+            panel2.Controls.Add(AddProdukButton);
+            panel2.Controls.Add(label5);
             panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(panel7);
-            panel2.Controls.Add(label5);
             panel2.Controls.Add(panel5);
             panel2.Controls.Add(panel3);
             panel2.Dock = DockStyle.Fill;
@@ -254,16 +240,38 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(768, 489);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
+            // 
+            // AddProdukButton
+            // 
+            AddProdukButton.BackColor = Color.FromArgb(244, 204, 92);
+            AddProdukButton.Location = new Point(38, 123);
+            AddProdukButton.Name = "AddProdukButton";
+            AddProdukButton.Size = new Size(214, 34);
+            AddProdukButton.TabIndex = 11;
+            AddProdukButton.Text = "Menambahkan Produk";
+            AddProdukButton.UseVisualStyleBackColor = false;
+            AddProdukButton.Click += AddProdukButton_Click;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(25, 18);
+            label5.Name = "label5";
+            label5.Size = new Size(116, 26);
+            label5.TabIndex = 10;
+            label5.Text = "PRODUK";
+            label5.Click += label5_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(27, 127);
+            dataGridView1.Location = new Point(25, 163);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(718, 298);
-            dataGridView1.TabIndex = 5;
+            dataGridView1.TabIndex = 9;
             // 
             // panel7
             // 
@@ -274,10 +282,10 @@
             panel7.Controls.Add(pictureBox2);
             panel7.Controls.Add(lblTotalTransaksi);
             panel7.Controls.Add(label3);
-            panel7.Location = new Point(271, 52);
+            panel7.Location = new Point(269, 58);
             panel7.Name = "panel7";
             panel7.Size = new Size(227, 59);
-            panel7.TabIndex = 4;
+            panel7.TabIndex = 8;
             // 
             // label7
             // 
@@ -320,17 +328,6 @@
             label3.TabIndex = 1;
             label3.Text = "Total Transaksi";
             // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(39, 9);
-            label5.Name = "label5";
-            label5.Size = new Size(164, 26);
-            label5.TabIndex = 4;
-            label5.Text = "DASHBOARD";
-            // 
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -340,11 +337,10 @@
             panel5.Controls.Add(lblTotalBuahBusuk);
             panel5.Controls.Add(label4);
             panel5.Controls.Add(pictureBox3);
-            panel5.Location = new Point(518, 52);
+            panel5.Location = new Point(516, 58);
             panel5.Name = "panel5";
             panel5.Size = new Size(227, 59);
-            panel5.TabIndex = 3;
-            panel5.Paint += panel5_Paint;
+            panel5.TabIndex = 7;
             // 
             // label8
             // 
@@ -364,7 +360,6 @@
             lblTotalBuahBusuk.Size = new Size(51, 25);
             lblTotalBuahBusuk.TabIndex = 2;
             lblTotalBuahBusuk.Text = "coba";
-            lblTotalBuahBusuk.Click += lblTotalBuahBusuk_Click;
             // 
             // label4
             // 
@@ -375,7 +370,6 @@
             label4.Size = new Size(94, 15);
             label4.TabIndex = 1;
             label4.Text = "Total Buah Busuk";
-            label4.Click += label4_Click;
             // 
             // pictureBox3
             // 
@@ -397,10 +391,10 @@
             panel3.Controls.Add(lblTotalStok);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(pictureBox1);
-            panel3.Location = new Point(27, 52);
+            panel3.Location = new Point(25, 58);
             panel3.Name = "panel3";
             panel3.Size = new Size(227, 59);
-            panel3.TabIndex = 1;
+            panel3.TabIndex = 6;
             // 
             // label6
             // 
@@ -420,7 +414,6 @@
             lblTotalStok.Size = new Size(54, 25);
             lblTotalStok.TabIndex = 2;
             lblTotalStok.Text = "Coba";
-            lblTotalStok.Click += lblTotalStok_Click;
             // 
             // label2
             // 
@@ -443,15 +436,29 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // V_DashboardAdmin
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.2686558F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.7313461F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(983, 495);
+            tableLayoutPanel1.TabIndex = 1;
+            // 
+            // V_Produk
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(983, 495);
             Controls.Add(tableLayoutPanel1);
-            Name = "V_DashboardAdmin";
-            Text = "DasshboardAdmin";
-            tableLayoutPanel1.ResumeLayout(false);
+            Name = "V_Produk";
+            Text = "V_Produk";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
@@ -472,42 +479,43 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
-        private Label label1;
-        private Panel panel2;
-        private PictureBox pictureBox1;
-        private Panel panel3;
-        private Label label2;
-        private Panel panel5;
-        private Label label4;
-        private PictureBox pictureBox3;
-        private Label label3;
-        private PictureBox pictureBox2;
-        private Label label5;
-        private Label lblTotalBuahBusuk;
-        private Label lblTotalTransaksi;
-        private Label lblTotalStok;
-        private Label label6;
-        private Label label8;
-        private Label label7;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private Panel panel6;
+        private Button LogOutButton;
+        private PictureBox pictureBox8;
         private Button ProfilButton;
         private PictureBox pictureBox7;
         private Button RiwayatButton;
         private PictureBox pictureBox6;
-        private Button HalProdukButton;
-        private Button LogOutButton;
-        private PictureBox pictureBox8;
-        private Panel panel7;
+        private Button button1;
+        private Panel panel6;
+        private Label label1;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private Panel panel2;
+        private TableLayoutPanel tableLayoutPanel1;
         private DataGridView dataGridView1;
+        private Panel panel7;
+        private Label label7;
+        private PictureBox pictureBox2;
+        private Label lblTotalTransaksi;
+        private Label label3;
+        private Panel panel5;
+        private Label label8;
+        private Label lblTotalBuahBusuk;
+        private Label label4;
+        private PictureBox pictureBox3;
+        private Panel panel3;
+        private Label label6;
+        private Label lblTotalStok;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private Label label5;
+        private Button AddProdukButton;
         private Button DashboardButton;
     }
 }

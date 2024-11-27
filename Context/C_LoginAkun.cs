@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using Npgsql;
 using Projek_PBO_B07.Core;
 using Projek_PBO_B07.Model;

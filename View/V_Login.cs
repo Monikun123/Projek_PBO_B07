@@ -2,7 +2,6 @@ using Npgsql;
 using Projek_PBO_B07.Core;
 using Projek_PBO_B07.Context;
 using Projek_PBO_B07.Model;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Projek_PBO_B07.View;
 namespace Projek_PBO_B07
 {

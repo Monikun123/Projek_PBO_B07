@@ -11,34 +11,21 @@ using Projek_PBO_B07.Context;
 
 namespace Projek_PBO_B07.View
 {
-    public partial class V_DashboardAdmin : Form
+    public partial class V_Produk : Form
     {
-        public V_DashboardAdmin()
+        public V_Produk()
         {
             InitializeComponent();
             getDataBuahAll();
-            this.Load += DashboardAdmin_Load;
+            this.Load += V_Produk_Load;
         }
-        private void label1_Click(object sender, EventArgs e)
+
+        private void V_Produk_Load(object sender, EventArgs e)
         {
-
-        }
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            LoadDataProduk();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblTotalStok_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTotalBuahBusuk_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
@@ -65,28 +52,6 @@ namespace Projek_PBO_B07.View
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void DashboardAdmin_Load(object sender, EventArgs e)
-        {
-            LoadDataProduk();
-        }
-
         private void LoadDataProduk()
         {
             try
@@ -131,6 +96,14 @@ namespace Projek_PBO_B07.View
                 {
                     dataGridView1.Rows[i].Cells["nomor"].Value = (i + 1).ToString();
                 }
+                DataGridViewButtonColumn updateButtonColumn = new DataGridViewButtonColumn
+                {
+                    Name = "Detail",
+                    HeaderText = "Detail",
+                    Text = "Update",
+                    UseColumnTextForButtonValue = true
+                };
+                dataGridView1.Columns.Add(updateButtonColumn);
             }
             catch (Exception ex)
             {
@@ -138,20 +111,17 @@ namespace Projek_PBO_B07.View
             }
         }
 
-        private void HalProdukButton_Click(object sender, EventArgs e)
+        private void AddProdukButton_Click(object sender, EventArgs e)
         {
-            this.Hide();  
-            V_Produk addHalProduk = new V_Produk();
-            if (addHalProduk.ShowDialog() == DialogResult.OK)
+            this.Hide();
+            V_FormTambahProduk formtambahproduk = new V_FormTambahProduk();
+            
+            if (formtambahproduk.ShowDialog() == DialogResult.OK)
             {
+                getDataBuahAll();
                 LoadDataProduk();
             }
             this.Show();
-
         }
     }
-
 }
-
-
-
