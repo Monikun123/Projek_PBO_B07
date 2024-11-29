@@ -72,10 +72,9 @@
             // 
             pictureBox4.BackColor = Color.Black;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(4, 53);
-            pictureBox4.Margin = new Padding(2, 2, 2, 2);
+            pictureBox4.Location = new Point(6, 88);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(31, 25);
+            pictureBox4.Size = new Size(44, 42);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
@@ -86,10 +85,9 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(27, 14);
-            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Location = new Point(39, 23);
             label5.Name = "label5";
-            label5.Size = new Size(67, 19);
+            label5.Size = new Size(103, 26);
             label5.TabIndex = 4;
             label5.Text = "PROFIL";
             label5.Click += label5_Click;
@@ -103,10 +101,9 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(panel5);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(215, 2);
-            panel2.Margin = new Padding(2, 2, 2, 2);
+            panel2.Location = new Point(308, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(788, 547);
+            panel2.Size = new Size(1125, 912);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -116,20 +113,18 @@
             panel7.AutoSize = true;
             panel7.BackColor = Color.FromArgb(233, 78, 1);
             panel7.Controls.Add(label4);
-            panel7.Location = new Point(27, 282);
-            panel7.Margin = new Padding(2, 2, 2, 2);
+            panel7.Location = new Point(39, 470);
             panel7.Name = "panel7";
-            panel7.Size = new Size(75, 26);
+            panel7.Size = new Size(125, 65);
             panel7.TabIndex = 7;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(17, 3);
-            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Location = new Point(24, 5);
             label4.Name = "label4";
-            label4.Size = new Size(45, 23);
+            label4.Size = new Size(69, 36);
             label4.TabIndex = 2;
             label4.Text = "Edit";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -141,19 +136,17 @@
             panel4.AutoSize = true;
             panel4.BackColor = Color.FromArgb(247, 204, 92);
             panel4.Controls.Add(label3);
-            panel4.Location = new Point(25, 208);
-            panel4.Margin = new Padding(2, 2, 2, 2);
+            panel4.Location = new Point(36, 347);
             panel4.Name = "panel4";
-            panel4.Size = new Size(256, 36);
+            panel4.Size = new Size(365, 60);
             panel4.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(2, 11);
-            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Location = new Point(3, 18);
             label3.Name = "label3";
-            label3.Size = new Size(120, 15);
+            label3.Size = new Size(184, 25);
             label3.TabIndex = 2;
             label3.Text = "Password : Admin123";
             // 
@@ -163,19 +156,17 @@
             panel3.AutoSize = true;
             panel3.BackColor = Color.FromArgb(247, 204, 92);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(27, 147);
-            panel3.Margin = new Padding(2, 2, 2, 2);
+            panel3.Location = new Point(39, 245);
             panel3.Name = "panel3";
-            panel3.Size = new Size(254, 36);
+            panel3.Size = new Size(363, 60);
             panel3.TabIndex = 5;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(2, 11);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(3, 18);
             label2.Name = "label2";
-            label2.Size = new Size(167, 15);
+            label2.Size = new Size(251, 25);
             label2.TabIndex = 2;
             label2.Text = "Email : Admin123@gmail.com";
             label2.Click += label2_Click;
@@ -186,19 +177,17 @@
             panel5.AutoSize = true;
             panel5.BackColor = Color.FromArgb(247, 204, 92);
             panel5.Controls.Add(lblTotalBuahBusuk);
-            panel5.Location = new Point(27, 81);
-            panel5.Margin = new Padding(2, 2, 2, 2);
+            panel5.Location = new Point(39, 135);
             panel5.Name = "panel5";
-            panel5.Size = new Size(254, 36);
+            panel5.Size = new Size(362, 60);
             panel5.TabIndex = 3;
             // 
             // lblTotalBuahBusuk
             // 
             lblTotalBuahBusuk.AutoSize = true;
-            lblTotalBuahBusuk.Location = new Point(8, 11);
-            lblTotalBuahBusuk.Margin = new Padding(2, 0, 2, 0);
+            lblTotalBuahBusuk.Location = new Point(11, 18);
             lblTotalBuahBusuk.Name = "lblTotalBuahBusuk";
-            lblTotalBuahBusuk.Size = new Size(90, 15);
+            lblTotalBuahBusuk.Size = new Size(136, 25);
             lblTotalBuahBusuk.TabIndex = 2;
             lblTotalBuahBusuk.Text = "Nama : Admin1";
             // 
@@ -210,12 +199,11 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.7313461F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Location = new Point(1, 1);
-            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
+            tableLayoutPanel1.Location = new Point(1, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1005, 551);
+            tableLayoutPanel1.Size = new Size(1436, 918);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -233,19 +221,17 @@
             panel1.Controls.Add(label9);
             panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(2, 2);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(209, 547);
+            panel1.Size = new Size(299, 912);
             panel1.TabIndex = 0;
             // 
             // LogOutButton
             // 
             LogOutButton.BackColor = Color.Red;
-            LogOutButton.Location = new Point(36, 257);
-            LogOutButton.Margin = new Padding(2, 2, 2, 2);
+            LogOutButton.Location = new Point(51, 428);
             LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(83, 25);
+            LogOutButton.Size = new Size(119, 42);
             LogOutButton.TabIndex = 14;
             LogOutButton.Text = "LogOut";
             LogOutButton.UseVisualStyleBackColor = false;
@@ -254,10 +240,9 @@
             // 
             pictureBox8.BackColor = Color.Red;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(4, 257);
-            pictureBox8.Margin = new Padding(2, 2, 2, 2);
+            pictureBox8.Location = new Point(6, 428);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(31, 25);
+            pictureBox8.Size = new Size(44, 42);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 13;
             pictureBox8.TabStop = false;
@@ -266,10 +251,9 @@
             // 
             ProfilButton.BackColor = Color.FromArgb(247, 204, 92);
             ProfilButton.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ProfilButton.Location = new Point(36, 164);
-            ProfilButton.Margin = new Padding(2, 2, 2, 2);
+            ProfilButton.Location = new Point(51, 273);
             ProfilButton.Name = "ProfilButton";
-            ProfilButton.Size = new Size(83, 25);
+            ProfilButton.Size = new Size(119, 42);
             ProfilButton.TabIndex = 12;
             ProfilButton.Text = "Profil";
             ProfilButton.UseVisualStyleBackColor = false;
@@ -278,20 +262,18 @@
             // 
             pictureBox7.BackColor = Color.FromArgb(247, 204, 92);
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(4, 164);
-            pictureBox7.Margin = new Padding(2, 2, 2, 2);
+            pictureBox7.Location = new Point(6, 273);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(31, 25);
+            pictureBox7.Size = new Size(44, 42);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 11;
             pictureBox7.TabStop = false;
             // 
             // RiwayatButton
             // 
-            RiwayatButton.Location = new Point(36, 128);
-            RiwayatButton.Margin = new Padding(2, 2, 2, 2);
+            RiwayatButton.Location = new Point(51, 213);
             RiwayatButton.Name = "RiwayatButton";
-            RiwayatButton.Size = new Size(83, 25);
+            RiwayatButton.Size = new Size(119, 42);
             RiwayatButton.TabIndex = 10;
             RiwayatButton.Text = "Riwayat";
             RiwayatButton.UseVisualStyleBackColor = true;
@@ -300,20 +282,18 @@
             // 
             pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(4, 128);
-            pictureBox6.Margin = new Padding(2, 2, 2, 2);
+            pictureBox6.Location = new Point(6, 213);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(31, 25);
+            pictureBox6.Size = new Size(44, 42);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
             // 
             // button1
             // 
-            button1.Location = new Point(36, 91);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Location = new Point(51, 152);
             button1.Name = "button1";
-            button1.Size = new Size(83, 25);
+            button1.Size = new Size(119, 42);
             button1.TabIndex = 8;
             button1.Text = "Produk";
             button1.UseVisualStyleBackColor = true;
@@ -324,9 +304,8 @@
             panel6.Controls.Add(label1);
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(0, 0);
-            panel6.Margin = new Padding(2, 2, 2, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(209, 43);
+            panel6.Size = new Size(299, 72);
             panel6.TabIndex = 7;
             // 
             // label1
@@ -336,10 +315,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(36, 11);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(51, 18);
             label1.Name = "label1";
-            label1.Size = new Size(73, 22);
+            label1.Size = new Size(108, 32);
             label1.TabIndex = 0;
             label1.Text = "Fruities";
             // 
@@ -347,10 +325,9 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(4, 91);
-            pictureBox5.Margin = new Padding(2, 2, 2, 2);
+            pictureBox5.Location = new Point(6, 152);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(31, 25);
+            pictureBox5.Size = new Size(44, 42);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
@@ -360,20 +337,20 @@
             label9.AutoSize = true;
             label9.BackColor = Color.White;
             label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(36, 62);
-            label9.Margin = new Padding(2, 0, 2, 0);
+            label9.Location = new Point(51, 103);
             label9.Name = "label9";
-            label9.Size = new Size(72, 17);
+            label9.Size = new Size(107, 25);
             label9.TabIndex = 5;
             label9.Text = "Dashboard";
             label9.Click += label9_Click;
             // 
             // V_Profil
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "V_Profil";
             Text = "V_Profil";
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
