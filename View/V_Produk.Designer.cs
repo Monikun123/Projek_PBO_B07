@@ -109,6 +109,7 @@
             DashboardButton.TabIndex = 16;
             DashboardButton.Text = "DashBoard";
             DashboardButton.UseVisualStyleBackColor = false;
+            DashboardButton.Click += DashboardButton_Click;
             // 
             // LogOutButton
             // 
@@ -139,6 +140,7 @@
             ProfilButton.TabIndex = 12;
             ProfilButton.Text = "Profil";
             ProfilButton.UseVisualStyleBackColor = true;
+            ProfilButton.Click += ProfilButton_Click;
             // 
             // pictureBox7
             // 
@@ -159,6 +161,7 @@
             RiwayatButton.TabIndex = 10;
             RiwayatButton.Text = "Riwayat";
             RiwayatButton.UseVisualStyleBackColor = true;
+            RiwayatButton.Click += RiwayatButton_Click;
             // 
             // pictureBox6
             // 

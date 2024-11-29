@@ -115,11 +115,47 @@ namespace Projek_PBO_B07.View
         {
             this.Hide();
             V_FormTambahProduk formtambahproduk = new V_FormTambahProduk();
-            
+
             if (formtambahproduk.ShowDialog() == DialogResult.OK)
             {
                 getDataBuahAll();
                 LoadDataProduk();
+            }
+            this.Show();
+        }
+
+        private void RiwayatButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat addriwayat = new V_Riwayat();
+            if (addriwayat.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
+            }
+            this.Show();
+        }
+
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Profil addprofil = new V_Profil();
+            if (addprofil.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
+            }
+            this.Show();
+        }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardAdmin adddashboard = new V_DashboardAdmin();
+            if (adddashboard.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
             }
             this.Show();
         }
