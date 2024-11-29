@@ -352,6 +352,7 @@
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "V_Profil";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_Profil";
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);

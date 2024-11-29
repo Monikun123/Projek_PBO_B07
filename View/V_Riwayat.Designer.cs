@@ -518,6 +518,7 @@
             ClientSize = new Size(983, 495);
             Controls.Add(tableLayoutPanel1);
             Name = "V_Riwayat";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_Riwayat";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

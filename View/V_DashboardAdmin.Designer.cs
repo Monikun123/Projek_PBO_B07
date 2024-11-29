@@ -454,7 +454,8 @@
             ClientSize = new Size(983, 495);
             Controls.Add(tableLayoutPanel1);
             Name = "V_DashboardAdmin";
-            Text = "DasshboardAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "DashboardAdmin";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();

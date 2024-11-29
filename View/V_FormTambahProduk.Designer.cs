@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            BackButton = new Button();
             AddProdukButton = new Button();
             TanggalExpiredDate = new DateTimePicker();
             label5 = new Label();
@@ -46,6 +47,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(BackButton);
             panel1.Controls.Add(AddProdukButton);
             panel1.Controls.Add(TanggalExpiredDate);
             panel1.Controls.Add(label5);
@@ -61,6 +63,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
+            // 
+            // BackButton
+            // 
+            BackButton.BackColor = Color.Red;
+            BackButton.ForeColor = Color.Black;
+            BackButton.Location = new Point(616, 366);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(112, 34);
+            BackButton.TabIndex = 13;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // AddProdukButton
             // 
@@ -178,6 +192,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Name = "V_FormTambahProduk";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_FormTambahProduk";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -200,5 +215,6 @@
         private DateTimePicker TanggalExpiredDate;
         private Label label5;
         private Button AddProdukButton;
+        private Button BackButton;
     }
 }

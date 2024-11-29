@@ -60,21 +60,21 @@ namespace Projek_PBO_B07.View
         }
         private bool ValidateInput()
         {
-            
+
             if (NamaBuahcomboBox.SelectedValue == null)
             {
                 MessageBox.Show("Silakan pilih nama buah.");
                 return false;
             }
 
-         
+
             if (TanggalMasukDate.Value > TanggalExpiredDate.Value)
             {
                 MessageBox.Show("Tanggal masuk tidak boleh lebih besar dari tanggal expired.");
                 return false;
             }
 
-       
+
             if (string.IsNullOrWhiteSpace(StoktextBox.Text) ||
                 !int.TryParse(StoktextBox.Text, out int stok) || stok < 0)
             {
@@ -82,21 +82,26 @@ namespace Projek_PBO_B07.View
                 return false;
             }
 
-         
+
             return true;
         }
         private void ClearFields()
         {
-           
-            StoktextBox.Clear(); 
 
-           
-            NamaBuahcomboBox.SelectedIndex = -1; 
+            StoktextBox.Clear();
 
-            
+
+            NamaBuahcomboBox.SelectedIndex = -1;
+
+
             TanggalMasukDate.Value = DateTime.Now;
             TanggalExpiredDate.Value = DateTime.Now;
         }
 
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Hide();
+        }
     }
 }

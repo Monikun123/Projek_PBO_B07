@@ -461,6 +461,7 @@
             ClientSize = new Size(983, 495);
             Controls.Add(tableLayoutPanel1);
             Name = "V_Produk";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_Produk";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
