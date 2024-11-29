@@ -98,5 +98,9 @@ namespace Projek_PBO_B07.View
             TanggalExpiredDate.Value = DateTime.Now;
         }
 
+        private void TanggalExpiredDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

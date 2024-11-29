@@ -85,6 +85,7 @@
             emailText.Name = "emailText";
             emailText.Size = new Size(349, 31);
             emailText.TabIndex = 4;
+            emailText.TextChanged += emailText_TextChanged;
             // 
             // label6
             // 

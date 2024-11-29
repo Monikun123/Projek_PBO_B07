@@ -82,6 +82,7 @@
             TanggalExpiredDate.Size = new Size(168, 31);
             TanggalExpiredDate.TabIndex = 8;
             TanggalExpiredDate.Value = new DateTime(2024, 1, 1, 0, 0, 0, 0);
+            TanggalExpiredDate.ValueChanged += TanggalExpiredDate_ValueChanged;
             // 
             // label5
             // 

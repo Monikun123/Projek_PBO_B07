@@ -15,21 +15,21 @@ namespace Projek_PBO_B07.View
         {
             InitializeComponent();
             getDataBuahAll();
-            controller = new C_Riwayat();  // Inisialisasi controller
-            LoadData();  // Panggil method untuk memuat data saat form pertama kali dibuka
+            controller = new C_Riwayat();  
+            LoadData();  
         }
 
-        // Metode untuk memuat data riwayat transaksi ke dalam form
+
         private void LoadData()
         {
             try
             {
-                // Ambil data riwayat transaksi dari controller
+                
                 DataTable data = controller.GetRiwayatTransaksi();
 
-                // Bersihkan panel7 sebelum menambahkan data baru
+               
 
-                // Pastikan ada data sebelum menambahkannya ke panel
+                // Bersihkan panel dan memastikan ada data sebelum menambahkannya ke panel
                 if (data != null && data.Rows.Count > 0)
                 {
                     int topPosition = 10;  // Menentukan posisi vertikal pertama untuk panel
@@ -38,9 +38,9 @@ namespace Projek_PBO_B07.View
                     {
                         // Membuat panel baru untuk setiap baris data
                         Panel itemPanel = new Panel();
-                        itemPanel.Width = panel8.Width - 20;  // Menyesuaikan lebar itemPanel dengan panel9
-                        itemPanel.Height = 80;  // Menentukan tinggi panel per item
-                        itemPanel.Location = new Point(10, topPosition);  // Menentukan posisi panel vertikal
+                        itemPanel.Width = panel8.Width - 20;  /
+                        itemPanel.Height = 80; 
+                        itemPanel.Location = new Point(10, topPosition); 
 
                         // Menambahkan label untuk ID
                         Label labelID = new Label();
@@ -60,8 +60,7 @@ namespace Projek_PBO_B07.View
                         Label labelTglTransaksi = new Label();
                         labelTglTransaksi.Text = row["tanggal_transaksi"].ToString();
                         labelTglTransaksi.Width = 120;
-                        labelTglTransaksi.Location = new Point(420, 10);  // Ubah lokasi agar tidak bertumpuk
-                        itemPanel.Controls.Add(labelTglTransaksi);
+                        labelTglTransaksi.Location = new Point(420, 10);
 
                         // Menambahkan label untuk Buah Busuk
                         Label labelBobot = new Label();
@@ -77,11 +76,11 @@ namespace Projek_PBO_B07.View
                         itemPanel.Controls.Add(labelStatus);
 
 
-                        // Menambahkan itemPanel ke panel9
+                        // Menambahkan itemPanel ke panel7
                         panel7.Controls.Add(itemPanel);
 
                         // Update posisi vertikal untuk panel berikutnya
-                        topPosition += itemPanel.Height + 10;  // Tambah tinggi panel dan margin vertikal
+                        topPosition += itemPanel.Height + 10; 
                     }
                 }
                 else
@@ -118,6 +117,11 @@ namespace Projek_PBO_B07.View
             {
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
