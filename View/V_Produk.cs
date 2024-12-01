@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_Produk : Form
     {
+        public int Id_user {  get; set; }
         public V_Produk()
         {
             InitializeComponent();
@@ -181,7 +183,7 @@ namespace Projek_PBO_B07.View
         private void ProfilButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Profil addprofil = new V_Profil();
+            V_Profil addprofil = new V_Profil(Id_user);
             if (addprofil.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
@@ -189,5 +191,7 @@ namespace Projek_PBO_B07.View
             }
             this.Show();
         }
+
+ 
     }
 }
