@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace Projek_PBO_B07.View
 {
-    public partial class Logout : UserControl
+    public partial class V_DashboardCust : Form
     {
-        public Logout()
+        public V_DashboardCust()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Logout_Load(object sender, EventArgs e)
+        private void DashboardCust_Load(object sender, EventArgs e)
         {
 
         }

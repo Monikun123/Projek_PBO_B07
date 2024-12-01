@@ -119,5 +119,43 @@ namespace Projek_PBO_B07.View
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin();
+            v_DashboardAdmin.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Produk v_Produk = new V_Produk();
+            v_Produk.Show();
+        }
+
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Profil v_profil = new V_Profil();
+            v_profil.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout();
+            v_logout.Show();
+        }
     }
 }

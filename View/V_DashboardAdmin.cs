@@ -13,8 +13,7 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_DashboardAdmin : Form
     {
-        private int userId;
-
+        public int id_profil { get; set; }
         public V_DashboardAdmin()
         {
             InitializeComponent();
@@ -180,13 +179,30 @@ namespace Projek_PBO_B07.View
         private void ProfilButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Profil addprofil = new V_Profil(userId);
+            V_Profil addprofil = new V_Profil(id_user);
             if (addprofil.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
                 getDataBuahAll();
             }
             this.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout();
+            v_logout.Show();
         }
     }
 

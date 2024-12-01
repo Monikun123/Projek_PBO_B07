@@ -136,10 +136,10 @@ namespace Projek_PBO_B07.View
             MessageBox.Show("Event CellContentClick dipanggil");
             if (e.RowIndex < 0) return;
 
-            if(e.ColumnIndex == dataGridView1.Columns["Update"].Index)
+            if (e.ColumnIndex == dataGridView1.Columns["Update"].Index)
             {
                 try
-                {   
+                {
 
                     int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_produk"].Value);
 
@@ -170,7 +170,7 @@ namespace Projek_PBO_B07.View
             }
         }
 
-            private void RiwayatButton_Click(object sender, EventArgs e)
+        private void RiwayatButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             V_Riwayat addriwayat = new V_Riwayat();
@@ -193,6 +193,18 @@ namespace Projek_PBO_B07.View
             this.Show();
         }
 
- 
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin();
+            v_DashboardAdmin.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout();
+            v_logout.Show();
+        }
     }
 }
