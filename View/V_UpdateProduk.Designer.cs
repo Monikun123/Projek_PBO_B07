@@ -41,12 +41,14 @@
             label2 = new Label();
             panel2 = new Panel();
             label1 = new Label();
+            TanggalTransaksiDate = new DateTimePicker();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(TanggalTransaksiDate);
             panel1.Controls.Add(AddRiwayatbutton);
             panel1.Controls.Add(BusuktextBox);
             panel1.Controls.Add(TerjualTexbox);
@@ -67,23 +69,24 @@
             // AddRiwayatbutton
             // 
             AddRiwayatbutton.BackColor = Color.FromArgb(244, 204, 92);
-            AddRiwayatbutton.Location = new Point(520, 324);
+            AddRiwayatbutton.Location = new Point(508, 352);
             AddRiwayatbutton.Name = "AddRiwayatbutton";
             AddRiwayatbutton.Size = new Size(171, 34);
             AddRiwayatbutton.TabIndex = 19;
             AddRiwayatbutton.Text = "Mengeluarkan";
             AddRiwayatbutton.UseVisualStyleBackColor = false;
+            AddRiwayatbutton.Click += AddRiwayatbutton_Click_1;
             // 
             // BusuktextBox
             // 
-            BusuktextBox.Location = new Point(628, 278);
+            BusuktextBox.Location = new Point(616, 306);
             BusuktextBox.Name = "BusuktextBox";
             BusuktextBox.Size = new Size(150, 31);
             BusuktextBox.TabIndex = 18;
             // 
             // TerjualTexbox
             // 
-            TerjualTexbox.Location = new Point(444, 278);
+            TerjualTexbox.Location = new Point(432, 306);
             TerjualTexbox.Name = "TerjualTexbox";
             TerjualTexbox.Size = new Size(150, 31);
             TerjualTexbox.TabIndex = 17;
@@ -92,7 +95,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(628, 253);
+            label5.Location = new Point(616, 281);
             label5.Name = "label5";
             label5.Size = new Size(58, 22);
             label5.TabIndex = 16;
@@ -102,7 +105,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(444, 253);
+            label4.Location = new Point(432, 281);
             label4.Name = "label4";
             label4.Size = new Size(67, 22);
             label4.TabIndex = 15;
@@ -112,11 +115,12 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(484, 209);
+            label3.Location = new Point(432, 217);
             label3.Name = "label3";
             label3.Size = new Size(207, 27);
             label3.TabIndex = 14;
             label3.Text = "Mengeluarkan Buah";
+            label3.Click += label3_Click;
             // 
             // BackButton
             // 
@@ -133,7 +137,7 @@
             // AddPromosiButton
             // 
             AddPromosiButton.BackColor = Color.FromArgb(244, 204, 92);
-            AddPromosiButton.Location = new Point(36, 312);
+            AddPromosiButton.Location = new Point(24, 340);
             AddPromosiButton.Name = "AddPromosiButton";
             AddPromosiButton.Size = new Size(214, 34);
             AddPromosiButton.TabIndex = 12;
@@ -144,7 +148,7 @@
             // PromosiCombobox
             // 
             PromosiCombobox.FormattingEnabled = true;
-            PromosiCombobox.Location = new Point(36, 273);
+            PromosiCombobox.Location = new Point(24, 301);
             PromosiCombobox.Name = "PromosiCombobox";
             PromosiCombobox.Size = new Size(182, 33);
             PromosiCombobox.TabIndex = 2;
@@ -153,7 +157,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(36, 209);
+            label2.Location = new Point(24, 237);
             label2.Name = "label2";
             label2.Size = new Size(91, 27);
             label2.TabIndex = 1;
@@ -182,6 +186,15 @@
             label1.TabIndex = 1;
             label1.Text = "Fruities";
             label1.Click += label1_Click;
+            // 
+            // TanggalTransaksiDate
+            // 
+            TanggalTransaksiDate.CustomFormat = "yyyy-MM-dd";
+            TanggalTransaksiDate.Format = DateTimePickerFormat.Custom;
+            TanggalTransaksiDate.Location = new Point(432, 247);
+            TanggalTransaksiDate.Name = "TanggalTransaksiDate";
+            TanggalTransaksiDate.Size = new Size(300, 31);
+            TanggalTransaksiDate.TabIndex = 20;
             // 
             // V_UpdateProduk
             // 
@@ -217,5 +230,6 @@
         private Button AddRiwayatbutton;
         private TextBox BusuktextBox;
         private TextBox TerjualTexbox;
+        private DateTimePicker TanggalTransaksiDate;
     }
 }

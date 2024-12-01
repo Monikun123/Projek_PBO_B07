@@ -73,6 +73,27 @@ ORDER BY
 
         }
 
+        public static DataTable GetDataStock(int id_produk)
+        {
+            string query = $"SELECT stok FROM produk  Where id_produk = @id_produk";
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@id_produk", id_produk),
+            };
+            DataTable getId = queryExecutor(query, parameters);
+            return getId;
+        }
+        public static void UpdateStok(int total, int id_produk)
+        {
+            string query = $"UPDATE produk SET stok = @stok WHERE id_produk = @id_produk";
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("stok", total),
+                new NpgsqlParameter("@id_produk", id_produk),
+            };
+            commandExecutor(query, parameters);
+        }
+
     }
  }
 
