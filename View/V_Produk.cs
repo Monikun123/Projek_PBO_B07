@@ -98,7 +98,7 @@ namespace Projek_PBO_B07.View
                 }
                 DataGridViewButtonColumn updateButtonColumn = new DataGridViewButtonColumn
                 {
-                    Name = "Detail",
+                    Name = "Update",
                     HeaderText = "Detail",
                     Text = "Update",
                     UseColumnTextForButtonValue = true
@@ -128,8 +128,46 @@ namespace Projek_PBO_B07.View
         {
 
         }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Event CellContentClick dipanggil");
+            if (e.RowIndex < 0) return;
 
-        private void RiwayatButton_Click(object sender, EventArgs e)
+            if(e.ColumnIndex == dataGridView1.Columns["Update"].Index)
+            {
+                try
+                {   
+
+                    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_produk"].Value);
+
+
+
+                    this.Hide();
+
+                    V_UpdateProduk addUpdateForm = new V_UpdateProduk
+                    {
+                        id_produk = id,
+                    };
+                    if (addUpdateForm.ShowDialog() == DialogResult.OK)
+                    {
+                        MessageBox.Show("Form Update ditutup dengan status OK");
+                        getDataBuahAll();
+                        LoadDataProduk();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Form Update ditutup tanpa status OK");
+                    }
+                    this.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+            private void RiwayatButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             V_Riwayat addriwayat = new V_Riwayat();

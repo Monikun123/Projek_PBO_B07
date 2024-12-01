@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            AddRiwayatbutton = new Button();
+            BusuktextBox = new TextBox();
+            TerjualTexbox = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             BackButton = new Button();
-            this.AddPromosiButton = new Button();
+            AddPromosiButton = new Button();
             PromosiCombobox = new ComboBox();
             label2 = new Label();
             panel2 = new Panel();
@@ -41,8 +47,14 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(AddRiwayatbutton);
+            panel1.Controls.Add(BusuktextBox);
+            panel1.Controls.Add(TerjualTexbox);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(BackButton);
-            panel1.Controls.Add(this.AddPromosiButton);
+            panel1.Controls.Add(AddPromosiButton);
             panel1.Controls.Add(PromosiCombobox);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(panel2);
@@ -52,26 +64,82 @@
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 1;
             // 
+            // AddRiwayatbutton
+            // 
+            AddRiwayatbutton.BackColor = Color.FromArgb(244, 204, 92);
+            AddRiwayatbutton.Location = new Point(520, 324);
+            AddRiwayatbutton.Name = "AddRiwayatbutton";
+            AddRiwayatbutton.Size = new Size(171, 34);
+            AddRiwayatbutton.TabIndex = 19;
+            AddRiwayatbutton.Text = "Mengeluarkan";
+            AddRiwayatbutton.UseVisualStyleBackColor = false;
+            // 
+            // BusuktextBox
+            // 
+            BusuktextBox.Location = new Point(628, 278);
+            BusuktextBox.Name = "BusuktextBox";
+            BusuktextBox.Size = new Size(150, 31);
+            BusuktextBox.TabIndex = 18;
+            // 
+            // TerjualTexbox
+            // 
+            TerjualTexbox.Location = new Point(444, 278);
+            TerjualTexbox.Name = "TerjualTexbox";
+            TerjualTexbox.Size = new Size(150, 31);
+            TerjualTexbox.TabIndex = 17;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(628, 253);
+            label5.Name = "label5";
+            label5.Size = new Size(58, 22);
+            label5.TabIndex = 16;
+            label5.Text = "Busuk";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(444, 253);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 22);
+            label4.TabIndex = 15;
+            label4.Text = "Terjual";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(484, 209);
+            label3.Name = "label3";
+            label3.Size = new Size(207, 27);
+            label3.TabIndex = 14;
+            label3.Text = "Mengeluarkan Buah";
+            // 
             // BackButton
             // 
             BackButton.BackColor = Color.Red;
             BackButton.ForeColor = Color.Black;
-            BackButton.Location = new Point(616, 366);
+            BackButton.Location = new Point(655, 404);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(112, 34);
             BackButton.TabIndex = 13;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // AddPromosiButton
             // 
-            this.AddPromosiButton.BackColor = Color.FromArgb(244, 204, 92);
-            this.AddPromosiButton.Location = new Point(36, 312);
-            this.AddPromosiButton.Name = "AddPromosiButton";
-            this.AddPromosiButton.Size = new Size(214, 34);
-            this.AddPromosiButton.TabIndex = 12;
-            this.AddPromosiButton.Text = "Add Promosi";
-            this.AddPromosiButton.UseVisualStyleBackColor = false;
+            AddPromosiButton.BackColor = Color.FromArgb(244, 204, 92);
+            AddPromosiButton.Location = new Point(36, 312);
+            AddPromosiButton.Name = "AddPromosiButton";
+            AddPromosiButton.Size = new Size(214, 34);
+            AddPromosiButton.TabIndex = 12;
+            AddPromosiButton.Text = "Add Promosi";
+            AddPromosiButton.UseVisualStyleBackColor = false;
+            AddPromosiButton.Click += AddPromosiButton_Click;
             // 
             // PromosiCombobox
             // 
@@ -85,7 +153,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(36, 232);
+            label2.Location = new Point(36, 209);
             label2.Name = "label2";
             label2.Size = new Size(91, 27);
             label2.TabIndex = 1;
@@ -135,7 +203,7 @@
 
         private Panel panel1;
         private Button BackButton;
-        private Button AddProdukButton;
+        private Button AddPromosiButton;
         private DateTimePicker TanggalExpiredDate;
         private Label label5;
         private Label label4;
@@ -146,5 +214,8 @@
         private Label label2;
         private Panel panel2;
         private Label label1;
+        private Button AddRiwayatbutton;
+        private TextBox BusuktextBox;
+        private TextBox TerjualTexbox;
     }
 }
