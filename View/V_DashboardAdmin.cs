@@ -13,6 +13,7 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_DashboardAdmin : Form
     {
+        private int id_user { get; set; }
         public V_DashboardAdmin()
         {
             InitializeComponent();
@@ -140,14 +141,51 @@ namespace Projek_PBO_B07.View
 
         private void HalProdukButton_Click(object sender, EventArgs e)
         {
-            this.Hide();  
+            this.Hide();
             V_Produk addHalProduk = new V_Produk();
             if (addHalProduk.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
+                getDataBuahAll();
             }
             this.Show();
 
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void RiwayatButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat addriwayat = new V_Riwayat();
+            if (addriwayat.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
+            }
+            this.Show();
+
+
+        }
+
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Profil addprofil = new V_Profil(id_user);
+            if (addprofil.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
+            }
+            this.Show();
         }
     }
 
