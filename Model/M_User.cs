@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projek_PBO_B07.Model
 {
-    internal class M_User
+    public class M_User
     {
         public string nama { get; set; }
         public string email { get; set; }

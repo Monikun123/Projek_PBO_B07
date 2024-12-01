@@ -26,13 +26,15 @@ namespace Projek_PBO_B07
                 }
                 {
                     string role = login.Role;
+                    
 
                     if (role == "Admin")
                     {
                         MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        V_DashboardAdmin adminDashboard = new V_DashboardAdmin();
+                        //V_DashboardAdmin adminDashboard = new V_DashboardAdmin();
+                        V_Profil profil = new V_Profil(login.Id_User);
                         this.Hide();
-                        adminDashboard.Show();
+                        profil.Show();
                     }
                     else if (role == "Customer")
                     {

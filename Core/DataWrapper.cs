@@ -8,11 +8,11 @@ using Npgsql;
 
 namespace Projek_PBO_B07.Core
 {
-    internal class DataWrapper
+    public class DataWrapper
     {
         // Properti credential database dan koneksinya
         private static readonly string DB_HOST = "localhost";
-        private static readonly string DB_DATABASE = "projek2";
+        private static readonly string DB_DATABASE = "projek3";
         private static readonly string DB_USERNAME = "postgres";
         private static readonly string DB_PASSWORD = "1";
         private static readonly string DB_PORT = "5432";
