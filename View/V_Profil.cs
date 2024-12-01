@@ -92,7 +92,10 @@ namespace Projek_PBO_B07.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            V_EditProfil v_EditProfil = new V_EditProfil();
+            v_EditProfil.Show();
+            
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)

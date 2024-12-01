@@ -13,6 +13,8 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_DashboardAdmin : Form
     {
+        private int userId;
+
         public V_DashboardAdmin()
         {
             InitializeComponent();
@@ -178,7 +180,7 @@ namespace Projek_PBO_B07.View
         private void ProfilButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Profil addprofil = new V_Profil();
+            V_Profil addprofil = new V_Profil(userId);
             if (addprofil.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
