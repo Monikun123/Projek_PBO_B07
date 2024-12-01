@@ -178,6 +178,7 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "V_Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);

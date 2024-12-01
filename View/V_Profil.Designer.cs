@@ -76,7 +76,7 @@
             pictureBox4.Location = new Point(4, 53);
             pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(31, 25);
+            pictureBox4.Size = new Size(35, 33);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
@@ -91,9 +91,9 @@
             label5.Location = new Point(27, 14);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(67, 19);
+            label5.Size = new Size(83, 23);
             label5.TabIndex = 4;
-            label5.Text = "PROFIL";
+            label5.Text = "PROIFL";
             label5.Click += label5_Click;
             // 
             // panel2
@@ -111,7 +111,7 @@
             panel2.Location = new Point(215, 2);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(788, 547);
+            panel2.Size = new Size(901, 729);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -165,7 +165,7 @@
             panel4.Location = new Point(107, 199);
             panel4.Margin = new Padding(2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(256, 36);
+            panel4.Size = new Size(255, 47);
             panel4.TabIndex = 6;
             // 
             // Password
@@ -187,7 +187,7 @@
             panel3.Location = new Point(107, 137);
             panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(254, 36);
+            panel3.Size = new Size(255, 47);
             panel3.TabIndex = 5;
             // 
             // panel5
@@ -199,7 +199,7 @@
             panel5.Location = new Point(107, 80);
             panel5.Margin = new Padding(2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(254, 36);
+            panel5.Size = new Size(255, 47);
             panel5.TabIndex = 3;
             panel5.Paint += panel5_Paint;
             // 
@@ -227,7 +227,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1005, 551);
+            tableLayoutPanel1.Size = new Size(1149, 735);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -248,7 +248,7 @@
             panel1.Location = new Point(2, 2);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(209, 547);
+            panel1.Size = new Size(240, 729);
             panel1.TabIndex = 0;
             // 
             // LogOutButton
@@ -257,7 +257,7 @@
             LogOutButton.Location = new Point(36, 257);
             LogOutButton.Margin = new Padding(2);
             LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(83, 25);
+            LogOutButton.Size = new Size(95, 33);
             LogOutButton.TabIndex = 14;
             LogOutButton.Text = "LogOut";
             LogOutButton.UseVisualStyleBackColor = false;
@@ -269,7 +269,7 @@
             pictureBox8.Location = new Point(4, 257);
             pictureBox8.Margin = new Padding(2);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(31, 25);
+            pictureBox8.Size = new Size(35, 33);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 13;
             pictureBox8.TabStop = false;
@@ -281,7 +281,7 @@
             ProfilButton.Location = new Point(36, 164);
             ProfilButton.Margin = new Padding(2);
             ProfilButton.Name = "ProfilButton";
-            ProfilButton.Size = new Size(83, 25);
+            ProfilButton.Size = new Size(95, 33);
             ProfilButton.TabIndex = 12;
             ProfilButton.Text = "Profil";
             ProfilButton.UseVisualStyleBackColor = false;
@@ -293,7 +293,7 @@
             pictureBox7.Location = new Point(4, 164);
             pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(31, 25);
+            pictureBox7.Size = new Size(35, 33);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 11;
             pictureBox7.TabStop = false;
@@ -303,7 +303,7 @@
             RiwayatButton.Location = new Point(36, 128);
             RiwayatButton.Margin = new Padding(2);
             RiwayatButton.Name = "RiwayatButton";
-            RiwayatButton.Size = new Size(83, 25);
+            RiwayatButton.Size = new Size(95, 33);
             RiwayatButton.TabIndex = 10;
             RiwayatButton.Text = "Riwayat";
             RiwayatButton.UseVisualStyleBackColor = true;
@@ -315,7 +315,7 @@
             pictureBox6.Location = new Point(4, 128);
             pictureBox6.Margin = new Padding(2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(31, 25);
+            pictureBox6.Size = new Size(35, 33);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
@@ -325,7 +325,7 @@
             button1.Location = new Point(36, 91);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(83, 25);
+            button1.Size = new Size(95, 33);
             button1.TabIndex = 8;
             button1.Text = "Produk";
             button1.UseVisualStyleBackColor = true;
@@ -338,7 +338,7 @@
             panel6.Location = new Point(0, 0);
             panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(209, 43);
+            panel6.Size = new Size(240, 57);
             panel6.TabIndex = 7;
             // 
             // label1
@@ -348,10 +348,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(36, 11);
+            label1.Location = new Point(42, 15);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(73, 22);
+            label1.Size = new Size(93, 26);
             label1.TabIndex = 0;
             label1.Text = "Fruities";
             // 
@@ -362,7 +362,7 @@
             pictureBox5.Location = new Point(4, 91);
             pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(31, 25);
+            pictureBox5.Size = new Size(35, 33);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
@@ -372,10 +372,10 @@
             label9.AutoSize = true;
             label9.BackColor = Color.White;
             label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(36, 62);
+            label9.Location = new Point(41, 83);
             label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(72, 17);
+            label9.Size = new Size(92, 21);
             label9.TabIndex = 5;
             label9.Text = "Dashboard";
             label9.Click += label9_Click;
@@ -393,10 +393,11 @@
             // 
             // V_Profil
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "V_Profil";
             Text = "V_Profil";
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

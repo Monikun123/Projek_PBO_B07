@@ -98,7 +98,7 @@ namespace Projek_PBO_B07.View
                 }
                 DataGridViewButtonColumn updateButtonColumn = new DataGridViewButtonColumn
                 {
-                    Name = "Detail",
+                    Name = "Update",
                     HeaderText = "Detail",
                     Text = "Update",
                     UseColumnTextForButtonValue = true
@@ -115,11 +115,77 @@ namespace Projek_PBO_B07.View
         {
             this.Hide();
             V_FormTambahProduk formtambahproduk = new V_FormTambahProduk();
-            
+
             if (formtambahproduk.ShowDialog() == DialogResult.OK)
             {
                 getDataBuahAll();
                 LoadDataProduk();
+            }
+            this.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Event CellContentClick dipanggil");
+            if (e.RowIndex < 0) return;
+
+            if(e.ColumnIndex == dataGridView1.Columns["Update"].Index)
+            {
+                try
+                {   
+
+                    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_produk"].Value);
+
+
+
+                    this.Hide();
+
+                    V_UpdateProduk addUpdateForm = new V_UpdateProduk
+                    {
+                        id_produk = id,
+                    };
+                    if (addUpdateForm.ShowDialog() == DialogResult.OK)
+                    {
+                        MessageBox.Show("Form Update ditutup dengan status OK");
+                        getDataBuahAll();
+                        LoadDataProduk();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Form Update ditutup tanpa status OK");
+                    }
+                    this.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+            private void RiwayatButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat addriwayat = new V_Riwayat();
+            if (addriwayat.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
+            }
+            this.Show();
+        }
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Profil addprofil = new V_Profil();
+            if (addprofil.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
             }
             this.Show();
         }

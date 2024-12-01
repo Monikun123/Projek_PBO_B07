@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Projek_PBO_B07.Core;
 using Projek_PBO_B07.Model;
 using Npgsql;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Projek_PBO_B07.View;
 
 namespace Projek_PBO_B07.Context
 {
@@ -53,6 +55,20 @@ ORDER BY
                 new NpgsqlParameter("@stok", Produk.stok),
             };
 
+            commandExecutor(query, parameters);
+
+        }
+
+        public static void UpdateDiskon(int id_promosi, int id_produk)
+        {
+            string query = $"UPDATE produk SET id_promosi = @id_promosi WHERE id_produk = @id_produk;";
+
+            NpgsqlParameter[] parameters =
+           {
+                new NpgsqlParameter("@id_promosi", id_promosi),
+                new NpgsqlParameter("@id_produk", id_produk),
+                
+            };
             commandExecutor(query, parameters);
 
         }
