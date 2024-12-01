@@ -186,6 +186,23 @@ namespace Projek_PBO_B07.View
             }
             this.Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout();
+            v_logout.Show();
+        }
     }
 
 }

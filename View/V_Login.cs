@@ -37,9 +37,9 @@ namespace Projek_PBO_B07
                     else if (role == "Customer")
                     {
                         MessageBox.Show("Login berhasil! Anda masuk sebagai Customer.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        V_DashboardUser userDashboard = new V_DashboardUser();
+                        V_DashboardCust v_dashboardcust = new V_DashboardCust();
                         this.Hide();
-                        userDashboard.Show();
+                        v_dashboardcust.Show();
                     }
                     else
                     {
@@ -61,6 +61,11 @@ namespace Projek_PBO_B07
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailText_TextChanged(object sender, EventArgs e)
         {
 
         }
