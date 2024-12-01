@@ -194,6 +194,7 @@
             Name = "V_FormTambahProduk";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "V_FormTambahProduk";
+            Load += V_FormTambahProduk_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

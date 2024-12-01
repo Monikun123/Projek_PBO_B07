@@ -128,5 +128,28 @@ namespace Projek_PBO_B07.View
         {
 
         }
+
+        private void RiwayatButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat addriwayat = new V_Riwayat();
+            if (addriwayat.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
+            }
+            this.Show();
+        }
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Profil addprofil = new V_Profil();
+            if (addprofil.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataProduk();
+                getDataBuahAll();
+            }
+            this.Show();
+        }
     }
 }

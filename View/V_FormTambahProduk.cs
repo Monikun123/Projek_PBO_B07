@@ -103,5 +103,10 @@ namespace Projek_PBO_B07.View
             this.DialogResult = DialogResult.OK;
             this.Hide();
         }
+
+        private void V_FormTambahProduk_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
