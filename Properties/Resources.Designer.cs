@@ -69,5 +69,15 @@ namespace Projek_PBO_B07.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] strawbery_jpg1 {
+            get {
+                object obj = ResourceManager.GetObject("strawbery.jpg1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
