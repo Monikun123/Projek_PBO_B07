@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projek_PBO_B07.Context;
+using Projek_PBO_B07.Model;
 
 namespace Projek_PBO_B07.View
 {
@@ -179,7 +180,7 @@ namespace Projek_PBO_B07.View
         private void ProfilButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Profil addprofil = new V_Profil(id_user);
+            V_Profil addprofil = new V_Profil(id_profil);
             if (addprofil.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();

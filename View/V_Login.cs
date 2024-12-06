@@ -26,7 +26,7 @@ namespace Projek_PBO_B07
                 }
                 {
                     string role = login.Role;
-                    
+
 
                     if (role == "Admin")
                     {
@@ -68,6 +68,11 @@ namespace Projek_PBO_B07
         }
 
         private void emailText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

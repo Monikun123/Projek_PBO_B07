@@ -146,9 +146,7 @@ namespace Projek_PBO_B07.View
 
         private void ProfilButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            V_Profil v_profil = new V_Profil();
-            v_profil.Show();
+
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
