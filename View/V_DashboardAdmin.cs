@@ -179,7 +179,7 @@ namespace Projek_PBO_B07.View
         private void ProfilButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Profil addprofil = new V_Profil(id_user);
+            V_Profil addprofil = new V_Profil(id_profil);
             if (addprofil.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
