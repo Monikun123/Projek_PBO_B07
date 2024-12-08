@@ -12,9 +12,11 @@ namespace Projek_PBO_B07.View
         public int id_profil { get; set; }
         private C_Riwayat controller;
 
-        public V_Riwayat()
+        public V_Riwayat(int id_user)
         {
+            
             InitializeComponent();
+            id_profil = id_user;
             getDataBuahAll();
             controller = new C_Riwayat();  // Inisialisasi controller
             LoadData();  // Panggil method untuk memuat data saat form pertama kali dibuka
@@ -133,15 +135,15 @@ namespace Projek_PBO_B07.View
 
         private void dashboard_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin();
-            v_DashboardAdmin.Show();
+            //this.Hide();
+            //V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin();
+            //v_DashboardAdmin.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Produk v_Produk = new V_Produk();
+            V_Produk v_Produk = new V_Produk(id_profil);
             v_Produk.Show();
         }
 
@@ -155,7 +157,7 @@ namespace Projek_PBO_B07.View
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Logout v_logout = new V_Logout();
+            V_Logout v_logout = new V_Logout(id_profil);
             v_logout.Show();
         }
 
