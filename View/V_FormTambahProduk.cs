@@ -108,5 +108,10 @@ namespace Projek_PBO_B07.View
         {
 
         }
+        private void V_FormTambahProduk_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

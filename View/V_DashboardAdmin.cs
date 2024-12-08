@@ -207,9 +207,9 @@ namespace Projek_PBO_B07.View
             this.Hide();
             V_Logout v_logout = new V_Logout(id_profil);
             v_logout.Show();
-        
-
         }
+
+
     }
 
 }
