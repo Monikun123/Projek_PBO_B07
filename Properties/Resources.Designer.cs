@@ -63,6 +63,16 @@ namespace Projek_PBO_B07.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] akar_icons_dashboard {
+            get {
+                object obj = ResourceManager.GetObject("akar-icons_dashboard", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] strawbery_jpg {
             get {
                 object obj = ResourceManager.GetObject("strawbery.jpg", resourceCulture);
