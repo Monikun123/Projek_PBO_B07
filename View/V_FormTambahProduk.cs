@@ -60,21 +60,21 @@ namespace Projek_PBO_B07.View
         }
         private bool ValidateInput()
         {
-            // Validasi NamaBuahcomboBox tidak boleh kosong atau null
+
             if (NamaBuahcomboBox.SelectedValue == null)
             {
                 MessageBox.Show("Silakan pilih nama buah.");
                 return false;
             }
 
-            // Validasi TanggalMasukDate dan TanggalExpiredDate
+
             if (TanggalMasukDate.Value > TanggalExpiredDate.Value)
             {
                 MessageBox.Show("Tanggal masuk tidak boleh lebih besar dari tanggal expired.");
                 return false;
             }
 
-            // Validasi Stok (harus bilangan bulat dan >= 0)
+
             if (string.IsNullOrWhiteSpace(StoktextBox.Text) ||
                 !int.TryParse(StoktextBox.Text, out int stok) || stok < 0)
             {
@@ -82,20 +82,26 @@ namespace Projek_PBO_B07.View
                 return false;
             }
 
-            // Semua validasi lulus
+
             return true;
         }
         private void ClearFields()
         {
-            // Membersihkan semua TextBox
-            StoktextBox.Clear(); // Menyesuaikan dengan nama TextBox untuk stok
 
-            // Reset ComboBox
-            NamaBuahcomboBox.SelectedIndex = -1; // Mengosongkan pilihan ComboBox
+            StoktextBox.Clear();
 
-            // Reset DateTimePicker ke tanggal default (opsional: hari ini)
+
+            NamaBuahcomboBox.SelectedIndex = -1;
+
+
             TanggalMasukDate.Value = DateTime.Now;
             TanggalExpiredDate.Value = DateTime.Now;
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Hide();
         }
 
         private void TanggalExpiredDate_ValueChanged(object sender, EventArgs e)

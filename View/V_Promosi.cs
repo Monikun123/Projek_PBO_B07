@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Projek_PBO_B07.View
 {
-    public partial class Login2 : Form
+    public partial class V_Promosi : Form
     {
-        public Login2()
+        public V_Promosi()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

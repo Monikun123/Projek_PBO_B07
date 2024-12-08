@@ -21,17 +21,17 @@ namespace Projek_PBO_B07.Context
 
             NpgsqlParameter[] parameters = { };
 
-            // Menjalankan query untuk mendapatkan DataTable
+            
             DataTable dataTotalBuahBusuk = queryExecutor(query, parameters);
 
-            // Memastikan jika DataTable tidak kosong dan mengambil nilai total_busuk
+            
             if (dataTotalBuahBusuk.Rows.Count > 0)
             {
-                // Mengambil nilai dari kolom 'total_busuk' yang pertama dan mengonversinya ke integer
+               
                 return Convert.ToInt32(dataTotalBuahBusuk.Rows[0]["total_busuk"]);
             }
 
-            // Jika tidak ada data, kembalikan nilai 0
+           
             return 0;
         }
         public static int getTotalTransaksi()
@@ -44,17 +44,17 @@ namespace Projek_PBO_B07.Context
 
             NpgsqlParameter[] parameters = { };
 
-            // Menjalankan query untuk mendapatkan DataTable
+           
             DataTable dataTotalBuahBusuk = queryExecutor(query, parameters);
 
-            // Memastikan jika DataTable tidak kosong dan mengambil nilai total_busuk
+            
             if (dataTotalBuahBusuk.Rows.Count > 0)
             {
-                // Mengambil nilai dari kolom 'total_busuk' yang pertama dan mengonversinya ke integer
+               
                 return Convert.ToInt32(dataTotalBuahBusuk.Rows[0]["buah_terjual"]);
             }
 
-            // Jika tidak ada data, kembalikan nilai 0
+           
             return 0;
         }
         public static int getDataStok()
@@ -67,17 +67,17 @@ namespace Projek_PBO_B07.Context
 
             NpgsqlParameter[] parameters = { };
 
-            // Menjalankan query untuk mendapatkan DataTable
+            
             DataTable dataStok = queryExecutor(query, parameters);
 
-            // Memastikan jika DataTable tidak kosong dan mengambil nilai total_stok
+           
             if (dataStok.Rows.Count > 0)
             {
-                // Mengambil nilai dari kolom 'total_stok' yang pertama dan mengonversinya ke integer
+                
                 return Convert.ToInt32(dataStok.Rows[0]["total_stok"]);
             }
 
-            // Jika tidak ada data, kembalikan nilai 0
+            
             return 0;
         }
     }

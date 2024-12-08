@@ -9,11 +9,14 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_Riwayat : Form
     {
+        public int id_profil { get; set; }
         private C_Riwayat controller;
 
-        public V_Riwayat()
+        public V_Riwayat(int id_user)
         {
+            
             InitializeComponent();
+            id_profil = id_user;
             getDataBuahAll();
             controller = new C_Riwayat();  
             LoadData();  

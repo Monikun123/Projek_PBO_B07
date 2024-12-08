@@ -73,10 +73,5 @@ namespace Projek_PBO_B07
         {
 
         }
-
-        private void emailText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

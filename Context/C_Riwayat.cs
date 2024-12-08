@@ -3,6 +3,7 @@ using Projek_PBO_B07.Core;
 using System;
 using System.Data;
 using Npgsql;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Projek_PBO_B07.Controller
 {
@@ -20,5 +21,8 @@ namespace Projek_PBO_B07.Controller
         {
             return M_Riwayat.GetRiwayatTransaksi(); 
         }
+
+
+
     }
 }
