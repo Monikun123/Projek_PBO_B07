@@ -38,7 +38,7 @@ namespace Projek_PBO_B07.View
                     {
                         // Membuat panel baru untuk setiap baris data
                         Panel itemPanel = new Panel();
-                        itemPanel.Width = panel8.Width - 20;  /
+                        itemPanel.Width = panel8.Width - 20;  
                         itemPanel.Height = 80; 
                         itemPanel.Location = new Point(10, topPosition); 
 

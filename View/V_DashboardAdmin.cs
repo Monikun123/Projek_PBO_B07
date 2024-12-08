@@ -140,13 +140,18 @@ namespace Projek_PBO_B07.View
 
         private void HalProdukButton_Click(object sender, EventArgs e)
         {
-            this.Hide();  
+            this.Hide();
             V_Produk addHalProduk = new V_Produk();
             if (addHalProduk.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
             }
             this.Show();
+
+        }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
 
         }
     }

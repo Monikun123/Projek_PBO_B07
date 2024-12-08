@@ -123,6 +123,7 @@
             DashboardButton.TabIndex = 15;
             DashboardButton.Text = "DashBoard";
             DashboardButton.UseVisualStyleBackColor = false;
+            DashboardButton.Click += DashboardButton_Click;
             // 
             // LogOutButton
             // 
