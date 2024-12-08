@@ -1,6 +1,6 @@
 ﻿namespace Projek_PBO_B07.View
 {
-    partial class V_DashboardUser
+    partial class V_Promosi
     {
         /// <summary>
         /// Required designer variable.

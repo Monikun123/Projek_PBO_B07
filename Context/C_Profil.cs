@@ -3,6 +3,8 @@ using System.Data;
 using Npgsql;
 using Projek_PBO_B07.Core;
 using Projek_PBO_B07.View;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Projek_PBO_B07.Context
 {
@@ -37,6 +39,32 @@ namespace Projek_PBO_B07.Context
             }
             return null;
         }
+        public static void Updateprofil(string nama, string email, string password,int userId)
+        {
+            string query = $"UPDATE pengguna SET nama = @nama, email = @email, password = @password WHERE id_pengguna = @id";
+
+            NpgsqlParameter[] parameters =
+            {
+                new NpgsqlParameter("@nama", nama),
+                new NpgsqlParameter("@email", email),
+                new NpgsqlParameter("@password", password),
+                new NpgsqlParameter("@id", userId)
+            };
+
+            commandExecutor(query, parameters);
+        }
+
+        //public static void DeleteProfile(int id)
+        //{
+        //    string query = $"DELETE FROM pengguna SET nama = @nama, email = @email, password = @password WHERE id = @id ";
+
+        //    NpgsqlParameter[] parameters =
+        //    { 
+        //        new NpgsqlParameter("@id", id)
+        //    };
+
+        //    commandExecutor(query, parameters);
+        //}
 
     }
 }

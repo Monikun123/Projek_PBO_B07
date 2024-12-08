@@ -30,7 +30,7 @@ namespace Projek_PBO_B07.Context
                 if (reader.Read())
                 {
                     loginAkun = new M_User(email, password);
-                    loginAkun.Id_User = (int)reader["id_User"];
+          
                     loginAkun.Role = (string)reader["role"];
                     loginAkun.Email = (string)reader["email"];
                     loginAkun.Password = (string)reader["password"];
@@ -40,5 +40,7 @@ namespace Projek_PBO_B07.Context
             return loginAkun;
 
         }
+
+       
     }
 }

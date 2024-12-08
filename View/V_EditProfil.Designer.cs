@@ -122,6 +122,7 @@
             btnsimpan.Tag = "";
             btnsimpan.Text = "Save";
             btnsimpan.UseVisualStyleBackColor = false;
+            btnsimpan.Click += btnsimpan_Click;
             // 
             // btnbatal
             // 

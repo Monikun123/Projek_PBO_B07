@@ -32,13 +32,10 @@
             lblTotalStok = new Label();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            this.btndashboard = new Button();
             LogOutButton = new Button();
             pictureBox8 = new PictureBox();
-            btnPromosi = new Button();
             panel6 = new Panel();
             label1 = new Label();
-            pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             label6 = new Label();
             panel3 = new Panel();
@@ -57,11 +54,11 @@
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
             tableLayoutPanel1 = new TableLayoutPanel();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -98,12 +95,10 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(this.btndashboard);
+            panel1.Controls.Add(label9);
             panel1.Controls.Add(LogOutButton);
             panel1.Controls.Add(pictureBox8);
-            panel1.Controls.Add(btnPromosi);
             panel1.Controls.Add(panel6);
-            panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(2, 2);
@@ -111,18 +106,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(163, 392);
             panel1.TabIndex = 0;
-            // 
-            // btndashboard
-            // 
-            this.btndashboard.BackColor = Color.FromArgb(247, 204, 92);
-            this.btndashboard.Location = new Point(41, 70);
-            this.btndashboard.Margin = new Padding(2);
-            this.btndashboard.Name = "btndashboard";
-            this.btndashboard.Size = new Size(95, 34);
-            this.btndashboard.TabIndex = 15;
-            this.btndashboard.Text = "DashBoard";
-            this.btndashboard.UseVisualStyleBackColor = false;
-            this.btndashboard.Click += this.btndashboard_Click;
             // 
             // LogOutButton
             // 
@@ -134,6 +117,7 @@
             LogOutButton.TabIndex = 14;
             LogOutButton.Text = "LogOut";
             LogOutButton.UseVisualStyleBackColor = false;
+            
             // 
             // pictureBox8
             // 
@@ -146,16 +130,6 @@
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 13;
             pictureBox8.TabStop = false;
-            // 
-            // btnPromosi
-            // 
-            btnPromosi.Location = new Point(41, 122);
-            btnPromosi.Margin = new Padding(2);
-            btnPromosi.Name = "btnPromosi";
-            btnPromosi.Size = new Size(95, 34);
-            btnPromosi.TabIndex = 8;
-            btnPromosi.Text = "Promosi";
-            btnPromosi.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -181,18 +155,6 @@
             label1.Size = new Size(93, 26);
             label1.TabIndex = 0;
             label1.Text = "Fruities";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = Color.White;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(5, 122);
-            pictureBox5.Margin = new Padding(2);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(35, 34);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 6;
-            pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -398,7 +360,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(575, 238);
             dataGridView1.TabIndex = 5;
-            dataGridView1.CellContentClick += this.dataGridView1_CellContentClick;
+            
             // 
             // tableLayoutPanel1
             // 
@@ -416,6 +378,17 @@
             tableLayoutPanel1.Size = new Size(786, 396);
             tableLayoutPanel1.TabIndex = 1;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(247, 204, 92);
+            label9.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(45, 76);
+            label9.Name = "label9";
+            label9.Size = new Size(99, 25);
+            label9.TabIndex = 16;
+            label9.Text = "DashBoard";
+            // 
             // V_DashboardCust
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -423,14 +396,13 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
             Name = "V_DashboardCust";
-            Text = "DashboardCust";
-            Load += DashboardCust_Load;
+            Text = "V_DashboardCust";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -455,14 +427,8 @@
         private Button DashboardButton;
         private Button LogOutButton;
         private PictureBox pictureBox8;
-        private Button ProfilButton;
-        private PictureBox pictureBox7;
-        private Button RiwayatButton;
-        private PictureBox pictureBox6;
-        private Button btnPromosi;
         private Panel panel6;
         private Label label1;
-        private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private Label label6;
         private Panel panel3;
@@ -481,5 +447,6 @@
         private Panel panel2;
         private DataGridView dataGridView1;
         private TableLayoutPanel tableLayoutPanel1;
+        private Label label9;
     }
 }

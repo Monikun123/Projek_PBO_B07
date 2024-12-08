@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projek_PBO_B07.View
 {
-    public partial class V_DashboardUser : Form
+    public partial class V_Promosi : Form
     {
-        public V_DashboardUser()
+        public V_Promosi()
         {
             InitializeComponent();
         }

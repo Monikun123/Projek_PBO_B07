@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projek_PBO_B07.Context;
+using Projek_PBO_B07.Model;
 
 namespace Projek_PBO_B07.View
 {

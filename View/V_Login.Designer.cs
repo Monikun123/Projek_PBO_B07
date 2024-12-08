@@ -85,7 +85,7 @@
             // 
             emailText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             emailText.Location = new Point(441, 262);
-            emailText.Margin = new Padding(2, 2, 2, 2);
+            emailText.Margin = new Padding(2);
             emailText.Name = "emailText";
             emailText.Size = new Size(280, 27);
             emailText.TabIndex = 4;
@@ -120,7 +120,7 @@
             // 
             passwordText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             passwordText.Location = new Point(441, 320);
-            passwordText.Margin = new Padding(2, 2, 2, 2);
+            passwordText.Margin = new Padding(2);
             passwordText.Name = "passwordText";
             passwordText.Size = new Size(280, 27);
             passwordText.TabIndex = 7;
@@ -132,7 +132,7 @@
             loginbutton.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginbutton.ForeColor = Color.Black;
             loginbutton.Location = new Point(441, 367);
-            loginbutton.Margin = new Padding(2, 2, 2, 2);
+            loginbutton.Margin = new Padding(2);
             loginbutton.Name = "loginbutton";
             loginbutton.Size = new Size(279, 40);
             loginbutton.TabIndex = 8;
@@ -147,7 +147,7 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Padding = new Padding(16, 16, 16, 16);
+            pictureBox1.Padding = new Padding(16);
             pictureBox1.Size = new Size(356, 517);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
@@ -159,7 +159,7 @@
             panel1.BackColor = Color.FromArgb(247, 204, 92);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(-1, -15);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(356, 517);
             panel1.TabIndex = 0;
@@ -168,10 +168,11 @@
             // 
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(2, 2, 2, 2);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new Size(782, 499);
             panel2.TabIndex = 9;
+            panel2.Paint += panel2_Paint_1;
             // 
             // V_Login
             // 
@@ -188,7 +189,7 @@
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "V_Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
