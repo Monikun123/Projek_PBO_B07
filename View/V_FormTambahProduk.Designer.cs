@@ -74,7 +74,6 @@
             BackButton.TabIndex = 13;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
-            BackButton.Click += BackButton_Click;
             // 
             // AddProdukButton
             // 
@@ -195,7 +194,6 @@
             Name = "V_FormTambahProduk";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "V_FormTambahProduk";
-            Load += V_FormTambahProduk_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
