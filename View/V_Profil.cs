@@ -65,7 +65,9 @@ namespace Projek_PBO_B07.View
 
         private void label9_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(id_user);
+            v_DashboardAdmin.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -123,6 +125,25 @@ namespace Projek_PBO_B07.View
             V_Logout v_logout = new V_Logout(id_user);
             v_logout.Show();
         }
-    } 
+
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RiwayatButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat v_Riwayat = new V_Riwayat(id_user);
+            v_Riwayat.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Produk v_Produk = new V_Produk(id_user);
+            v_Produk.Show();
+        }
+    }
 }
 

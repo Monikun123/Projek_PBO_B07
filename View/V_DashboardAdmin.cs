@@ -20,7 +20,6 @@ namespace Projek_PBO_B07.View
             InitializeComponent();
             
             id_profil = id_user;
-            MessageBox.Show($"Terjadi kesalahan: {id_profil}");
             getDataBuahAll();
             this.Load += DashboardAdmin_Load;
         }
