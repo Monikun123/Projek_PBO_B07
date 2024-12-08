@@ -151,6 +151,7 @@ namespace Projek_PBO_B07.View
                     V_UpdateProduk addUpdateForm = new V_UpdateProduk
                     {
                         id_produk = id,
+                        id_user = userId
                     };
                     if (addUpdateForm.ShowDialog() == DialogResult.OK)
                     {
@@ -180,7 +181,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+            
         }
         private void ProfilButton_Click(object sender, EventArgs e)
         {
@@ -191,7 +192,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+            
         }
 
         private void DashboardButton_Click(object sender, EventArgs e)

@@ -135,9 +135,10 @@ namespace Projek_PBO_B07.View
 
         private void dashboard_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin();
-            //v_DashboardAdmin.Show();
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(id_profil);
+            v_DashboardAdmin.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -145,6 +146,7 @@ namespace Projek_PBO_B07.View
             this.Hide();
             V_Produk v_Produk = new V_Produk(id_profil);
             v_Produk.Show();
+            
         }
 
         private void ProfilButton_Click(object sender, EventArgs e)
@@ -152,6 +154,7 @@ namespace Projek_PBO_B07.View
             this.Hide();
             V_Profil v_profil = new V_Profil(id_profil);
             v_profil.Show();
+            
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)

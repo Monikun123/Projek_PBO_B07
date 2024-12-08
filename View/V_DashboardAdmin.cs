@@ -152,7 +152,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+          
 
         }
 
@@ -175,7 +175,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+            
 
 
         }
@@ -189,7 +189,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
