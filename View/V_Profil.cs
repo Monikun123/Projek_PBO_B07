@@ -17,12 +17,15 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_Profil : Form
     {
+        private int id_user { get; set; }
         private M_User currentUser;
-        public V_Profil(int userId)
+        public V_Profil(int user_id)
         {
+            id_user = user_id;
+
             InitializeComponent();
             C_Profil profilContext = new C_Profil();
-            M_Profile profil = profilContext.GetProfil(userId);
+            M_Profile profil = profilContext.GetProfil(user_id);
 
             if (profil != null)
             {
@@ -92,6 +95,10 @@ namespace Projek_PBO_B07.View
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            V_EditProfil v_EditProfil = new V_EditProfil(id_user);
+            MessageBox.Show($"{id_user}");
+            v_EditProfil.Show();
 
         }
 
@@ -104,5 +111,18 @@ namespace Projek_PBO_B07.View
         {
 
         }
-    }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout(id_user);
+            v_logout.Show();
+        }
+    } 
 }
+

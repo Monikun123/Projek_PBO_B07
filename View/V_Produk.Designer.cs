@@ -111,6 +111,7 @@
             DashboardButton.TabIndex = 16;
             DashboardButton.Text = "DashBoard";
             DashboardButton.UseVisualStyleBackColor = false;
+            DashboardButton.Click += DashboardButton_Click;
             // 
             // LogOutButton
             // 
@@ -122,6 +123,7 @@
             LogOutButton.TabIndex = 14;
             LogOutButton.Text = "LogOut";
             LogOutButton.UseVisualStyleBackColor = false;
+            LogOutButton.Click += LogOutButton_Click;
             // 
             // pictureBox8
             // 
@@ -306,7 +308,7 @@
             panel7.Location = new Point(269, 58);
             panel7.Margin = new Padding(2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(230, 60);
+            panel7.Size = new Size(231, 60);
             panel7.TabIndex = 8;
             // 
             // label7

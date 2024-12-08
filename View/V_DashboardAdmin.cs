@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projek_PBO_B07.Context;
+using Projek_PBO_B07.Model;
 
 namespace Projek_PBO_B07.View
 {
     public partial class V_DashboardAdmin : Form
     {
-        private int id_user { get; set; }
-        public V_DashboardAdmin()
+        public int id_profil { get; set; }
+        public V_DashboardAdmin(int id_user)
         {
             InitializeComponent();
+            
+            id_profil = id_user;
+            MessageBox.Show($"Terjadi kesalahan: {id_profil}");
             getDataBuahAll();
             this.Load += DashboardAdmin_Load;
         }
@@ -142,13 +146,13 @@ namespace Projek_PBO_B07.View
         private void HalProdukButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Produk addHalProduk = new V_Produk();
+            V_Produk addHalProduk = new V_Produk(id_profil);
             if (addHalProduk.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+          
 
         }
 
@@ -165,13 +169,13 @@ namespace Projek_PBO_B07.View
         private void RiwayatButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Riwayat addriwayat = new V_Riwayat();
+            V_Riwayat addriwayat = new V_Riwayat(id_profil);
             if (addriwayat.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+            
 
 
         }
@@ -179,13 +183,30 @@ namespace Projek_PBO_B07.View
         private void ProfilButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Profil addprofil = new V_Profil(id_user);
+            V_Profil addprofil = new V_Profil(id_profil);
             if (addprofil.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            this.Show();
+           
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout(id_profil);
+            v_logout.Show();
         }
     }
 

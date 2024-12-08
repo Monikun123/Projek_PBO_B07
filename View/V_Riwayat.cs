@@ -9,11 +9,14 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_Riwayat : Form
     {
+        public int id_profil { get; set; }
         private C_Riwayat controller;
 
-        public V_Riwayat()
+        public V_Riwayat(int id_user)
         {
+            
             InitializeComponent();
+            id_profil = id_user;
             getDataBuahAll();
             controller = new C_Riwayat();  // Inisialisasi controller
             LoadData();  // Panggil method untuk memuat data saat form pertama kali dibuka
@@ -118,6 +121,52 @@ namespace Projek_PBO_B07.View
             {
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(id_profil);
+            v_DashboardAdmin.Show();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Produk v_Produk = new V_Produk(id_profil);
+            v_Produk.Show();
+            
+        }
+
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Profil v_profil = new V_Profil(id_profil);
+            v_profil.Show();
+            
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout(id_profil);
+            v_logout.Show();
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

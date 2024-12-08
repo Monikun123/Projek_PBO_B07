@@ -26,22 +26,22 @@ namespace Projek_PBO_B07
                 }
                 {
                     string role = login.Role;
-                    
+
 
                     if (role == "Admin")
                     {
                         MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //V_DashboardAdmin adminDashboard = new V_DashboardAdmin();
-                        V_Profil profil = new V_Profil(login.Id_User);
+                        V_DashboardAdmin adminDashboard = new V_DashboardAdmin(login.Id_User);
+                        //V_Profil profil = new V_Profil(login.Id_User);
                         this.Hide();
-                        profil.Show();
+                        adminDashboard.Show();
                     }
                     else if (role == "Customer")
                     {
                         MessageBox.Show("Login berhasil! Anda masuk sebagai Customer.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        V_DashboardUser userDashboard = new V_DashboardUser();
+                        V_DashboardCust v_dashboardcust = new V_DashboardCust(login.Id_User);
                         this.Hide();
-                        userDashboard.Show();
+                        v_dashboardcust.Show();
                     }
                     else
                     {
@@ -63,6 +63,16 @@ namespace Projek_PBO_B07
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

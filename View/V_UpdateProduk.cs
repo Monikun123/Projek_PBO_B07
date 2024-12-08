@@ -13,12 +13,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projek_PBO_B07.View
 {
+
     public partial class V_UpdateProduk : Form
     {
+        public int id_user {  get; set; }
         public int id_produk { get; set; }
         public V_UpdateProduk()
         {
             InitializeComponent();
+            
             LoadPromosi();
             loadnilai0();
         }
