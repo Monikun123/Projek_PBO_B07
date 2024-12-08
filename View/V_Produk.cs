@@ -16,9 +16,10 @@ namespace Projek_PBO_B07.View
     {
         private int userId;
 
-        public V_Produk()
+        public V_Produk(int id_user)
         {
             InitializeComponent();
+            userId = id_user;
             getDataBuahAll();
             this.Load += V_Produk_Load;
         }
@@ -173,7 +174,7 @@ namespace Projek_PBO_B07.View
         private void RiwayatButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Riwayat addriwayat = new V_Riwayat();
+            V_Riwayat addriwayat = new V_Riwayat(userId);
             if (addriwayat.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
@@ -196,14 +197,14 @@ namespace Projek_PBO_B07.View
         private void DashboardButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(userId);
             v_DashboardAdmin.Show();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Logout v_logout = new V_Logout();
+            V_Logout v_logout = new V_Logout(userId);
             v_logout.Show();
         }
     }

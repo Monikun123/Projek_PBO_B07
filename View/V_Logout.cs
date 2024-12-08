@@ -12,9 +12,13 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_Logout : Form
     {
-        public V_Logout()
+        public int id_user { get; set; }
+        public V_Logout(int id_user)
         {
             InitializeComponent();
+            this.id_user = id_user;
+            MessageBox.Show($"Terjadi kesalahan: {id_user}");
+
         }
 
         private void btnya_Click(object sender, EventArgs e)
@@ -27,7 +31,7 @@ namespace Projek_PBO_B07.View
         private void btntidak_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_DashboardAdmin v_dashboardadmin = new V_DashboardAdmin();
+            V_DashboardAdmin v_dashboardadmin = new V_DashboardAdmin(id_user);
             v_dashboardadmin.Show();
         }
 

@@ -123,5 +123,17 @@ namespace Projek_PBO_B07.View
             V_Logout v_logout = new V_Logout();
             v_logout.Show();
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            //V_Logout v_logout = new V_Logout();
+            //v_logout.Show();
+        }
     }
 }

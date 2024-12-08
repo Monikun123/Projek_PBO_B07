@@ -31,15 +31,15 @@ namespace Projek_PBO_B07
                     if (role == "Admin")
                     {
                         MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //V_DashboardAdmin adminDashboard = new V_DashboardAdmin();
-                        V_Profil profil = new V_Profil(login.Id_User);
+                        V_DashboardAdmin adminDashboard = new V_DashboardAdmin(login.Id_User);
+                        //V_Profil profil = new V_Profil(login.Id_User);
                         this.Hide();
-                        profil.Show();
+                        adminDashboard.Show();
                     }
                     else if (role == "Customer")
                     {
                         MessageBox.Show("Login berhasil! Anda masuk sebagai Customer.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        V_DashboardCust v_dashboardcust = new V_DashboardCust();
+                        V_DashboardCust v_dashboardcust = new V_DashboardCust(login.Id_User);
                         this.Hide();
                         v_dashboardcust.Show();
                     }

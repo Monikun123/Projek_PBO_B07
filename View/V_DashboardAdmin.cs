@@ -15,9 +15,12 @@ namespace Projek_PBO_B07.View
     public partial class V_DashboardAdmin : Form
     {
         public int id_profil { get; set; }
-        public V_DashboardAdmin()
+        public V_DashboardAdmin(int id_user)
         {
             InitializeComponent();
+            
+            id_profil = id_user;
+            MessageBox.Show($"Terjadi kesalahan: {id_profil}");
             getDataBuahAll();
             this.Load += DashboardAdmin_Load;
         }
@@ -143,7 +146,7 @@ namespace Projek_PBO_B07.View
         private void HalProdukButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Produk addHalProduk = new V_Produk();
+            V_Produk addHalProduk = new V_Produk(id_profil);
             if (addHalProduk.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
@@ -166,7 +169,7 @@ namespace Projek_PBO_B07.View
         private void RiwayatButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Riwayat addriwayat = new V_Riwayat();
+            V_Riwayat addriwayat = new V_Riwayat(id_profil);
             if (addriwayat.ShowDialog() == DialogResult.OK)
             {
                 LoadDataProduk();
@@ -202,7 +205,7 @@ namespace Projek_PBO_B07.View
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Logout v_logout = new V_Logout();
+            V_Logout v_logout = new V_Logout(id_profil);
             v_logout.Show();
         }
     }

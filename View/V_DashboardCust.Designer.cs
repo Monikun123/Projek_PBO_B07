@@ -32,6 +32,7 @@
             lblTotalStok = new Label();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            label9 = new Label();
             LogOutButton = new Button();
             pictureBox8 = new PictureBox();
             panel6 = new Panel();
@@ -52,7 +53,8 @@
             label3 = new Label();
             panel7 = new Panel();
             panel2 = new Panel();
-            dataGridView1 = new DataGridView();
+            panel8 = new Panel();
+            panel4 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -66,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel7.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -107,6 +108,17 @@
             panel1.Size = new Size(163, 392);
             panel1.TabIndex = 0;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(247, 204, 92);
+            label9.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(45, 76);
+            label9.Name = "label9";
+            label9.Size = new Size(99, 25);
+            label9.TabIndex = 16;
+            label9.Text = "DashBoard";
+            // 
             // LogOutButton
             // 
             LogOutButton.BackColor = Color.Red;
@@ -117,7 +129,7 @@
             LogOutButton.TabIndex = 14;
             LogOutButton.Text = "LogOut";
             LogOutButton.UseVisualStyleBackColor = false;
-            
+            LogOutButton.Click += LogOutButton_Click;
             // 
             // pictureBox8
             // 
@@ -339,7 +351,8 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLight;
-            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(panel8);
+            panel2.Controls.Add(panel4);
             panel2.Controls.Add(panel7);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(panel5);
@@ -351,16 +364,22 @@
             panel2.Size = new Size(615, 392);
             panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // panel8
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 102);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(575, 238);
-            dataGridView1.TabIndex = 5;
-            
+            panel8.AutoScroll = true;
+            panel8.Location = new Point(22, 175);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(575, 201);
+            panel8.TabIndex = 6;
+            panel8.Paint += panel8_Paint;
+            // 
+            // panel4
+            // 
+            panel4.Location = new Point(22, 115);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(575, 37);
+            panel4.TabIndex = 5;
+            panel4.Paint += panel4_Paint;
             // 
             // tableLayoutPanel1
             // 
@@ -414,7 +433,6 @@
             panel7.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -445,8 +463,9 @@
         private Label label3;
         private Panel panel7;
         private Panel panel2;
-        private DataGridView dataGridView1;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label9;
+        private Panel panel8;
+        private Panel panel4;
     }
 }
