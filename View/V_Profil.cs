@@ -22,7 +22,7 @@ namespace Projek_PBO_B07.View
         public V_Profil(int user_id)
         {
             id_user = user_id;
-            
+
             InitializeComponent();
             C_Profil profilContext = new C_Profil();
             M_Profile profil = profilContext.GetProfil(user_id);
@@ -120,20 +120,9 @@ namespace Projek_PBO_B07.View
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            V_Logout v_logout = new V_Logout();
+            V_Logout v_logout = new V_Logout(id_user);
             v_logout.Show();
         }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void LogOutButton_Click(object sender, EventArgs e)
-        {
-            //this.Hide();
-            //V_Logout v_logout = new V_Logout();
-            //v_logout.Show();
-        }
-    }
+    } 
 }
+
