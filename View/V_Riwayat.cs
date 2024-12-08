@@ -9,6 +9,7 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_Riwayat : Form
     {
+        public int id_profil { get; set; }
         private C_Riwayat controller;
 
         public V_Riwayat()
@@ -146,7 +147,9 @@ namespace Projek_PBO_B07.View
 
         private void ProfilButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            V_Profil v_profil = new V_Profil(id_profil);
+            v_profil.Show();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -154,6 +157,11 @@ namespace Projek_PBO_B07.View
             this.Hide();
             V_Logout v_logout = new V_Logout();
             v_logout.Show();
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
