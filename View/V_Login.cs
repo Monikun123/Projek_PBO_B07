@@ -39,14 +39,14 @@ namespace Projek_PBO_B07
                 if (role == "Admin")
                 {
                     MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    V_DashboardAdmin adminDashboard = new V_DashboardAdmin();
+                    V_DashboardAdmin adminDashboard = new V_DashboardAdmin(login.Id_User);
                     this.Hide();
                     adminDashboard.Show();
                 }
                 else if (role == "User")
                 {
                     MessageBox.Show("Login berhasil! Anda masuk sebagai User.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    V_DashboardUser userDashboard = new V_DashboardUser();
+                    V_DashboardCust userDashboard = new V_DashboardCust(login.Id_User);
                     this.Hide();
                     userDashboard.Show();
                 }
@@ -70,6 +70,15 @@ namespace Projek_PBO_B07
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void emailText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
