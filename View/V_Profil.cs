@@ -65,7 +65,9 @@ namespace Projek_PBO_B07.View
 
         private void label9_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(id_user);
+            v_DashboardAdmin.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -97,7 +99,7 @@ namespace Projek_PBO_B07.View
         {
             this.Hide();
             V_EditProfil v_EditProfil = new V_EditProfil(id_user);
-            MessageBox.Show($"{id_user}");
+
             v_EditProfil.Show();
 
         }
@@ -123,6 +125,65 @@ namespace Projek_PBO_B07.View
             V_Logout v_logout = new V_Logout(id_user);
             v_logout.Show();
         }
-    } 
+
+        private void ProfilButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RiwayatButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat v_Riwayat = new V_Riwayat(id_user);
+            v_Riwayat.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Produk v_Produk = new V_Produk(id_user);
+            v_Produk.Show();
+        }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(id_user);
+            v_DashboardAdmin.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout(id_user);
+            v_logout.Show();
+        }
+
+        private void RiwayatButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat addriwayat = new V_Riwayat(id_user);
+            addriwayat.Show();
+
+
+        }
+
+        private void HalProdukButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Produk addproduk = new V_Produk(id_user);
+            addproduk.Show();
+        }
+    }
 }
 

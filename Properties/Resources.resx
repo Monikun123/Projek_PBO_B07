@@ -121,7 +121,16 @@
   <data name="strawbery.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strawbery,jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="strawbery.jpg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strawbery,jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="blueberry.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blueberry.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pineapple.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pineapple.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lemon.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lemon.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="orange.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

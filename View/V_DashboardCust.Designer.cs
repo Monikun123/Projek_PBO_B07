@@ -55,8 +55,8 @@
             panel2 = new Panel();
             panel8 = new Panel();
             panel4 = new Panel();
+            label10 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -68,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel7.SuspendLayout();
             panel2.SuspendLayout();
+            panel4.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -367,19 +368,31 @@
             // panel8
             // 
             panel8.AutoScroll = true;
-            panel8.Location = new Point(22, 175);
+            panel8.Dock = DockStyle.Bottom;
+            panel8.Location = new Point(0, 151);
             panel8.Name = "panel8";
-            panel8.Size = new Size(575, 201);
+            panel8.Size = new Size(615, 241);
             panel8.TabIndex = 6;
             panel8.Paint += panel8_Paint;
             // 
             // panel4
             // 
-            panel4.Location = new Point(22, 115);
+            panel4.Controls.Add(label10);
+            panel4.Location = new Point(3, 115);
             panel4.Name = "panel4";
-            panel4.Size = new Size(575, 37);
+            panel4.Size = new Size(614, 37);
             panel4.TabIndex = 5;
             panel4.Paint += panel4_Paint;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(5, 9);
+            label10.Name = "label10";
+            label10.Size = new Size(32, 20);
+            label10.TabIndex = 0;
+            label10.Text = "No.";
+            label10.Click += label10_Click_1;
             // 
             // tableLayoutPanel1
             // 
@@ -396,17 +409,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(786, 396);
             tableLayoutPanel1.TabIndex = 1;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(247, 204, 92);
-            label9.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(45, 76);
-            label9.Name = "label9";
-            label9.Size = new Size(99, 25);
-            label9.TabIndex = 16;
-            label9.Text = "DashBoard";
             // 
             // V_DashboardCust
             // 
@@ -433,6 +435,8 @@
             panel7.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -467,5 +471,6 @@
         private Label label9;
         private Panel panel8;
         private Panel panel4;
+        private Label label10;
     }
 }

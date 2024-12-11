@@ -74,7 +74,6 @@
             BackButton.TabIndex = 13;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
-            BackButton.Click += BackButton_Click;
             // 
             // AddProdukButton
             // 
@@ -95,7 +94,8 @@
             TanggalExpiredDate.Name = "TanggalExpiredDate";
             TanggalExpiredDate.Size = new Size(168, 31);
             TanggalExpiredDate.TabIndex = 8;
-            TanggalExpiredDate.Value = new DateTime(2024, 1, 1, 0, 0, 0, 0);
+            TanggalExpiredDate.Value = new DateTime(2024, 12, 11, 0, 0, 0, 0);
+            TanggalExpiredDate.ValueChanged += TanggalExpiredDate_ValueChanged;
             // 
             // label5
             // 
@@ -125,7 +125,7 @@
             TanggalMasukDate.Name = "TanggalMasukDate";
             TanggalMasukDate.Size = new Size(157, 31);
             TanggalMasukDate.TabIndex = 5;
-            TanggalMasukDate.Value = new DateTime(2024, 1, 1, 0, 0, 0, 0);
+            TanggalMasukDate.Value = new DateTime(2024, 12, 11, 0, 0, 0, 0);
             // 
             // StoktextBox
             // 
@@ -194,7 +194,6 @@
             Name = "V_FormTambahProduk";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "V_FormTambahProduk";
-            Load += V_FormTambahProduk_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

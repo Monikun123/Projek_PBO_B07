@@ -13,13 +13,13 @@ namespace Projek_PBO_B07.Controller
 
         public C_Riwayat()
         {
-            model = new M_Riwayat(0, "", DateTime.Now, "", 0);// Inisialisasi model, jika diperlukan
+            model = new M_Riwayat(0, "", DateTime.Now, "", 0);
         }
 
-        // Metode untuk mengambil data riwayat transaksi
+        
         public DataTable GetRiwayatTransaksi()
         {
-            return M_Riwayat.GetRiwayatTransaksi(); // Memanggil model untuk mendapatkan data
+            return M_Riwayat.GetRiwayatTransaksi(); 
         }
 
 

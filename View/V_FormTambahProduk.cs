@@ -104,9 +104,14 @@ namespace Projek_PBO_B07.View
             this.Hide();
         }
 
+        private void TanggalExpiredDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
         private void V_FormTambahProduk_Load(object sender, EventArgs e)
         {
 
         }
     }
+
 }
