@@ -45,7 +45,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(234, 87, 13);
-            label1.Location = new Point(62, 56);
+            label1.Location = new Point(68, 20);
             label1.Name = "label1";
             label1.Size = new Size(134, 22);
             label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(68, 123);
+            label2.Location = new Point(68, 60);
             label2.Name = "label2";
             label2.Size = new Size(40, 15);
             label2.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(68, 179);
+            label3.Location = new Point(68, 114);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
             label3.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(68, 241);
+            label4.Location = new Point(68, 166);
             label4.Name = "label4";
             label4.Size = new Size(62, 15);
             label4.TabIndex = 3;
@@ -86,7 +86,7 @@
             // namaupdate
             // 
             namaupdate.BackColor = Color.FromArgb(247, 204, 92);
-            namaupdate.Location = new Point(180, 120);
+            namaupdate.Location = new Point(178, 60);
             namaupdate.Name = "namaupdate";
             namaupdate.Size = new Size(256, 23);
             namaupdate.TabIndex = 4;
@@ -95,7 +95,7 @@
             // emailupdate
             // 
             emailupdate.BackColor = Color.FromArgb(247, 204, 92);
-            emailupdate.Location = new Point(182, 174);
+            emailupdate.Location = new Point(180, 114);
             emailupdate.Name = "emailupdate";
             emailupdate.Size = new Size(254, 23);
             emailupdate.TabIndex = 5;
@@ -104,7 +104,7 @@
             // passwordupdate
             // 
             passwordupdate.BackColor = Color.FromArgb(247, 204, 92);
-            passwordupdate.Location = new Point(180, 233);
+            passwordupdate.Location = new Point(178, 166);
             passwordupdate.Name = "passwordupdate";
             passwordupdate.Size = new Size(256, 23);
             passwordupdate.TabIndex = 6;
@@ -115,7 +115,7 @@
             // 
             btnsimpan.BackColor = Color.FromArgb(108, 241, 86);
             btnsimpan.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnsimpan.Location = new Point(68, 307);
+            btnsimpan.Location = new Point(68, 209);
             btnsimpan.Name = "btnsimpan";
             btnsimpan.Size = new Size(75, 29);
             btnsimpan.TabIndex = 7;
@@ -128,7 +128,7 @@
             // 
             btnbatal.BackColor = Color.FromArgb(252, 0, 0);
             btnbatal.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnbatal.Location = new Point(361, 307);
+            btnbatal.Location = new Point(359, 209);
             btnbatal.Name = "btnbatal";
             btnbatal.Size = new Size(75, 29);
             btnbatal.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(754, 452);
+            ClientSize = new Size(687, 297);
             Controls.Add(btnbatal);
             Controls.Add(btnsimpan);
             Controls.Add(passwordupdate);
