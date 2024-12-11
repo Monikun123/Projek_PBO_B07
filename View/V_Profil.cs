@@ -99,7 +99,7 @@ namespace Projek_PBO_B07.View
         {
             this.Hide();
             V_EditProfil v_EditProfil = new V_EditProfil(id_user);
-            
+
             v_EditProfil.Show();
 
         }
@@ -160,6 +160,13 @@ namespace Projek_PBO_B07.View
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LogOutButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Logout v_logout = new V_Logout(id_user);
+            v_logout.Show();
         }
     }
 }

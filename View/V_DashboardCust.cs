@@ -24,40 +24,86 @@ namespace Projek_PBO_B07.View
         {
             try
             {
-                // Ambil data riwayat transaksi dari controller
+                // Ambil data dari sumber (database)
                 DataTable data = ProdukContext.GetAllProdukdanGambar();
 
-                // Bersihkan panel7 sebelum menambahkan data baru
-
-                // Pastikan ada data sebelum menambahkannya ke panel
                 if (data != null && data.Rows.Count > 0)
                 {
-                    int topPosition = 10;  // Menentukan posisi vertikal pertama untuk panel
+                    panel8.Controls.Clear(); // Bersihkan panel sebelum memuat data baru
+                    panel8.AutoScroll = true; // Mengaktifkan AutoScroll
+                    panel8.HorizontalScroll.Enabled = true;
+                    panel8.HorizontalScroll.Visible = true;
+
+                    int topPosition = 10; // Posisi vertikal awal
+                    int panelItemWidth = 850; // Total lebar item panel yang lebih besar dari panel8
+
+                    // Membuat header kolom
+                    Panel headerPanel = new Panel
+                    {
+                        Width = panelItemWidth,
+                        Height = 30,
+                        Location = new Point(10, topPosition),
+                        BorderStyle = BorderStyle.FixedSingle
+                    };
+
+                    // Fungsi untuk membuat dan menambahkan header label dengan lebar dinamis
+                    void TambahkanHeaderLabel(string text, int width, int xPosition)
+                    {
+                        Label label = new Label
+                        {
+                            Text = text,
+                            Width = width,
+                            Height = 30,
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            BackColor = Color.LightGray,
+                            BorderStyle = BorderStyle.FixedSingle,
+                            Location = new Point(xPosition, 0)
+                        };
+                        headerPanel.Controls.Add(label);
+                    }
+
+                    // Menambahkan header kolom dengan lebar yang sesuai
+                    int[] columnWidths = {110, 50, 120, 100, 50, 120, 120, 70, 120 };
+                    string[] headers = { "Gambar","ID", "Nama", "Harga", "Stok", "Tanggal Masuk", "Tanggal Expired", "Diskon", "Harga Diskon" };
+
+                    int headerXPosition = 0; // Posisi awal untuk header
+                    for (int i = 0; i < headers.Length; i++)
+                    {
+                        TambahkanHeaderLabel(headers[i], columnWidths[i], headerXPosition);
+                        headerXPosition += columnWidths[i];
+                    }
+
+                    // Menambahkan headerPanel ke panel utama
+                    panel8.Controls.Add(headerPanel);
+
+                    // Update posisi setelah header
+                    topPosition += headerPanel.Height + 10;
 
                     foreach (DataRow row in data.Rows)
                     {
-                        // Membuat panel baru untuk setiap baris data
-                        Panel itemPanel = new Panel();
-                        itemPanel.Width = panel8.Width - 20;  // Menyesuaikan lebar itemPanel dengan panel9
-                        itemPanel.Height = 80;  // Menentukan tinggi panel per item
-                        itemPanel.Location = new Point(10, topPosition);  // Menentukan posisi panel vertikal
+                        // Panel untuk setiap item
+                        Panel itemPanel = new Panel
+                        {
+                            Width = panelItemWidth, // Set lebar lebih besar dari panel8 untuk memungkinkan scroll horizontal
+                            Height = 120,
+                            Location = new Point(10, topPosition),
+                            BorderStyle = BorderStyle.FixedSingle
+                        };
 
-                        // Menambahkan label untuk ID
-                        Label labelID = new Label();
-                        labelID.Text = row["id_produk"].ToString();
-                        labelID.Width = 50;
-                        labelID.Location = new Point(10, 10);
-                        itemPanel.Controls.Add(labelID);
+                        int currentX = 10; // Posisi horizontal awal
+                        int paddingX = 0; // Padding antar elemen data
 
-                        //Menambahkan picturebox buat gambar
-                        PictureBox pictureBox = new PictureBox();
-                        pictureBox.Width = 90;
-                        pictureBox.Height = 90;
-                        pictureBox.Location = new Point(70, 100);
-                        pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                        // PictureBox untuk gambar
+                        PictureBox pictureBox = new PictureBox
+                        {
+                            Width = 100,
+                            Height = 100,
+                            Location = new Point(currentX, 10),
+                            SizeMode = PictureBoxSizeMode.StretchImage
+                        };
 
-                        // Ambil nama gambar dari DataTable
-                        string imageName = row["gambar"].ToString(); // Kolom "image_name" harus ada di DataTable
+                        // Memuat gambar dari resource
+                        string imageName = row["gambar"].ToString();
                         object resourceObject = Properties.Resources.ResourceManager.GetObject(imageName);
 
                         if (resourceObject is byte[] imageBytes)
@@ -66,16 +112,12 @@ namespace Projek_PBO_B07.View
                             {
                                 pictureBox.Image = Image.FromStream(ms);
                             }
-                            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         }
 
-
-                        // Jika gambar tidak ditemukan, gunakan gambar default
                         if (pictureBox.Image == null)
                         {
-                            string imagedefault = "strawbery.jpg";
-                            object resourceObject2 = Properties.Resources.ResourceManager.GetObject(imagedefault);
-                            // Ganti dengan nama gambar default Anda
+                            string defaultImage = "strawbery.jpg"; // Gambar default
+                            object resourceObject2 = Properties.Resources.ResourceManager.GetObject(defaultImage);
 
                             if (resourceObject2 is byte[] defaultImageBytes)
                             {
@@ -83,77 +125,64 @@ namespace Projek_PBO_B07.View
                                 {
                                     pictureBox.Image = Image.FromStream(ms);
                                 }
-                                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                             }
                         }
 
                         itemPanel.Controls.Add(pictureBox);
+                        currentX += pictureBox.Width + paddingX;
 
+                        // Fungsi untuk menambah label
+                        void TambahkanLabel(string text, int width)
+                        {
+                            Label label = new Label
+                            {
+                                Text = text,
+                                Width = width,
+                                Height = 30,
+                                Location = new Point(currentX, 45), // Posisikan data di tengah secara vertikal
+                                TextAlign = ContentAlignment.MiddleCenter
+                            };
+                            itemPanel.Controls.Add(label);
+                            currentX += width + paddingX;
+                        }
 
-                        // Menambahkan label untuk Nama buah
-                        Label labelnama_buah = new Label();
-                        labelnama_buah.Text = row["nama_buah"].ToString();
-                        labelnama_buah.Width = 150;
-                        labelnama_buah.Location = new Point(100, 10);
-                        itemPanel.Controls.Add(labelnama_buah);
+                        // Menambahkan kolom-kolom dengan lebar yang sesuai
+                        TambahkanLabel(row["id_produk"].ToString(), columnWidths[1]); // ID Produk
+                        TambahkanLabel(row["nama_buah"].ToString(), columnWidths[2]); // Nama Produk
+                        TambahkanLabel(row["harga_awal"].ToString(), columnWidths[3]); // Harga Awal
+                        TambahkanLabel(row["stok"].ToString(), columnWidths[4]); // Stok
+                        TambahkanLabel(row["tanggal_masuk"].ToString(), columnWidths[5]); // Tanggal Masuk
+                        TambahkanLabel(row["tanggal_expired"].ToString(), columnWidths[6]); // Tanggal Expired
+                        TambahkanLabel($"{row["diskon"]}%", columnWidths[7]); // Diskon
+                        TambahkanLabel(row["harga_setelah_diskon"].ToString(), columnWidths[8]); // Harga Setelah Diskon
 
-                        // Menambahkan label untuk Harga awal
-                        Label labelharga_awal = new Label();
-                        labelharga_awal.Text = row["harga_awal"].ToString();
-                        labelharga_awal.Width = 120;
-                        labelharga_awal.Location = new Point(150, 10);  // Ubah lokasi agar tidak bertumpuk
-                        itemPanel.Controls.Add(labelharga_awal);
-
-                        // Menambahkan label untuk stok
-                        Label labelstok = new Label();
-                        labelstok.Text = row["stok"].ToString();
-                        labelstok.Width = 100;
-                        labelstok.Location = new Point(200, 10);
-                        itemPanel.Controls.Add(labelstok);
-
-                        Label labeltanggal_masuk = new Label();
-                        labeltanggal_masuk.Text = row["tanggal_masuk"].ToString();
-                        labeltanggal_masuk.Width = 150;
-                        labeltanggal_masuk.Location = new Point(250, 10);
-                        itemPanel.Controls.Add(labeltanggal_masuk);
-
-                        Label labeltanggal_expired = new Label();
-                        labeltanggal_expired.Text = row["tanggal_expired"].ToString();
-                        labeltanggal_expired.Width = 150;
-                        labeltanggal_expired.Location = new Point(300, 10);
-                        itemPanel.Controls.Add(labeltanggal_expired);
-
-                        Label labeldiskon = new Label();
-                        labeldiskon.Text = row["diskon"].ToString();
-                        labeldiskon.Width = 100;
-                        labeldiskon.Location = new Point(350, 10);
-                        itemPanel.Controls.Add(labeldiskon);
-
-                        Label labelharga_setelah_diskon = new Label();
-                        labelharga_setelah_diskon.Text = row["harga_setelah_diskon"].ToString();
-                        labelharga_setelah_diskon.Width = 150;
-                        labelharga_setelah_diskon.Location = new Point(400, 10);
-                        itemPanel.Controls.Add(labelharga_setelah_diskon);
-
-
-                        // Menambahkan itemPanel ke panel9
+                        // Tambahkan panel item ke panel utama
                         panel8.Controls.Add(itemPanel);
 
-                        // Update posisi vertikal untuk panel berikutnya
-                        topPosition += itemPanel.Height + 10;  // Tambah tinggi panel dan margin vertikal
+                        // Perbarui posisi vertikal untuk item berikutnya
+                        topPosition += itemPanel.Height + 10;
                     }
+
+                    // Pastikan lebar total konten lebih besar dari panel8
+                    panel8.HorizontalScroll.Maximum = panelItemWidth;
                 }
                 else
                 {
-                    MessageBox.Show("Tidak ada data riwayat transaksi.");
+                    MessageBox.Show("Tidak ada data untuk ditampilkan.");
                 }
             }
             catch (Exception ex)
             {
-                // Menangani error dan menampilkan pesan kesalahan
+                // Menangani error
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
         }
+
+
+
+
+
+
         private void DashboardButton_Click(object sender, EventArgs e)
         {
 
@@ -186,6 +215,10 @@ namespace Projek_PBO_B07.View
 
         }
 
+        private void label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

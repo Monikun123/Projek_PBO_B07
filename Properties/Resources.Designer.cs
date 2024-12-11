@@ -63,9 +63,39 @@ namespace Projek_PBO_B07.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] akar_icons_dashboard {
+        internal static byte[] blueberry_jpg {
             get {
-                object obj = ResourceManager.GetObject("akar-icons_dashboard", resourceCulture);
+                object obj = ResourceManager.GetObject("blueberry.jpg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] lemon_jpg {
+            get {
+                object obj = ResourceManager.GetObject("lemon.jpg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] orange_jpg {
+            get {
+                object obj = ResourceManager.GetObject("orange.jpg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] pineapple_jpg {
+            get {
+                object obj = ResourceManager.GetObject("pineapple.jpg", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -76,16 +106,6 @@ namespace Projek_PBO_B07.Properties {
         internal static byte[] strawbery_jpg {
             get {
                 object obj = ResourceManager.GetObject("strawbery.jpg", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] strawbery_jpg1 {
-            get {
-                object obj = ResourceManager.GetObject("strawbery.jpg1", resourceCulture);
                 return ((byte[])(obj));
             }
         }
