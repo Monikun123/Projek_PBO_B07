@@ -99,7 +99,7 @@ namespace Projek_PBO_B07.View
         {
             this.Hide();
             V_EditProfil v_EditProfil = new V_EditProfil(id_user);
-            MessageBox.Show($"{id_user}");
+            
             v_EditProfil.Show();
 
         }
@@ -150,6 +150,16 @@ namespace Projek_PBO_B07.View
             this.Hide();
             V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(id_user);
             v_DashboardAdmin.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

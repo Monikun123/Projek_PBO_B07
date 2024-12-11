@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_Profil));
-            pictureBox4 = new PictureBox();
             label5 = new Label();
             panel2 = new Panel();
             label7 = new Label();
@@ -51,11 +50,11 @@
             pictureBox7 = new PictureBox();
             RiwayatButton = new Button();
             pictureBox6 = new PictureBox();
-            button1 = new Button();
+            HalProdukButton = new Button();
             panel6 = new Panel();
             label1 = new Label();
             pictureBox5 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            pictureBox4 = new PictureBox();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
@@ -67,20 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.Black;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(4, 40);
-            pictureBox4.Margin = new Padding(1);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(31, 25);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 4;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
             // 
             // label5
             // 
@@ -93,7 +80,7 @@
             label5.Name = "label5";
             label5.Size = new Size(67, 19);
             label5.TabIndex = 4;
-            label5.Text = "PROIFL";
+            label5.Text = "PROFIL";
             label5.Click += label5_Click;
             // 
             // panel2
@@ -107,11 +94,10 @@
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(panel5);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(190, 1);
+            panel2.Location = new Point(149, 1);
             panel2.Margin = new Padding(1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(702, 396);
+            panel2.Size = new Size(547, 298);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -166,7 +152,7 @@
             panel4.Location = new Point(94, 149);
             panel4.Margin = new Padding(1);
             panel4.Name = "panel4";
-            panel4.Size = new Size(137, 35);
+            panel4.Size = new Size(187, 35);
             panel4.TabIndex = 6;
             panel4.Paint += panel4_Paint;
             // 
@@ -189,7 +175,7 @@
             panel3.Location = new Point(94, 103);
             panel3.Margin = new Padding(1);
             panel3.Name = "panel3";
-            panel3.Size = new Size(137, 35);
+            panel3.Size = new Size(187, 35);
             panel3.TabIndex = 5;
             // 
             // Email
@@ -212,7 +198,7 @@
             panel5.Location = new Point(94, 60);
             panel5.Margin = new Padding(1);
             panel5.Name = "panel5";
-            panel5.Size = new Size(137, 35);
+            panel5.Size = new Size(187, 35);
             panel5.TabIndex = 3;
             panel5.Paint += panel5_Paint;
             // 
@@ -240,7 +226,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(893, 398);
+            tableLayoutPanel1.Size = new Size(697, 398);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -253,7 +239,7 @@
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(RiwayatButton);
             panel1.Controls.Add(pictureBox6);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(HalProdukButton);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(pictureBox4);
@@ -261,38 +247,36 @@
             panel1.Location = new Point(1, 1);
             panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(187, 396);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(146, 396);
+            panel1.TabIndex = 2;
             // 
             // DashboardButton
             // 
-            DashboardButton.BackColor = Color.White;
-            DashboardButton.Location = new Point(37, 42);
+            DashboardButton.BackColor = Color.FromArgb(247, 204, 92);
+            DashboardButton.Location = new Point(36, 53);
             DashboardButton.Margin = new Padding(1);
             DashboardButton.Name = "DashboardButton";
             DashboardButton.Size = new Size(83, 25);
-            DashboardButton.TabIndex = 17;
+            DashboardButton.TabIndex = 15;
             DashboardButton.Text = "DashBoard";
             DashboardButton.UseVisualStyleBackColor = false;
-            DashboardButton.Click += DashboardButton_Click;
             // 
             // LogOutButton
             // 
             LogOutButton.BackColor = Color.Red;
-            LogOutButton.Location = new Point(37, 193);
+            LogOutButton.Location = new Point(36, 257);
             LogOutButton.Margin = new Padding(1);
             LogOutButton.Name = "LogOutButton";
             LogOutButton.Size = new Size(83, 25);
             LogOutButton.TabIndex = 14;
             LogOutButton.Text = "LogOut";
             LogOutButton.UseVisualStyleBackColor = false;
-            LogOutButton.Click += LogOutButton_Click;
             // 
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.Red;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(4, 193);
+            pictureBox8.Location = new Point(4, 257);
             pictureBox8.Margin = new Padding(1);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(31, 25);
@@ -302,22 +286,19 @@
             // 
             // ProfilButton
             // 
-            ProfilButton.BackColor = Color.FromArgb(247, 204, 92);
-            ProfilButton.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ProfilButton.Location = new Point(37, 123);
+            ProfilButton.Location = new Point(36, 163);
             ProfilButton.Margin = new Padding(1);
             ProfilButton.Name = "ProfilButton";
             ProfilButton.Size = new Size(83, 25);
             ProfilButton.TabIndex = 12;
             ProfilButton.Text = "Profil";
-            ProfilButton.UseVisualStyleBackColor = false;
-            ProfilButton.Click += ProfilButton_Click;
+            ProfilButton.UseVisualStyleBackColor = true;
             // 
             // pictureBox7
             // 
-            pictureBox7.BackColor = Color.FromArgb(247, 204, 92);
+            pictureBox7.BackColor = Color.White;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(4, 123);
+            pictureBox7.Location = new Point(4, 163);
             pictureBox7.Margin = new Padding(1);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(31, 25);
@@ -327,20 +308,19 @@
             // 
             // RiwayatButton
             // 
-            RiwayatButton.Location = new Point(37, 96);
+            RiwayatButton.Location = new Point(36, 127);
             RiwayatButton.Margin = new Padding(1);
             RiwayatButton.Name = "RiwayatButton";
             RiwayatButton.Size = new Size(83, 25);
             RiwayatButton.TabIndex = 10;
             RiwayatButton.Text = "Riwayat";
             RiwayatButton.UseVisualStyleBackColor = true;
-            RiwayatButton.Click += RiwayatButton_Click;
             // 
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.White;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(4, 96);
+            pictureBox6.Location = new Point(4, 127);
             pictureBox6.Margin = new Padding(1);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(31, 25);
@@ -348,16 +328,15 @@
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
             // 
-            // button1
+            // HalProdukButton
             // 
-            button1.Location = new Point(37, 69);
-            button1.Margin = new Padding(1);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 25);
-            button1.TabIndex = 8;
-            button1.Text = "Produk";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            HalProdukButton.Location = new Point(36, 91);
+            HalProdukButton.Margin = new Padding(1);
+            HalProdukButton.Name = "HalProdukButton";
+            HalProdukButton.Size = new Size(83, 25);
+            HalProdukButton.TabIndex = 8;
+            HalProdukButton.Text = "Produk";
+            HalProdukButton.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -367,7 +346,7 @@
             panel6.Location = new Point(0, 0);
             panel6.Margin = new Padding(1);
             panel6.Name = "panel6";
-            panel6.Size = new Size(187, 38);
+            panel6.Size = new Size(146, 43);
             panel6.TabIndex = 7;
             // 
             // label1
@@ -377,7 +356,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(23, 11);
+            label1.Location = new Point(36, 11);
             label1.Margin = new Padding(1, 0, 1, 0);
             label1.Name = "label1";
             label1.Size = new Size(73, 22);
@@ -388,13 +367,25 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(4, 68);
+            pictureBox5.Location = new Point(4, 91);
             pictureBox5.Margin = new Padding(1);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(31, 25);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.FromArgb(247, 204, 92);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(4, 53);
+            pictureBox4.Margin = new Padding(1);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(31, 25);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
             // 
             // V_Profil
             // 
@@ -405,7 +396,6 @@
             Name = "V_Profil";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "V_Profil";
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel4.ResumeLayout(false);
@@ -422,25 +412,14 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private PictureBox pictureBox4;
         private Label label5;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel1;
-        private Button LogOutButton;
-        private PictureBox pictureBox8;
-        private Button ProfilButton;
-        private PictureBox pictureBox7;
-        private Button RiwayatButton;
-        private PictureBox pictureBox6;
-        private Button button1;
-        private Panel panel6;
-        private Label label1;
-        private PictureBox pictureBox5;
         private Label label9;
         private Panel panel5;
         private Label Nama;
@@ -452,6 +431,18 @@
         private Label label6;
         private Label label4;
         private Label Email;
+        private Panel panel1;
         private Button DashboardButton;
+        private Button LogOutButton;
+        private PictureBox pictureBox8;
+        private Button ProfilButton;
+        private PictureBox pictureBox7;
+        private Button RiwayatButton;
+        private PictureBox pictureBox6;
+        private Button HalProdukButton;
+        private Panel panel6;
+        private Label label1;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
     }
 }
