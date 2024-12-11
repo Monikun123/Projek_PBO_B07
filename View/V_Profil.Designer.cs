@@ -44,6 +44,7 @@
             Nama = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            DashboardButton = new Button();
             LogOutButton = new Button();
             pictureBox8 = new PictureBox();
             ProfilButton = new Button();
@@ -54,7 +55,6 @@
             panel6 = new Panel();
             label1 = new Label();
             pictureBox5 = new PictureBox();
-            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -108,10 +108,10 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(panel5);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(214, 1);
+            panel2.Location = new Point(190, 1);
             panel2.Margin = new Padding(1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(790, 549);
+            panel2.Size = new Size(702, 396);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -166,7 +166,7 @@
             panel4.Location = new Point(94, 149);
             panel4.Margin = new Padding(1);
             panel4.Name = "panel4";
-            panel4.Size = new Size(225, 35);
+            panel4.Size = new Size(137, 35);
             panel4.TabIndex = 6;
             panel4.Paint += panel4_Paint;
             // 
@@ -189,7 +189,7 @@
             panel3.Location = new Point(94, 103);
             panel3.Margin = new Padding(1);
             panel3.Name = "panel3";
-            panel3.Size = new Size(225, 35);
+            panel3.Size = new Size(137, 35);
             panel3.TabIndex = 5;
             // 
             // Email
@@ -212,7 +212,7 @@
             panel5.Location = new Point(94, 60);
             panel5.Margin = new Padding(1);
             panel5.Name = "panel5";
-            panel5.Size = new Size(225, 35);
+            panel5.Size = new Size(137, 35);
             panel5.TabIndex = 3;
             panel5.Paint += panel5_Paint;
             // 
@@ -240,12 +240,13 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1005, 551);
+            tableLayoutPanel1.Size = new Size(893, 398);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(DashboardButton);
             panel1.Controls.Add(LogOutButton);
             panel1.Controls.Add(pictureBox8);
             panel1.Controls.Add(ProfilButton);
@@ -255,14 +256,25 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(pictureBox5);
-            panel1.Controls.Add(label9);
             panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(1, 1);
             panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(211, 549);
+            panel1.Size = new Size(187, 396);
             panel1.TabIndex = 0;
+            // 
+            // DashboardButton
+            // 
+            DashboardButton.BackColor = Color.White;
+            DashboardButton.Location = new Point(37, 42);
+            DashboardButton.Margin = new Padding(1);
+            DashboardButton.Name = "DashboardButton";
+            DashboardButton.Size = new Size(83, 25);
+            DashboardButton.TabIndex = 17;
+            DashboardButton.Text = "DashBoard";
+            DashboardButton.UseVisualStyleBackColor = false;
+            DashboardButton.Click += DashboardButton_Click;
             // 
             // LogOutButton
             // 
@@ -299,6 +311,7 @@
             ProfilButton.TabIndex = 12;
             ProfilButton.Text = "Profil";
             ProfilButton.UseVisualStyleBackColor = false;
+            ProfilButton.Click += ProfilButton_Click;
             // 
             // pictureBox7
             // 
@@ -321,6 +334,7 @@
             RiwayatButton.TabIndex = 10;
             RiwayatButton.Text = "Riwayat";
             RiwayatButton.UseVisualStyleBackColor = true;
+            RiwayatButton.Click += RiwayatButton_Click;
             // 
             // pictureBox6
             // 
@@ -343,6 +357,7 @@
             button1.TabIndex = 8;
             button1.Text = "Produk";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panel6
             // 
@@ -352,7 +367,7 @@
             panel6.Location = new Point(0, 0);
             panel6.Margin = new Padding(1);
             panel6.Name = "panel6";
-            panel6.Size = new Size(211, 43);
+            panel6.Size = new Size(187, 38);
             panel6.TabIndex = 7;
             // 
             // label1
@@ -362,7 +377,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(36, 11);
+            label1.Location = new Point(23, 11);
             label1.Margin = new Padding(1, 0, 1, 0);
             label1.Name = "label1";
             label1.Size = new Size(73, 22);
@@ -381,26 +396,14 @@
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.White;
-            label9.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(48, 48);
-            label9.Margin = new Padding(1, 0, 1, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(72, 17);
-            label9.TabIndex = 5;
-            label9.Text = "Dashboard";
-            label9.Click += label9_Click;
-            // 
             // V_Profil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(799, 450);
+            ClientSize = new Size(687, 297);
             Controls.Add(tableLayoutPanel1);
             Name = "V_Profil";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_Profil";
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
@@ -413,7 +416,6 @@
             panel5.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -450,5 +452,6 @@
         private Label label6;
         private Label label4;
         private Label Email;
+        private Button DashboardButton;
     }
 }
