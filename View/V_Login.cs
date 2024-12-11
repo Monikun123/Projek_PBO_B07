@@ -44,7 +44,7 @@ namespace Projek_PBO_B07
                     this.Hide();
                     adminDashboard.Show();
                 }
-                else if (role == "User")
+                else if (role == "Customer")
                 {
                     MessageBox.Show("Login berhasil! Anda masuk sebagai User.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     V_DashboardCust userDashboard = new V_DashboardCust(login.Id_User);
