@@ -168,6 +168,22 @@ namespace Projek_PBO_B07.View
             V_Logout v_logout = new V_Logout(id_user);
             v_logout.Show();
         }
+
+        private void RiwayatButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Riwayat addriwayat = new V_Riwayat(id_user);
+            addriwayat.Show();
+
+
+        }
+
+        private void HalProdukButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_Produk addproduk = new V_Produk(id_user);
+            addproduk.Show();
+        }
     }
 }
 

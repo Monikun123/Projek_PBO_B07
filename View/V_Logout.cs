@@ -17,7 +17,7 @@ namespace Projek_PBO_B07.View
         {
             InitializeComponent();
             this.id_user = id_user;
-            MessageBox.Show($"Terjadi kesalahan: {id_user}");
+  
 
         }
 
