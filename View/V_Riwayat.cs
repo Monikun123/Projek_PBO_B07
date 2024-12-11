@@ -64,6 +64,7 @@ namespace Projek_PBO_B07.View
                         labelTglTransaksi.Text = row["tanggal_transaksi"].ToString();
                         labelTglTransaksi.Width = 120;
                         labelTglTransaksi.Location = new Point(420, 10);
+                        itemPanel.Controls.Add(labelTglTransaksi);
 
                         // Menambahkan label untuk Buah Busuk
                         Label labelBobot = new Label();
