@@ -39,6 +39,7 @@ namespace Projek_PBO_B07
                 if (role == "Admin")
                 {
                     MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    V_Profil addprofil = new V_Profil(login.Id_User);
                     V_DashboardAdmin adminDashboard = new V_DashboardAdmin(login.Id_User);
                     this.Hide();
                     adminDashboard.Show();
