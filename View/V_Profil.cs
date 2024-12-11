@@ -144,6 +144,13 @@ namespace Projek_PBO_B07.View
             V_Produk v_Produk = new V_Produk(id_user);
             v_Produk.Show();
         }
+
+        private void DashboardButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardAdmin v_DashboardAdmin = new V_DashboardAdmin(id_user);
+            v_DashboardAdmin.Show();
+        }
     }
 }
 
