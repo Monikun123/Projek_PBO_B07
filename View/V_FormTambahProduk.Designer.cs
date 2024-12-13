@@ -74,6 +74,7 @@
             BackButton.TabIndex = 13;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click_1;
             // 
             // AddProdukButton
             // 

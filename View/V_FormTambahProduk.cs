@@ -112,6 +112,12 @@ namespace Projek_PBO_B07.View
         {
 
         }
+
+        private void BackButton_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Hide();
+        }
     }
 
 }

@@ -111,15 +111,27 @@ namespace Projek_PBO_B07.View
                         // Tentukan path lengkap gambar yang ada di folder Resources
                         string imagePath = Path.Combine(resourcesFolderPath, imageName);
 
-                        // Memuat gambar jika ada di folder Resources
-                        if (File.Exists(imagePath))
+                        // Daftar ekstensi gambar yang valid
+                        string[] validExtensions = { ".jpg", ".jpeg", ".png" };
+
+                        // Memeriksa apakah file gambar ada dengan ekstensi yang valid
+                        bool imageFound = false;
+                        foreach (string ext in validExtensions)
                         {
-                            pictureBox.Image = Image.FromFile(imagePath);
+                            string filePath = Path.Combine(resourcesFolderPath, Path.ChangeExtension(imageName, ext));
+
+                            if (File.Exists(filePath))
+                            {
+                                pictureBox.Image = Image.FromFile(filePath);
+                                imageFound = true;
+                                break;
+                            }
                         }
-                        else
+
+                        // Jika gambar tidak ditemukan, gunakan gambar default
+                        if (!imageFound)
                         {
-                            // Jika gambar tidak ditemukan, gunakan gambar default
-                            string defaultImage = "strawbery.jpg.jpg"; // Nama gambar default
+                            string defaultImage = "Pepaya.png"; // Nama gambar default (tanpa ekstensi)
                             string defaultImagePath = Path.Combine(resourcesFolderPath, defaultImage);
 
                             if (File.Exists(defaultImagePath))
@@ -134,7 +146,6 @@ namespace Projek_PBO_B07.View
 
                         itemPanel.Controls.Add(pictureBox);
                         currentX += pictureBox.Width + paddingX;
-
                         // Fungsi untuk menambah label
                         void TambahkanLabel(string text, int width)
                         {
@@ -155,7 +166,7 @@ namespace Projek_PBO_B07.View
                         TambahkanLabel(row["nama_buah"].ToString(), columnWidths[2]); // Nama Produk
                         TambahkanLabel(row["harga_awal"].ToString(), columnWidths[3]); // Harga Awal
                         TambahkanLabel(row["stok"].ToString(), columnWidths[4]); // Stok
-                        TambahkanLabel(row["gambar"].ToString(), columnWidths[5]); // Tanggal Masuk
+                        TambahkanLabel(row["tanggal_masuk"].ToString(), columnWidths[5]); // Tanggal Masuk
                         TambahkanLabel(row["tanggal_expired"].ToString(), columnWidths[6]); // Tanggal Expired
                         TambahkanLabel($"{row["diskon"]}%", columnWidths[7]); // Diskon
                         TambahkanLabel(row["harga_setelah_diskon"].ToString(), columnWidths[8]); // Harga Setelah Diskon

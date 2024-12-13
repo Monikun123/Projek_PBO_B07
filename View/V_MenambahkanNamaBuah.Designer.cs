@@ -72,9 +72,9 @@
             NamaGambar.AutoSize = true;
             NamaGambar.Location = new Point(504, 289);
             NamaGambar.Name = "NamaGambar";
-            NamaGambar.Size = new Size(127, 25);
+            NamaGambar.Size = new Size(75, 25);
             NamaGambar.TabIndex = 19;
-            NamaGambar.Text = "Nama Gambar";
+            NamaGambar.Text = "Gambar";
             NamaGambar.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // AddImageButton
@@ -132,6 +132,7 @@
             BackButton.TabIndex = 13;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // AddProdukButton
             // 
@@ -142,6 +143,7 @@
             AddProdukButton.TabIndex = 12;
             AddProdukButton.Text = "Menambahkan Buah";
             AddProdukButton.UseVisualStyleBackColor = false;
+            AddProdukButton.Click += AddProdukButton_Click;
             // 
             // HargaTextBox
             // 

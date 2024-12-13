@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projek_PBO_B07.Context;
 using Projek_PBO_B07.Core;
+using Projek_PBO_B07.Model;
 
 namespace Projek_PBO_B07.View
 {
@@ -43,13 +44,14 @@ namespace Projek_PBO_B07.View
                 try
                 {
                     // Mengecek apakah file yang dipilih adalah gambar
-                    if (openFileDialog.FileName.EndsWith(".jpg") ||
+                    if (
+                        openFileDialog.FileName.EndsWith(".jpg") ||
                         openFileDialog.FileName.EndsWith(".png") ||
                         openFileDialog.FileName.EndsWith(".bmp"))
                     {
                         // Mengurangi ukuran gambar sebelum memuatnya
                         Image originalImage = Image.FromFile(openFileDialog.FileName);
-                        int newWidth = 800; // Ganti ukuran lebar gambar yang diinginkan
+                        int newWidth = 80; // Ganti ukuran lebar gambar yang diinginkan
                         int newHeight = (int)(originalImage.Height * ((float)newWidth / originalImage.Width));
                         Image resizedImage = new Bitmap(originalImage, newWidth, newHeight);
 
@@ -79,7 +81,7 @@ namespace Projek_PBO_B07.View
                     }
                     else
                     {
-                        MessageBox.Show("File yang dipilih bukan gambar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("File yang dipilih bukan file png maupun bmp.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)
@@ -89,5 +91,53 @@ namespace Projek_PBO_B07.View
                 }
             }
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Hide();
+        }
+
+        private void AddProdukButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(NamatextBox.Text))
+            {
+                MessageBox.Show("Nama buah tidak boleh kosong.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(HargaTextBox.Text) || !int.TryParse(HargaTextBox.Text, out int harga))
+            {
+                MessageBox.Show("Harga harus berupa angka yang valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (NamaGambar.Text == "Gambar" || string.IsNullOrWhiteSpace(NamaGambar.Text))
+            {
+                MessageBox.Show("Gambar tidak boleh kosong atau hanya berisi teks 'Gambar'.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (JbcomboBox1.SelectedValue == null)
+            {
+                MessageBox.Show("Jenis buah harus dipilih.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            M_Nama_Buah buah = new M_Nama_Buah()
+            {
+                nama_buah = NamatextBox.Text,
+                harga = int.Parse(HargaTextBox.Text),
+                gambar = NamaGambar.Text,
+                id_jenis_buah = (int)JbcomboBox1.SelectedValue
+            };
+            ProdukContext.AddNamaBuah(buah);
+            MessageBox.Show("Buah baru berhasil ditambahkan");
+            this.DialogResult = DialogResult.OK;
+            this.Hide();
+
+
+        }
     }
+
+
 }
