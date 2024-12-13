@@ -17,7 +17,7 @@ namespace Projek_PBO_B07.Core
     {
         // Properti credential database dan koneksinya
         private static readonly string DB_HOST = "localhost";
-        private static readonly string DB_DATABASE = "projek3";
+        private static readonly string DB_DATABASE = "projek4";
         private static readonly string DB_USERNAME = "postgres";
         private static readonly string DB_PASSWORD = "basic324";
         private static readonly string DB_PORT = "5432";
@@ -28,63 +28,7 @@ namespace Projek_PBO_B07.Core
         // Method open dan close Koneksi
 
 
-        public void SaveImageToResources(string imagePath)
-        {
-            // Path ke file Resources.resx
-            string resourceFilePath = Path.Combine(Application.StartupPath, @"C:\Users\Naufal Kemal A\Source\Repos\Projek_PBO_B071\Properties\Resources.resx");
-
-            // Pastikan file Resources.resx ada
-            if (!File.Exists(resourceFilePath))
-            {
-                MessageBox.Show("Resources.resx tidak ditemukan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string imageName = Path.GetFileName(imagePath); // Nama gambar
-            string targetFolder = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B07\Resources\";  // Folder target tempat menyimpan gambar
-
-            // Salin gambar ke folder Resources jika perlu
-            if (!Directory.Exists(targetFolder))
-            {
-                Directory.CreateDirectory(targetFolder);  // Membuat folder Resources jika tidak ada
-            }
-
-            string targetPath = Path.Combine(targetFolder, imageName); // Path lengkap untuk gambar
-            try
-            {
-                // Salin gambar ke folder Resources
-                File.Copy(imagePath, targetPath, true);  // Menyalin gambar ke folder target
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Terjadi kesalahan saat menyalin gambar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Menambahkan gambar ke dalam Resources.resx
-            try
-            {
-                // Membuka file .resx yang ada untuk menambah resource
-                using (ResXResourceWriter resxWriter = new ResXResourceWriter(resourceFilePath))
-                {
-                    // Membaca resource yang sudah ada sebelumnya dan menulis kembali ke file .resx
-                    foreach (DictionaryEntry entry in new ResXResourceReader(resourceFilePath))
-                    {
-                        resxWriter.AddResource(entry.Key.ToString(), entry.Value);
-                    }
-
-                    // Menambahkan gambar ke dalam file .resx sebagai referensi file
-                    resxWriter.AddResource(imageName, new ResXFileRef(targetPath, "System.Drawing.Bitmap"));
-                }
-
-                MessageBox.Show($"Gambar '{imageName}' berhasil disimpan dalam Resources.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Terjadi kesalahan saat menulis ke Resources.resx: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+        
 
 
         public static void openConnection()

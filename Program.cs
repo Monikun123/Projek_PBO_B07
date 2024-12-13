@@ -14,7 +14,7 @@ namespace Projek_PBO_B07
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new V_MenambahkanNamaBuah());
+            Application.Run(new V_Login());
         }
     }
 }

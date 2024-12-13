@@ -94,6 +94,9 @@ namespace Projek_PBO_B07.View
                         int paddingX = 0; // Padding antar elemen data
 
                         // PictureBox untuk gambar
+                        String resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B07\Resources";
+
+                        // Membuat PictureBox
                         PictureBox pictureBox = new PictureBox
                         {
                             Width = 100,
@@ -102,29 +105,30 @@ namespace Projek_PBO_B07.View
                             SizeMode = PictureBoxSizeMode.StretchImage
                         };
 
-                        // Memuat gambar dari resource
+                        // Mengambil nama gambar dari data (misalnya, DataTable atau database)
                         string imageName = row["gambar"].ToString();
-                        object resourceObject = Properties.Resources.ResourceManager.GetObject(imageName);
 
-                        if (resourceObject is byte[] imageBytes)
+                        // Tentukan path lengkap gambar yang ada di folder Resources
+                        string imagePath = Path.Combine(resourcesFolderPath, imageName);
+
+                        // Memuat gambar jika ada di folder Resources
+                        if (File.Exists(imagePath))
                         {
-                            using (MemoryStream ms = new MemoryStream(imageBytes))
-                            {
-                                pictureBox.Image = Image.FromStream(ms);
-                            }
+                            pictureBox.Image = Image.FromFile(imagePath);
                         }
-
-                        if (pictureBox.Image == null)
+                        else
                         {
-                            string defaultImage = "strawbery.jpg"; // Gambar default
-                            object resourceObject2 = Properties.Resources.ResourceManager.GetObject(defaultImage);
+                            // Jika gambar tidak ditemukan, gunakan gambar default
+                            string defaultImage = "strawbery.jpg.jpg"; // Nama gambar default
+                            string defaultImagePath = Path.Combine(resourcesFolderPath, defaultImage);
 
-                            if (resourceObject2 is byte[] defaultImageBytes)
+                            if (File.Exists(defaultImagePath))
                             {
-                                using (MemoryStream ms = new MemoryStream(defaultImageBytes))
-                                {
-                                    pictureBox.Image = Image.FromStream(ms);
-                                }
+                                pictureBox.Image = Image.FromFile(defaultImagePath);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gambar default tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
 
@@ -151,7 +155,7 @@ namespace Projek_PBO_B07.View
                         TambahkanLabel(row["nama_buah"].ToString(), columnWidths[2]); // Nama Produk
                         TambahkanLabel(row["harga_awal"].ToString(), columnWidths[3]); // Harga Awal
                         TambahkanLabel(row["stok"].ToString(), columnWidths[4]); // Stok
-                        TambahkanLabel(row["tanggal_masuk"].ToString(), columnWidths[5]); // Tanggal Masuk
+                        TambahkanLabel(row["gambar"].ToString(), columnWidths[5]); // Tanggal Masuk
                         TambahkanLabel(row["tanggal_expired"].ToString(), columnWidths[6]); // Tanggal Expired
                         TambahkanLabel($"{row["diskon"]}%", columnWidths[7]); // Diskon
                         TambahkanLabel(row["harga_setelah_diskon"].ToString(), columnWidths[8]); // Harga Setelah Diskon
