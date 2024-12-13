@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
@@ -21,6 +22,41 @@ namespace Projek_PBO_B07.Core
         private static NpgsqlCommand command;
 
         // Method open dan close Koneksi
+        public void SaveImageToResources(string filePath)
+        {
+            try
+            {
+                // Membaca gambar ke dalam byte array
+                byte[] imageBytes;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (Image image = Image.FromFile(filePath))
+                    {
+                        image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);  // Menyimpan gambar sebagai PNG
+                    }
+                    imageBytes = ms.ToArray();
+                }
+
+                // Tentukan path ke file Resources.resx
+                string resourcesPath = @"C:\Users\Naufal Kemal A\Source\Repos\Projek_PBO_B071\Properties\Resources.resx";
+
+                // Membaca file .resx yang sudah ada
+                ResXResourceWriter resxWriter = new ResXResourceWriter(resourcesPath);
+
+                // Menambahkan resource baru (gambar) ke dalam .resx
+                string resourceName = Path.GetFileName(filePath);  // Gunakan nama file sebagai nama resource
+                resxWriter.AddResource(resourceName, imageBytes);  // Menambahkan resource gambar
+
+                // Menyimpan file Resources.resx
+                resxWriter.Close();
+
+                MessageBox.Show($"Gambar berhasil disimpan ke Resources.resx dengan nama resource '{resourceName}'", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan saat menyimpan gambar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public static void openConnection()
         {
             connection = new NpgsqlConnection($"Host={DB_HOST};Username={DB_USERNAME};Password={DB_PASSWORD};Database={DB_DATABASE};Port={DB_PORT}");

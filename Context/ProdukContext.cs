@@ -83,6 +83,10 @@ ORDER BY
 
         }
 
+        public static void AddNamaBuah (int id_jenisbuah, string gambar,  string namabuah)
+        { 
+
+        }
         public static void UpdateDiskon(int id_promosi, int id_produk)
         {
             string query = $"UPDATE produk SET id_promosi = @id_promosi WHERE id_produk = @id_produk;";
