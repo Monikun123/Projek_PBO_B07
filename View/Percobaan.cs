@@ -22,7 +22,7 @@ namespace Projek_PBO_B07.View
 
         private void picturebox()
         {
-            string imageName = "download1.png";  // Nama gambar yang ingin diambil
+            string imageName = "pepaya.jpg";  // Nama gambar yang ingin diambil
             string resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources\";
 
             // Tentukan path lengkap gambar
