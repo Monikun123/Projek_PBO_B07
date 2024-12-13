@@ -97,6 +97,11 @@ namespace Projek_PBO_B07.View
                     MessageBox.Show("Nilai tidak boleh negatif.", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                if (terjual == 0 && busuk == 0)
+                {
+                    MessageBox.Show("jumlah Buah harus diisi.", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 DataTable stokSaatIni = ProdukContext.GetDataStock(id_produk); // Ganti dengan fungsi yang benar untuk mendapatkan stok
                 int stock = Convert.ToInt32(stokSaatIni.Rows[0]["stok"]);
                 // Validasi total (terjual + busuk) tidak boleh melebihi stok
