@@ -27,40 +27,42 @@ namespace Projek_PBO_B07.Core
         // Method open dan close Koneksi
 
 
-        public void SaveImageToResources(string filePath)
+        public void SaveImageToResources(string imagePath)
         {
-            string fileName = Path.GetFileName(filePath);
-            string resourceName = Path.GetFileNameWithoutExtension(fileName); // Nama file tanpa ekstensi
+            string resourceFilePath = Path.Combine(Application.StartupPath, @"C:\Users\Naufal Kemal A\Source\Repos\Projek_PBO_B071\Properties\Resources.resx");
 
-            string resourcesPath = Path.Combine(Application.StartupPath, @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Properties\Resources.resx");
-
-            if (!File.Exists(resourcesPath))
+            // Pastikan file Resources.resx ada
+            if (!File.Exists(resourceFilePath))
             {
-                MessageBox.Show("Resources.resx tidak ditemukan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Resources.resx tidak ditemukan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Menyalin gambar ke dalam folder Resources jika perlu
-            string targetFolder = Path.Combine(Application.StartupPath, "Resources");
+            string imageName = Path.GetFileName(imagePath); // Nama gambar
+            string imageRelativePath = Path.Combine(@"..\Resources", imageName);
+
+            // Salin gambar ke folder Resources (jika perlu)
+            string targetFolder = Path.Combine(Application.StartupPath, @"Resources");
             if (!Directory.Exists(targetFolder))
             {
                 Directory.CreateDirectory(targetFolder);
             }
 
-            string targetPath = Path.Combine(targetFolder, fileName);
-            File.Copy(filePath, targetPath, true);
+            string targetPath = Path.Combine(targetFolder, imageName);
+            File.Copy(imagePath, targetPath, true);
 
-            // Menggunakan ResXResourceWriter untuk menambah gambar ke Resources
-            using (ResXResourceWriter resxWriter = new ResXResourceWriter(resourcesPath))
+            // Menulis ke Resources.resx
+            using (ResXResourceWriter resxWriter = new ResXResourceWriter(resourceFilePath))
             {
-                resxWriter.AddResource(resourceName, new ResXFileRef(targetPath, "System.Drawing.Bitmap"));
+                resxWriter.AddResource(imageName, new ResXFileRef(targetPath, "System.Drawing.Bitmap"));
             }
 
-            MessageBox.Show($"Gambar '{fileName}' berhasil disimpan ke Resources.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Gambar '{imageName}' berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+    
 
 
-        public static void openConnection()
+    public static void openConnection()
         {
             connection = new NpgsqlConnection($"Host={DB_HOST};Username={DB_USERNAME};Password={DB_PASSWORD};Database={DB_DATABASE};Port={DB_PORT}");
             connection.Open();
