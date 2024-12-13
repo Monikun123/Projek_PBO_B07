@@ -117,23 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="strawbery.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strawbery,jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="blueberry.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blueberry.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pineapple.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pineapple.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lemon.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lemon.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="orange.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orange.jpg.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Business Model Whiteboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Business Model Whiteboard.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>
