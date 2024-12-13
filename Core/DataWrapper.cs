@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using System.Drawing;
-using System.Resources; 
+using System.Resources;
+using System.Collections;
 
 namespace Projek_PBO_B07.Core
 {
@@ -29,6 +30,7 @@ namespace Projek_PBO_B07.Core
 
         public void SaveImageToResources(string imagePath)
         {
+            // Path ke file Resources.resx
             string resourceFilePath = Path.Combine(Application.StartupPath, @"C:\Users\Naufal Kemal A\Source\Repos\Projek_PBO_B071\Properties\Resources.resx");
 
             // Pastikan file Resources.resx ada
@@ -39,30 +41,53 @@ namespace Projek_PBO_B07.Core
             }
 
             string imageName = Path.GetFileName(imagePath); // Nama gambar
-            string imageRelativePath = Path.Combine(@"..\Resources", imageName);
+            string targetFolder = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B07\Resources\";  // Folder target tempat menyimpan gambar
 
-            // Salin gambar ke folder Resources (jika perlu)
-            string targetFolder = Path.Combine(Application.StartupPath, @"Resources");
+            // Salin gambar ke folder Resources jika perlu
             if (!Directory.Exists(targetFolder))
             {
-                Directory.CreateDirectory(targetFolder);
+                Directory.CreateDirectory(targetFolder);  // Membuat folder Resources jika tidak ada
             }
 
-            string targetPath = Path.Combine(targetFolder, imageName);
-            File.Copy(imagePath, targetPath, true);
-
-            // Menulis ke Resources.resx
-            using (ResXResourceWriter resxWriter = new ResXResourceWriter(resourceFilePath))
+            string targetPath = Path.Combine(targetFolder, imageName); // Path lengkap untuk gambar
+            try
             {
-                resxWriter.AddResource(imageName, new ResXFileRef(targetPath, "System.Drawing.Bitmap"));
+                // Salin gambar ke folder Resources
+                File.Copy(imagePath, targetPath, true);  // Menyalin gambar ke folder target
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan saat menyalin gambar: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            MessageBox.Show($"Gambar '{imageName}' berhasil disimpan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Menambahkan gambar ke dalam Resources.resx
+            try
+            {
+                // Membuka file .resx yang ada untuk menambah resource
+                using (ResXResourceWriter resxWriter = new ResXResourceWriter(resourceFilePath))
+                {
+                    // Membaca resource yang sudah ada sebelumnya dan menulis kembali ke file .resx
+                    foreach (DictionaryEntry entry in new ResXResourceReader(resourceFilePath))
+                    {
+                        resxWriter.AddResource(entry.Key.ToString(), entry.Value);
+                    }
+
+                    // Menambahkan gambar ke dalam file .resx sebagai referensi file
+                    resxWriter.AddResource(imageName, new ResXFileRef(targetPath, "System.Drawing.Bitmap"));
+                }
+
+                MessageBox.Show($"Gambar '{imageName}' berhasil disimpan dalam Resources.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan saat menulis ke Resources.resx: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-    
 
 
-    public static void openConnection()
+
+        public static void openConnection()
         {
             connection = new NpgsqlConnection($"Host={DB_HOST};Username={DB_USERNAME};Password={DB_PASSWORD};Database={DB_DATABASE};Port={DB_PORT}");
             connection.Open();
