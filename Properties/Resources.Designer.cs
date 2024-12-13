@@ -73,6 +73,16 @@ namespace Projek_PBO_B07.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Business_Model_Whiteboard {
+            get {
+                object obj = ResourceManager.GetObject("Business Model Whiteboard", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] lemon_jpg {
             get {
                 object obj = ResourceManager.GetObject("lemon.jpg", resourceCulture);
