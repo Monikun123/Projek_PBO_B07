@@ -59,7 +59,7 @@ namespace Projek_PBO_B07.View
                         pictureBox1.Image = resizedImage;
 
                         // Tentukan path folder Resources
-                        string resourcesPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources";
+                        string resourcesPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources\";
 
                         // Pastikan folder Resources ada, jika tidak ada buat folder baru
                         if (!Directory.Exists(resourcesPath))
@@ -71,6 +71,7 @@ namespace Projek_PBO_B07.View
                         string fileName = Path.GetFileName(openFileDialog.FileName);
                         string destinationPath = Path.Combine(resourcesPath, fileName);
 
+
                         // Salin file ke folder Resources
                         File.Copy(openFileDialog.FileName, destinationPath, overwrite: true);
 
@@ -81,7 +82,7 @@ namespace Projek_PBO_B07.View
                     }
                     else
                     {
-                        MessageBox.Show("File yang dipilih bukan file png maupun bmp.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("File yang dipilih gambar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)

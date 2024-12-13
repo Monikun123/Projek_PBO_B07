@@ -94,7 +94,7 @@ namespace Projek_PBO_B07.View
                         int paddingX = 0; // Padding antar elemen data
 
                         // PictureBox untuk gambar
-                        String resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B07\Resources";
+                        String resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources\";
 
                         // Membuat PictureBox
                         PictureBox pictureBox = new PictureBox
@@ -131,7 +131,7 @@ namespace Projek_PBO_B07.View
                         // Jika gambar tidak ditemukan, gunakan gambar default
                         if (!imageFound)
                         {
-                            string defaultImage = "Pepaya.png"; // Nama gambar default (tanpa ekstensi)
+                            string defaultImage = "strawbery.jpg.jpg"; // Nama gambar default (tanpa ekstensi)
                             string defaultImagePath = Path.Combine(resourcesFolderPath, defaultImage);
 
                             if (File.Exists(defaultImagePath))

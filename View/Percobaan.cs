@@ -22,8 +22,8 @@ namespace Projek_PBO_B07.View
 
         private void picturebox()
         {
-            string imageName = "download.jpg";  // Nama gambar yang ingin diambil
-            string resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B07\Resources";
+            string imageName = "download1.png";  // Nama gambar yang ingin diambil
+            string resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources\";
 
             // Tentukan path lengkap gambar
             string imagePath = Path.Combine(resourcesFolderPath, imageName);
@@ -58,7 +58,8 @@ namespace Projek_PBO_B07.View
 
                 foreach (var ext in validExtensions)
                 {
-                    string tempPath = Path.ChangeExtension(imagePath, ext);
+                    // Pastikan untuk memeriksa ekstensi yang benar
+                    string tempPath = Path.Combine(resourcesFolderPath, Path.ChangeExtension(imageName, ext));
                     if (File.Exists(tempPath))
                     {
                         MessageBox.Show("Gambar dengan ekstensi " + ext + " ditemukan: " + tempPath);
@@ -77,6 +78,7 @@ namespace Projek_PBO_B07.View
         }
 
     }
+
 }
 
 
