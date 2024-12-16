@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using Projek_PBO_B07.Context;
 using Projek_PBO_B07.Model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -16,14 +17,18 @@ namespace Projek_PBO_B07.View
 
     public partial class V_UpdateProduk : Form
     {
-        public int id_user {  get; set; }
         public int id_produk { get; set; }
-        public V_UpdateProduk()
+        public V_UpdateProduk(int produk_id)
         {
+ 
+            id_produk = produk_id;
             InitializeComponent();
-            
+ 
+
             LoadPromosi();
+            LoadNamaBuahData();
             loadnilai0();
+            populateForm();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,6 +48,27 @@ namespace Projek_PBO_B07.View
             PromosiCombobox.ValueMember = "id_promosi";
             PromosiCombobox.DataSource = dataNamabuah;
             PromosiCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
+
+        }
+        private void LoadNamaBuahData()
+        {
+            DataTable dataNamabuah = NamaBuahContext.All();
+            NamaBuahcomboBox.DisplayMember = "nama_buah";
+            NamaBuahcomboBox.ValueMember = "id_nama_buah";
+            NamaBuahcomboBox.DataSource = dataNamabuah;
+            NamaBuahcomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private void populateForm()
+        {
+
+           ProdukContext produkContext = new ProdukContext();
+            M_Produk produk = produkContext.GetProdukbtId(id_produk);
+            NamaBuahcomboBox.SelectedValue = produk.id_nama_buah;
+            PromosiCombobox.SelectedValue = produk.id_promosi;
+            StoktextBox.Text = produk.stok.ToString();
+            MasukdateTimePicker.Value = produk.tanggal_masuk;
+            ExpireddateTimePicker.Value = produk.tanggal_expired;
+            
 
         }
 
