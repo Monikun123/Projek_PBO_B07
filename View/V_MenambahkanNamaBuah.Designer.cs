@@ -1,6 +1,6 @@
 ﻿namespace Projek_PBO_B07.View
 {
-    partial class V_FormTambahProduk
+    partial class V_MenambahkanNamaBuah
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,98 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            NamaGambar = new Label();
+            AddImageButton = new Button();
+            pictureBox1 = new PictureBox();
+            JbcomboBox1 = new ComboBox();
+            label4 = new Label();
+            NamatextBox = new TextBox();
             BackButton = new Button();
             AddProdukButton = new Button();
-            TanggalExpiredDate = new DateTimePicker();
-            label5 = new Label();
-            label4 = new Label();
-            TanggalMasukDate = new DateTimePicker();
-            StoktextBox = new TextBox();
+            HargaTextBox = new TextBox();
             label3 = new Label();
-            NamaBuahcomboBox = new ComboBox();
             label2 = new Label();
             panel2 = new Panel();
             label1 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(NamaGambar);
+            panel1.Controls.Add(AddImageButton);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(JbcomboBox1);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(NamatextBox);
             panel1.Controls.Add(BackButton);
             panel1.Controls.Add(AddProdukButton);
-            panel1.Controls.Add(TanggalExpiredDate);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(TanggalMasukDate);
-            panel1.Controls.Add(StoktextBox);
+            panel1.Controls.Add(HargaTextBox);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(NamaBuahcomboBox);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
+            // 
+            // NamaGambar
+            // 
+            NamaGambar.AutoSize = true;
+            NamaGambar.Location = new Point(504, 289);
+            NamaGambar.Name = "NamaGambar";
+            NamaGambar.Size = new Size(75, 25);
+            NamaGambar.TabIndex = 19;
+            NamaGambar.Text = "Gambar";
+            NamaGambar.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // AddImageButton
+            // 
+            AddImageButton.BackColor = Color.FromArgb(244, 204, 92);
+            AddImageButton.Location = new Point(450, 326);
+            AddImageButton.Name = "AddImageButton";
+            AddImageButton.Size = new Size(229, 34);
+            AddImageButton.TabIndex = 18;
+            AddImageButton.Text = "Menambahkan Gambar";
+            AddImageButton.UseVisualStyleBackColor = false;
+            AddImageButton.Click += AddImageButton_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(450, 91);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(229, 187);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
+            // 
+            // JbcomboBox1
+            // 
+            JbcomboBox1.FormattingEnabled = true;
+            JbcomboBox1.Location = new Point(36, 281);
+            JbcomboBox1.Name = "JbcomboBox1";
+            JbcomboBox1.Size = new Size(182, 33);
+            JbcomboBox1.TabIndex = 16;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(36, 251);
+            label4.Name = "label4";
+            label4.Size = new Size(116, 27);
+            label4.TabIndex = 15;
+            label4.Text = "Jenis Buah";
+            // 
+            // NamatextBox
+            // 
+            NamatextBox.Location = new Point(36, 126);
+            NamatextBox.Name = "NamatextBox";
+            NamatextBox.Size = new Size(182, 31);
+            NamatextBox.TabIndex = 14;
             // 
             // BackButton
             // 
@@ -74,7 +132,7 @@
             BackButton.TabIndex = 13;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = false;
-            BackButton.Click += BackButton_Click_1;
+            BackButton.Click += BackButton_Click;
             // 
             // AddProdukButton
             // 
@@ -83,57 +141,16 @@
             AddProdukButton.Name = "AddProdukButton";
             AddProdukButton.Size = new Size(214, 34);
             AddProdukButton.TabIndex = 12;
-            AddProdukButton.Text = "Menambahkan Produk";
+            AddProdukButton.Text = "Menambahkan Buah";
             AddProdukButton.UseVisualStyleBackColor = false;
             AddProdukButton.Click += AddProdukButton_Click;
             // 
-            // TanggalExpiredDate
+            // HargaTextBox
             // 
-            TanggalExpiredDate.CustomFormat = "yyyy-MM-dd";
-            TanggalExpiredDate.Format = DateTimePickerFormat.Custom;
-            TanggalExpiredDate.Location = new Point(392, 292);
-            TanggalExpiredDate.Name = "TanggalExpiredDate";
-            TanggalExpiredDate.Size = new Size(168, 31);
-            TanggalExpiredDate.TabIndex = 8;
-            TanggalExpiredDate.Value = new DateTime(2024, 12, 11, 0, 0, 0, 0);
-            TanggalExpiredDate.ValueChanged += TanggalExpiredDate_ValueChanged;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(392, 262);
-            label5.Name = "label5";
-            label5.Size = new Size(168, 27);
-            label5.TabIndex = 7;
-            label5.Text = "Tanggal Expired";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(36, 262);
-            label4.Name = "label4";
-            label4.Size = new Size(157, 27);
-            label4.TabIndex = 6;
-            label4.Text = "Tanggal Masuk";
-            // 
-            // TanggalMasukDate
-            // 
-            TanggalMasukDate.CustomFormat = "yyyy-MM-dd";
-            TanggalMasukDate.Format = DateTimePickerFormat.Custom;
-            TanggalMasukDate.Location = new Point(36, 292);
-            TanggalMasukDate.Name = "TanggalMasukDate";
-            TanggalMasukDate.Size = new Size(157, 31);
-            TanggalMasukDate.TabIndex = 5;
-            TanggalMasukDate.Value = new DateTime(2024, 12, 11, 0, 0, 0, 0);
-            // 
-            // StoktextBox
-            // 
-            StoktextBox.Location = new Point(36, 207);
-            StoktextBox.Name = "StoktextBox";
-            StoktextBox.Size = new Size(182, 31);
-            StoktextBox.TabIndex = 4;
+            HargaTextBox.Location = new Point(36, 207);
+            HargaTextBox.Name = "HargaTextBox";
+            HargaTextBox.Size = new Size(182, 31);
+            HargaTextBox.TabIndex = 4;
             // 
             // label3
             // 
@@ -141,17 +158,9 @@
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(36, 177);
             label3.Name = "label3";
-            label3.Size = new Size(55, 27);
+            label3.Size = new Size(192, 27);
             label3.TabIndex = 3;
-            label3.Text = "Stok";
-            // 
-            // NamaBuahcomboBox
-            // 
-            NamaBuahcomboBox.FormattingEnabled = true;
-            NamaBuahcomboBox.Location = new Point(36, 126);
-            NamaBuahcomboBox.Name = "NamaBuahcomboBox";
-            NamaBuahcomboBox.Size = new Size(182, 33);
-            NamaBuahcomboBox.TabIndex = 2;
+            label3.Text = "Harga Buah (/box)";
             // 
             // label2
             // 
@@ -180,23 +189,23 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(346, 20);
+            label1.Location = new Point(334, 25);
             label1.Name = "label1";
             label1.Size = new Size(108, 32);
             label1.TabIndex = 1;
             label1.Text = "Fruities";
             // 
-            // V_FormTambahProduk
+            // V_MenambahkanNamaBuah
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "V_FormTambahProduk";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "V_FormTambahProduk";
+            Name = "V_MenambahkanNamaBuah";
+            Text = "V_MenambahkanNamaBuah";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -205,17 +214,18 @@
         #endregion
 
         private Panel panel1;
+        private Button BackButton;
+        private Button AddProdukButton;
+        private TextBox HargaTextBox;
+        private Label label3;
+        private Label label2;
         private Panel panel2;
         private Label label1;
-        private DateTimePicker TanggalMasukDate;
-        private TextBox StoktextBox;
-        private Label label3;
-        private ComboBox NamaBuahcomboBox;
-        private Label label2;
+        private TextBox NamatextBox;
+        private PictureBox pictureBox1;
+        private ComboBox JbcomboBox1;
         private Label label4;
-        private DateTimePicker TanggalExpiredDate;
-        private Label label5;
-        private Button AddProdukButton;
-        private Button BackButton;
+        private Button AddImageButton;
+        private Label NamaGambar;
     }
 }

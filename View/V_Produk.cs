@@ -125,6 +125,7 @@ namespace Projek_PBO_B07.View
                 getDataBuahAll();
                 LoadDataProduk();
             }
+
             this.Show();
         }
 
@@ -181,7 +182,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            
+
         }
         private void ProfilButton_Click(object sender, EventArgs e)
         {
@@ -192,7 +193,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            
+
         }
 
         private void DashboardButton_Click(object sender, EventArgs e)
@@ -207,6 +208,20 @@ namespace Projek_PBO_B07.View
             this.Hide();
             V_Logout v_logout = new V_Logout(userId);
             v_logout.Show();
+        }
+
+        private void AddNewBuahbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_MenambahkanNamaBuah formnamabuah = new V_MenambahkanNamaBuah();
+
+            if (formnamabuah.ShowDialog() == DialogResult.OK)
+            {
+                getDataBuahAll();
+                LoadDataProduk();
+            }
+            this.Show();
+
         }
     }
 }

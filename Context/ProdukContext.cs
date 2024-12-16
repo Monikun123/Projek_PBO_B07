@@ -83,6 +83,23 @@ ORDER BY
 
         }
 
+        public static void AddNamaBuah (M_Nama_Buah Buah)
+        {
+            string query = $"INSERT INTO nama_buah (id_jenis_buah, gambar, nama_buah, harga) " +
+                $"VALUES(@id_jenis_buah, @gambar, @nama_buah, @harga)";
+            NpgsqlParameter[] parameters =
+{
+                new NpgsqlParameter("@id_jenis_buah", Buah.id_jenis_buah),
+                new NpgsqlParameter("@gambar", Buah.gambar),
+                new NpgsqlParameter("@nama_buah", Buah.nama_buah),
+                new NpgsqlParameter("@harga", Buah.harga),
+    
+            };
+
+            commandExecutor(query, parameters);
+
+        }
+
         public static void UpdateDiskon(int id_promosi, int id_produk)
         {
             string query = $"UPDATE produk SET id_promosi = @id_promosi WHERE id_produk = @id_produk;";

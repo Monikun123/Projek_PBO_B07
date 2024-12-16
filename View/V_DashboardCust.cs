@@ -94,6 +94,9 @@ namespace Projek_PBO_B07.View
                         int paddingX = 0; // Padding antar elemen data
 
                         // PictureBox untuk gambar
+                        String resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources\";
+
+                        // Membuat PictureBox
                         PictureBox pictureBox = new PictureBox
                         {
                             Width = 100,
@@ -102,35 +105,47 @@ namespace Projek_PBO_B07.View
                             SizeMode = PictureBoxSizeMode.StretchImage
                         };
 
-                        // Memuat gambar dari resource
+                        // Mengambil nama gambar dari data (misalnya, DataTable atau database)
                         string imageName = row["gambar"].ToString();
-                        object resourceObject = Properties.Resources.ResourceManager.GetObject(imageName);
 
-                        if (resourceObject is byte[] imageBytes)
+                        // Tentukan path lengkap gambar yang ada di folder Resources
+                        string imagePath = Path.Combine(resourcesFolderPath, imageName);
+
+                        // Daftar ekstensi gambar yang valid
+                        string[] validExtensions = { ".jpg", ".jpeg", ".png" };
+
+                        // Memeriksa apakah file gambar ada dengan ekstensi yang valid
+                        bool imageFound = false;
+                        foreach (string ext in validExtensions)
                         {
-                            using (MemoryStream ms = new MemoryStream(imageBytes))
+                            string filePath = Path.Combine(resourcesFolderPath, Path.ChangeExtension(imageName, ext));
+
+                            if (File.Exists(filePath))
                             {
-                                pictureBox.Image = Image.FromStream(ms);
+                                pictureBox.Image = Image.FromFile(filePath);
+                                imageFound = true;
+                                break;
                             }
                         }
 
-                        if (pictureBox.Image == null)
+                        // Jika gambar tidak ditemukan, gunakan gambar default
+                        if (!imageFound)
                         {
-                            string defaultImage = "strawbery.jpg"; // Gambar default
-                            object resourceObject2 = Properties.Resources.ResourceManager.GetObject(defaultImage);
+                            string defaultImage = "strawbery.jpg.jpg"; // Nama gambar default (tanpa ekstensi)
+                            string defaultImagePath = Path.Combine(resourcesFolderPath, defaultImage);
 
-                            if (resourceObject2 is byte[] defaultImageBytes)
+                            if (File.Exists(defaultImagePath))
                             {
-                                using (MemoryStream ms = new MemoryStream(defaultImageBytes))
-                                {
-                                    pictureBox.Image = Image.FromStream(ms);
-                                }
+                                pictureBox.Image = Image.FromFile(defaultImagePath);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gambar default tidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
 
                         itemPanel.Controls.Add(pictureBox);
                         currentX += pictureBox.Width + paddingX;
-
                         // Fungsi untuk menambah label
                         void TambahkanLabel(string text, int width)
                         {
