@@ -82,6 +82,48 @@ ORDER BY
             commandExecutor(query, parameters);
 
         }
+        public M_Produk GetProdukbtId(int produkId)
+        {
+            string query = "SELECT * FROM produk WHERE id_produk = @id_produk";
+            NpgsqlParameter[] parameters = {
+                new NpgsqlParameter("@id_produk", produkId)
+            };
+
+            using (NpgsqlDataReader reader = ExecuteReaderCommand(query, parameters))
+            {
+                if (reader.Read())
+                {
+                    M_Produk produk = new M_Produk()
+                    {
+                        id_nama_buah = (int)reader["id_nama_buah"],
+                        id_promosi = (int)reader["id_promosi"],
+                        stok = (int)reader["stok"],
+                        tanggal_masuk = (DateTime)reader["tanggal_masuk"],
+                        tanggal_expired = (DateTime)reader["tanggal_expired"]
+                      
+                    };
+
+                    return produk;
+                }
+            }
+            return null;
+        }
+        public static void AddNamaBuah (M_Nama_Buah Buah)
+        {
+            string query = $"INSERT INTO nama_buah (id_jenis_buah, gambar, nama_buah, harga) " +
+                $"VALUES(@id_jenis_buah, @gambar, @nama_buah, @harga)";
+            NpgsqlParameter[] parameters =
+{
+                new NpgsqlParameter("@id_jenis_buah", Buah.id_jenis_buah),
+                new NpgsqlParameter("@gambar", Buah.gambar),
+                new NpgsqlParameter("@nama_buah", Buah.nama_buah),
+                new NpgsqlParameter("@harga", Buah.harga),
+    
+            };
+
+            commandExecutor(query, parameters);
+
+        }
 
         public static void UpdateDiskon(int id_promosi, int id_produk)
         {

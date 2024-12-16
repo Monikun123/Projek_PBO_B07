@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label7 = new Label();
+            StoktextBox = new TextBox();
+            NamaBuahcomboBox = new ComboBox();
+            label6 = new Label();
+            ExpireddateTimePicker = new DateTimePicker();
+            MasukdateTimePicker = new DateTimePicker();
+            TanggalTransaksiDate = new DateTimePicker();
             AddRiwayatbutton = new Button();
             BusuktextBox = new TextBox();
             TerjualTexbox = new TextBox();
@@ -41,13 +48,24 @@
             label2 = new Label();
             panel2 = new Panel();
             label1 = new Label();
-            TanggalTransaksiDate = new DateTimePicker();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(StoktextBox);
+            panel1.Controls.Add(NamaBuahcomboBox);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(ExpireddateTimePicker);
+            panel1.Controls.Add(MasukdateTimePicker);
             panel1.Controls.Add(TanggalTransaksiDate);
             panel1.Controls.Add(AddRiwayatbutton);
             panel1.Controls.Add(BusuktextBox);
@@ -65,6 +83,68 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 1;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(24, 220);
+            label7.Name = "label7";
+            label7.Size = new Size(55, 27);
+            label7.TabIndex = 26;
+            label7.Text = "Stok";
+            // 
+            // StoktextBox
+            // 
+            StoktextBox.Location = new Point(24, 249);
+            StoktextBox.Name = "StoktextBox";
+            StoktextBox.Size = new Size(182, 31);
+            StoktextBox.TabIndex = 25;
+            // 
+            // NamaBuahcomboBox
+            // 
+            NamaBuahcomboBox.FormattingEnabled = true;
+            NamaBuahcomboBox.Location = new Point(24, 117);
+            NamaBuahcomboBox.Name = "NamaBuahcomboBox";
+            NamaBuahcomboBox.Size = new Size(182, 33);
+            NamaBuahcomboBox.TabIndex = 24;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(24, 87);
+            label6.Name = "label6";
+            label6.Size = new Size(126, 27);
+            label6.TabIndex = 23;
+            label6.Text = "Nama Buah";
+            // 
+            // ExpireddateTimePicker
+            // 
+            ExpireddateTimePicker.CustomFormat = "yyyy-MM-dd";
+            ExpireddateTimePicker.Format = DateTimePickerFormat.Custom;
+            ExpireddateTimePicker.Location = new Point(209, 340);
+            ExpireddateTimePicker.Name = "ExpireddateTimePicker";
+            ExpireddateTimePicker.Size = new Size(133, 31);
+            ExpireddateTimePicker.TabIndex = 22;
+            // 
+            // MasukdateTimePicker
+            // 
+            MasukdateTimePicker.CustomFormat = "yyyy-MM-dd";
+            MasukdateTimePicker.Format = DateTimePickerFormat.Custom;
+            MasukdateTimePicker.Location = new Point(24, 340);
+            MasukdateTimePicker.Name = "MasukdateTimePicker";
+            MasukdateTimePicker.Size = new Size(133, 31);
+            MasukdateTimePicker.TabIndex = 21;
+            // 
+            // TanggalTransaksiDate
+            // 
+            TanggalTransaksiDate.CustomFormat = "yyyy-MM-dd";
+            TanggalTransaksiDate.Format = DateTimePickerFormat.Custom;
+            TanggalTransaksiDate.Location = new Point(432, 247);
+            TanggalTransaksiDate.Name = "TanggalTransaksiDate";
+            TanggalTransaksiDate.Size = new Size(300, 31);
+            TanggalTransaksiDate.TabIndex = 20;
             // 
             // AddRiwayatbutton
             // 
@@ -115,7 +195,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(432, 217);
+            label3.Location = new Point(413, 184);
             label3.Name = "label3";
             label3.Size = new Size(207, 27);
             label3.TabIndex = 14;
@@ -137,18 +217,18 @@
             // AddPromosiButton
             // 
             AddPromosiButton.BackColor = Color.FromArgb(244, 204, 92);
-            AddPromosiButton.Location = new Point(24, 340);
+            AddPromosiButton.Location = new Point(24, 387);
             AddPromosiButton.Name = "AddPromosiButton";
             AddPromosiButton.Size = new Size(214, 34);
             AddPromosiButton.TabIndex = 12;
-            AddPromosiButton.Text = "Add Promosi";
+            AddPromosiButton.Text = "Edit Produk";
             AddPromosiButton.UseVisualStyleBackColor = false;
             AddPromosiButton.Click += AddPromosiButton_Click;
             // 
             // PromosiCombobox
             // 
             PromosiCombobox.FormattingEnabled = true;
-            PromosiCombobox.Location = new Point(24, 301);
+            PromosiCombobox.Location = new Point(24, 184);
             PromosiCombobox.Name = "PromosiCombobox";
             PromosiCombobox.Size = new Size(182, 33);
             PromosiCombobox.TabIndex = 2;
@@ -157,7 +237,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(24, 237);
+            label2.Location = new Point(24, 154);
             label2.Name = "label2";
             label2.Size = new Size(91, 27);
             label2.TabIndex = 1;
@@ -187,14 +267,35 @@
             label1.Text = "Fruities";
             label1.Click += label1_Click;
             // 
-            // TanggalTransaksiDate
+            // label8
             // 
-            TanggalTransaksiDate.CustomFormat = "yyyy-MM-dd";
-            TanggalTransaksiDate.Format = DateTimePickerFormat.Custom;
-            TanggalTransaksiDate.Location = new Point(432, 247);
-            TanggalTransaksiDate.Name = "TanggalTransaksiDate";
-            TanggalTransaksiDate.Size = new Size(300, 31);
-            TanggalTransaksiDate.TabIndex = 20;
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(24, 310);
+            label8.Name = "label8";
+            label8.Size = new Size(114, 27);
+            label8.TabIndex = 27;
+            label8.Text = "Tgl Masuk";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(209, 310);
+            label9.Name = "label9";
+            label9.Size = new Size(125, 27);
+            label9.TabIndex = 28;
+            label9.Text = "Tgl Expired";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(432, 220);
+            label10.Name = "label10";
+            label10.Size = new Size(114, 27);
+            label10.TabIndex = 29;
+            label10.Text = "Tgl Keluar";
             // 
             // V_UpdateProduk
             // 
@@ -231,5 +332,13 @@
         private TextBox BusuktextBox;
         private TextBox TerjualTexbox;
         private DateTimePicker TanggalTransaksiDate;
+        private ComboBox NamaBuahcomboBox;
+        private Label label6;
+        private DateTimePicker ExpireddateTimePicker;
+        private DateTimePicker MasukdateTimePicker;
+        private Label label7;
+        private Label label10;
+        private Label label9;
+        private Label label8;
     }
 }

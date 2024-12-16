@@ -125,6 +125,7 @@ namespace Projek_PBO_B07.View
                 getDataBuahAll();
                 LoadDataProduk();
             }
+
             this.Show();
         }
 
@@ -142,20 +143,15 @@ namespace Projek_PBO_B07.View
                 try
                 {
 
-                    int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_produk"].Value);
-
+                    int id_produk = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_produk"].Value);
+                   
 
 
                     this.Hide();
 
-                    V_UpdateProduk addUpdateForm = new V_UpdateProduk
-                    {
-                        id_produk = id,
-                        id_user = userId
-                    };
+                    V_UpdateProduk addUpdateForm = new V_UpdateProduk(id_produk);
                     if (addUpdateForm.ShowDialog() == DialogResult.OK)
                     {
-                        MessageBox.Show("Form Update ditutup dengan status OK");
                         getDataBuahAll();
                         LoadDataProduk();
                     }
@@ -181,7 +177,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            
+
         }
         private void ProfilButton_Click(object sender, EventArgs e)
         {
@@ -192,7 +188,7 @@ namespace Projek_PBO_B07.View
                 LoadDataProduk();
                 getDataBuahAll();
             }
-            
+
         }
 
         private void DashboardButton_Click(object sender, EventArgs e)
@@ -204,9 +200,28 @@ namespace Projek_PBO_B07.View
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
+         
             this.Hide();
-            V_Logout v_logout = new V_Logout(userId);
-            v_logout.Show();
+            V_Logout v_logout = new V_Logout();
+
+            if (v_logout.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();    
+            }
+    }
+
+        private void AddNewBuahbutton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_MenambahkanNamaBuah formnamabuah = new V_MenambahkanNamaBuah();
+
+            if (formnamabuah.ShowDialog() == DialogResult.OK)
+            {
+                getDataBuahAll();
+                LoadDataProduk();
+            }
+            this.Show();
+
         }
     }
 }

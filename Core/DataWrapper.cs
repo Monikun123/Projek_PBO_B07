@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Imaging;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using System.Drawing;
+using System.Resources;
+using System.Collections;
 
 namespace Projek_PBO_B07.Core
 {
@@ -21,6 +26,11 @@ namespace Projek_PBO_B07.Core
         private static NpgsqlCommand command;
 
         // Method open dan close Koneksi
+
+
+        
+
+
         public static void openConnection()
         {
             connection = new NpgsqlConnection($"Host={DB_HOST};Username={DB_USERNAME};Password={DB_PASSWORD};Database={DB_DATABASE};Port={DB_PORT}");

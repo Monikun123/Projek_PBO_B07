@@ -63,7 +63,7 @@
             pictureBox1.Size = new Size(150, 75);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            
             // 
             // Login2
             // 

@@ -62,6 +62,7 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            AddNewBuahbutton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -246,6 +247,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLight;
+            panel2.Controls.Add(AddNewBuahbutton);
             panel2.Controls.Add(AddProdukButton);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(dataGridView1);
@@ -490,6 +492,18 @@
             tableLayoutPanel1.Size = new Size(982, 495);
             tableLayoutPanel1.TabIndex = 1;
             // 
+            // AddNewBuahbutton
+            // 
+            AddNewBuahbutton.BackColor = Color.FromArgb(244, 204, 92);
+            AddNewBuahbutton.Location = new Point(269, 122);
+            AddNewBuahbutton.Margin = new Padding(2);
+            AddNewBuahbutton.Name = "AddNewBuahbutton";
+            AddNewBuahbutton.Size = new Size(263, 34);
+            AddNewBuahbutton.TabIndex = 12;
+            AddNewBuahbutton.Text = "Menambahkan Buah baru";
+            AddNewBuahbutton.UseVisualStyleBackColor = false;
+            AddNewBuahbutton.Click += AddNewBuahbutton_Click;
+            // 
             // V_Produk
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -558,5 +572,6 @@
         private Label label5;
         private Button AddProdukButton;
         private Button DashboardButton;
+        private Button AddNewBuahbutton;
     }
 }

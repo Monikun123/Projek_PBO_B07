@@ -20,32 +20,67 @@ namespace Projek_PBO_B07.View
             picturebox();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void picturebox()
         {
+            string imageName = "pepaya.jpg";  // Nama gambar yang ingin diambil
+            string resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources\";
 
-        }
-            private void picturebox()
-            {
-                string imageName = "strawbery.jpg";
-            // Ambil resource sebagai byte array
-            object resourceObject = Properties.Resources.ResourceManager.GetObject(imageName);
+            // Tentukan path lengkap gambar
+            string imagePath = Path.Combine(resourcesFolderPath, imageName);
 
-            if (resourceObject is byte[] imageBytes)
+            // Tampilkan path untuk memverifikasi
+            MessageBox.Show("Path Gambar: " + imagePath);
+
+            // Periksa apakah gambar ada di folder Resources
+            if (File.Exists(imagePath))
             {
-                using (MemoryStream ms = new MemoryStream(imageBytes))
+                try
                 {
-                    pictureBox1.Image = Image.FromStream(ms);
+                    // Memuat gambar dari file
+                    pictureBox1.Image = Image.FromFile(imagePath);
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    MessageBox.Show("Gambar berhasil dimuat dari: " + imagePath);
                 }
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                catch (Exception ex)
+                {
+                    // Menangani kesalahan jika format gambar tidak valid
+                    MessageBox.Show("Terjadi kesalahan saat memuat gambar: " + ex.Message);
+                }
             }
             else
             {
-                MessageBox.Show("Gambar tidak ditemukan atau format tidak valid.");
-            }
+                // Jika gambar tidak ditemukan, berikan informasi path dan cek ekstensi file
+                MessageBox.Show("Gambar tidak ditemukan di path: " + imagePath);
 
+                // Cek apakah file dengan ekstensi lain ada di folder Resources
+                string[] validExtensions = { ".jpg", ".jpeg", ".png" };
+                bool imageFound = false;
+
+                foreach (var ext in validExtensions)
+                {
+                    // Pastikan untuk memeriksa ekstensi yang benar
+                    string tempPath = Path.Combine(resourcesFolderPath, Path.ChangeExtension(imageName, ext));
+                    if (File.Exists(tempPath))
+                    {
+                        MessageBox.Show("Gambar dengan ekstensi " + ext + " ditemukan: " + tempPath);
+                        pictureBox1.Image = Image.FromFile(tempPath);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                        imageFound = true;
+                        break;
+                    }
+                }
+
+                if (!imageFound)
+                {
+                    MessageBox.Show("Tidak ada gambar dengan ekstensi yang valid ditemukan.");
+                }
+            }
         }
 
     }
+
 }
 
-   
+
+
+
