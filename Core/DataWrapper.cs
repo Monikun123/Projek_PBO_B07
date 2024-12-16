@@ -1,26 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Imaging;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using System.Drawing;
+using System.Resources;
+using System.Collections;
 
 namespace Projek_PBO_B07.Core
 {
-    internal class DataWrapper
+    public class DataWrapper
     {
         // Properti credential database dan koneksinya
         private static readonly string DB_HOST = "localhost";
-        private static readonly string DB_DATABASE = "projekfix";
+        private static readonly string DB_DATABASE = "projek2";
         private static readonly string DB_USERNAME = "postgres";
-        private static readonly string DB_PASSWORD = "basic324";
+        private static readonly string DB_PASSWORD = "010105Ts";
         private static readonly string DB_PORT = "5432";
 
         private static NpgsqlConnection connection;
         private static NpgsqlCommand command;
 
         // Method open dan close Koneksi
+
+
+        
+
+
         public static void openConnection()
         {
             connection = new NpgsqlConnection($"Host={DB_HOST};Username={DB_USERNAME};Password={DB_PASSWORD};Database={DB_DATABASE};Port={DB_PORT}");

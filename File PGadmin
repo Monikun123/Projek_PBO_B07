@@ -1,0 +1,122 @@
+-- Tabel pengguna
+CREATE TABLE pengguna (
+    ID_pengguna SERIAL PRIMARY KEY,
+    nama VARCHAR NOT NULL,
+    email VARCHAR NOT NULL,
+    password VARCHAR NOT NULL,
+    role VARCHAR NOT NULL
+);
+
+-- Tabel jenis_buah
+CREATE TABLE jenis_buah (
+    ID_jenis_buah SERIAL PRIMARY KEY,
+    jenis_buah VARCHAR NOT NULL
+);
+
+-- Tabel nama_buah
+CREATE TABLE nama_buah (
+    ID_nama_buah SERIAL PRIMARY KEY,
+    ID_jenis_buah INT NOT NULL,
+    gambar VARCHAR NOT NULL,
+    nama_buah VARCHAR NOT NULL,
+    harga INT NOT NULL,
+    CONSTRAINT fk_jenis_buah FOREIGN KEY (ID_jenis_buah) REFERENCES jenis_buah (ID_jenis_buah)
+);
+
+-- Tabel riwayat
+CREATE TABLE riwayat (
+    ID_riwayat SERIAL PRIMARY KEY,
+    jumlah_keluar INT NOT NULL,
+    buah_busuk VARCHAR NOT NULL,
+    buah_terjual VARCHAR NOT NULL,
+    tanggal_transaksi DATE NOT NULL
+);
+
+-- Tabel promosi
+CREATE TABLE promosi (
+    ID_promosi SERIAL PRIMARY KEY,
+    diskon INT NOT NULL
+);
+
+-- Tabel produk
+CREATE TABLE produk (
+    ID_produk SERIAL PRIMARY KEY,
+    ID_promosi INT NOT NULL,
+    ID_pengguna INT NOT NULL,
+    ID_nama_buah INT NOT NULL,
+    tanggal_masuk DATE NOT NULL,
+    tanggal_expired DATE NOT NULL,
+    stok INT NOT NULL,
+    CONSTRAINT fk_promosi FOREIGN KEY (ID_promosi) REFERENCES promosi (ID_promosi),
+    CONSTRAINT fk_pengguna FOREIGN KEY (ID_pengguna) REFERENCES pengguna (ID_pengguna),
+    CONSTRAINT fk_nama_buah FOREIGN KEY (ID_nama_buah) REFERENCES nama_buah (ID_nama_buah)
+);
+
+-- Tabel transaksi
+CREATE TABLE transaksi (
+    ID_transaksi SERIAL PRIMARY KEY,
+    ID_produk INT NOT NULL,
+    ID_riwayat INT NOT NULL,
+    CONSTRAINT fk_produk FOREIGN KEY (ID_produk) REFERENCES produk (ID_produk),
+    CONSTRAINT fk_riwayat FOREIGN KEY (ID_riwayat) REFERENCES riwayat (ID_riwayat)
+);
+
+INSERT INTO pengguna (nama, email, password, role)
+VALUES ('AdminUtama','admin123@gmail.com','123','Admin'),('PedagangA','pedagangcoba','abc','Customer')
+
+INSERT INTO jenis_buah (jenis_buah)
+VALUES 
+('Buah Tropis'),
+('Buah Citrus'),
+('Buah Berry'),
+('Buah Kering');
+INSERT INTO promosi (
+    diskon
+) VALUES
+(0),
+(10),  -- Diskon 10%
+(20),  -- Diskon 15%
+(30),
+(40);
+
+INSERT INTO nama_buah (ID_jenis_buah, gambar, nama_buah, harga)
+VALUES 
+(1, 'mango.jpg.jpg', 'Mangga', 150000),
+(1, 'pineapple.jpg.jpg', 'Nanas', 120000),
+(2, 'orange.jpg.jpg', 'Jeruk', 100000),
+(2, 'lemon.jpg.jpg', 'Lemon', 130000),
+(3, 'strawberry.jpg.jpg', 'Stroberi', 250000),
+(3, 'blueberry.jpg.jpg', 'Blueberry', 300000);
+
+INSERT INTO produk (
+    ID_promosi,
+    ID_pengguna,
+    ID_nama_buah,
+    tanggal_masuk,
+    tanggal_expired,
+    stok
+) VALUES
+(1, 1, 3, '2024-11-20', '2024-12-20', 50), -- Produk dengan ID_promosi 1
+(2, 1, 4, '2024-11-21', '2024-12-25', 30), -- Produk dengan ID_promosi 2
+(3, 1, 5, '2024-11-22', '2024-12-30', 40), -- Produk dengan ID_promosi 3
+(1, 1, 3, '2024-11-23', '2024-12-31', 20);
+INSERT INTO riwayat (
+    jumlah_keluar,
+    buah_busuk,
+    buah_terjual,
+    tanggal_transaksi
+) VALUES
+(20, 0, 18, '2024-11-23'),
+(15, 12, 0, '2024-11-22');
+
+INSERT INTO transaksi (
+    ID_produk,
+    ID_riwayat
+) VALUES
+(1, 1), -- Produk ID 1, Riwayat ID 1
+(2, 2); -- Produk ID 2, Riwayat ID 2
+ALTER TABLE riwayat
+ALTER COLUMN buah_busuk TYPE INTEGER USING buah_busuk::INTEGER;
+
+ALTER TABLE riwayat
+ALTER COLUMN buah_terjual TYPE INTEGER USING buah_terjual::INTEGER;

@@ -2,6 +2,7 @@ using Npgsql;
 using Projek_PBO_B07.Core;
 using Projek_PBO_B07.Context;
 using Projek_PBO_B07.Model;
+using Projek_PBO_B07.View;
 namespace Projek_PBO_B07
 {
     public partial class V_Login : Form
@@ -11,62 +12,75 @@ namespace Projek_PBO_B07
             InitializeComponent();
         }
 
-        private void MainFormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void loginbutton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(emailText.Text) || string.IsNullOrEmpty(passwordText.Text))
+            {
+                MessageBox.Show("Email dan Password wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            if (emailText.Text.EndsWith("@gmail.com") == false)
+            {
+                MessageBox.Show("Maaf, Anda kurang menambahkan @gmail.com", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             C_LoginAkun loginakunContext = new C_LoginAkun();
-            M_User login = loginakunContext.Validate(usernameText.Text, passwordText.Text);
+            M_User login = loginakunContext.Validate(emailText.Text, passwordText.Text);
 
-            if (login != null)
+            if (login == null)
             {
-                MessageBox.Show("Login berhasil!", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearTextBox();
-
-
-            }
-            else if (string.IsNullOrEmpty(usernameText.Text) || string.IsNullOrEmpty(passwordText.Text))
-            {
-                MessageBox.Show("Username & Password tidak boleh kosong!", "FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username atau password salah.", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Username atau Password salah. Masukkan dengan benar!", "LOGIN FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                string role = login.Role;
 
+                if (role == "Admin")
+                {
+                    MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    V_Profil addprofil = new V_Profil(login.Id_User);
+                    V_DashboardAdmin adminDashboard = new V_DashboardAdmin(login.Id_User);
+                    this.Hide();
+                    adminDashboard.Show();
+                }
+                else if (role == "User")
+                {
+                    MessageBox.Show("Login berhasil! Anda masuk sebagai User.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    V_DashboardCust userDashboard = new V_DashboardCust(login.Id_User);
+
+                    this.Hide();
+                    userDashboard.Show();
+                }
+                else
+                {
+                    // Handle unexpected roles (optional)
+                }
+            }
         }
+
         public void ClearTextBox()
         {
-            usernameText.Text = "";
+            emailText.Text = "";
             passwordText.Text = "";
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void emailText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
