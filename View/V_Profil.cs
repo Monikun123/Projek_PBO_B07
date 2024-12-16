@@ -184,6 +184,11 @@ namespace Projek_PBO_B07.View
             V_Produk addproduk = new V_Produk(id_user);
             addproduk.Show();
         }
+
+        private void DashboardButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
