@@ -13,11 +13,11 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_DashboardCust : Form
     {
-        public int id_user { get; set; }
-        public V_DashboardCust(int id_user)
+
+        public V_DashboardCust()
         {
             InitializeComponent();
-            this.id_user = id_user;
+
             LoadData();
         }
         private void LoadData()
@@ -63,8 +63,8 @@ namespace Projek_PBO_B07.View
                     }
 
                     // Menambahkan header kolom dengan lebar yang sesuai
-                    int[] columnWidths = {110, 50, 120, 100, 50, 120, 120, 70, 120 };
-                    string[] headers = { "Gambar","ID", "Nama", "Harga", "Stok", "Tanggal Masuk", "Tanggal Expired", "Diskon", "Harga Diskon" };
+                    int[] columnWidths = { 110, 50, 120, 100, 50, 120, 120, 70, 120 };
+                    string[] headers = { "Gambar", "ID", "Nama", "Harga", "Stok", "Tanggal Masuk", "Tanggal Expired", "Diskon", "Harga Diskon" };
 
                     int headerXPosition = 0; // Posisi awal untuk header
                     for (int i = 0; i < headers.Length; i++)
@@ -195,9 +195,7 @@ namespace Projek_PBO_B07.View
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            V_Logout v_logout = new V_Logout(id_user);
-            v_logout.Show();
+            
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -216,6 +214,11 @@ namespace Projek_PBO_B07.View
         }
 
         private void label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

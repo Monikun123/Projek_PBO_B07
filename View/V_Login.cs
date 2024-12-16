@@ -20,42 +20,42 @@ namespace Projek_PBO_B07
             M_User login = loginakunContext.Validate(emailText.Text, passwordText.Text);
             {
                 if (string.IsNullOrEmpty(emailText.Text) || string.IsNullOrEmpty(passwordText.Text))
-            {
-                MessageBox.Show("Email dan Password wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // C_LoginAkun loginakunContext = new C_LoginAkun();
-            // M_User login = loginakunContext.Validate(emailText.Text, passwordText.Text);
-
-            if (login == null)
-            {
-                MessageBox.Show("Username atau password salah.", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                string role = login.Role;
-
-                if (role == "Admin")
                 {
-                    MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    V_Profil addprofil = new V_Profil(login.Id_User);
-                    V_DashboardAdmin adminDashboard = new V_DashboardAdmin(login.Id_User);
-                    this.Hide();
-                    adminDashboard.Show();
+                    MessageBox.Show("Email dan Password wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
-                else if (role == "Customer")
+
+                // C_LoginAkun loginakunContext = new C_LoginAkun();
+                // M_User login = loginakunContext.Validate(emailText.Text, passwordText.Text);
+
+                if (login == null)
                 {
-                    MessageBox.Show("Login berhasil! Anda masuk sebagai User.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    V_DashboardCust userDashboard = new V_DashboardCust(login.Id_User);
-                    this.Hide();
-                    userDashboard.Show();
+                    MessageBox.Show("Username atau password salah.", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    // Handle unexpected roles (optional)
+                    string role = login.Role;
+
+                    if (role == "Admin")
+                    {
+                        MessageBox.Show("Login berhasil! Anda masuk sebagai Admin.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        V_Profil addprofil = new V_Profil(login.Id_User);
+                        V_DashboardAdmin adminDashboard = new V_DashboardAdmin(login.Id_User);
+                        this.Hide();
+                        adminDashboard.Show();
+                    }
+                    else if (role == "Customer")
+                    {
+                        MessageBox.Show("Login berhasil! Anda masuk sebagai User.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        V_DashboardCust userDashboard = new V_DashboardCust();
+                        this.Hide();
+                        userDashboard.Show();
+                    }
+                    else
+                    {
+                        // Handle unexpected roles (optional)
+                    }
                 }
-            }
             }
         }
 
@@ -82,6 +82,13 @@ namespace Projek_PBO_B07
         private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardCust v_dashboardadmin = new V_DashboardCust();
+            v_dashboardadmin.Show();
         }
     }
 }
