@@ -20,7 +20,6 @@ namespace Projek_PBO_B07
                 return;
             }
 
-            // Validasi email untuk admin
             if (emailText.Text.EndsWith("@gmail.com") == false)
             {
                 MessageBox.Show("Maaf, Anda kurang menambahkan @gmail.com", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
