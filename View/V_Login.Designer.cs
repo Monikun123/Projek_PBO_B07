@@ -40,8 +40,10 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             panel2 = new Panel();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label3
@@ -166,6 +168,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(button1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(2);
@@ -173,6 +176,17 @@
             panel2.Size = new Size(684, 374);
             panel2.TabIndex = 9;
             panel2.Paint += panel2_Paint_1;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(235, 90, 19);
+            button1.Location = new Point(676, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 0;
+            button1.Text = "Guess";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // V_Login
             // 
@@ -195,6 +209,7 @@
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,5 +226,6 @@
         private PictureBox pictureBox1;
         private Panel panel1;
         private Panel panel2;
+        private Button button1;
     }
 }

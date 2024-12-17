@@ -26,7 +26,6 @@ namespace Projek_PBO_B07.View
  
 
             LoadPromosi();
-            LoadNamaBuahData();
             loadnilai0();
             populateForm();
         }
@@ -50,24 +49,13 @@ namespace Projek_PBO_B07.View
             PromosiCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
-        private void LoadNamaBuahData()
-        {
-            DataTable dataNamabuah = NamaBuahContext.All();
-            NamaBuahcomboBox.DisplayMember = "nama_buah";
-            NamaBuahcomboBox.ValueMember = "id_nama_buah";
-            NamaBuahcomboBox.DataSource = dataNamabuah;
-            NamaBuahcomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
+
         private void populateForm()
         {
 
            ProdukContext produkContext = new ProdukContext();
             M_Produk produk = produkContext.GetProdukbtId(id_produk);
-            NamaBuahcomboBox.SelectedValue = produk.id_nama_buah;
             PromosiCombobox.SelectedValue = produk.id_promosi;
-            StoktextBox.Text = produk.stok.ToString();
-            MasukdateTimePicker.Value = produk.tanggal_masuk;
-            ExpireddateTimePicker.Value = produk.tanggal_expired;
             
 
         }
