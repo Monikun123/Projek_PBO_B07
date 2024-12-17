@@ -297,7 +297,7 @@
             ProfilButton.TabIndex = 12;
             ProfilButton.Text = "Profil";
             ProfilButton.UseVisualStyleBackColor = false;
-            ProfilButton.Click += ProfilButton_Click_1;
+        
             // 
             // pictureBox7
             // 
