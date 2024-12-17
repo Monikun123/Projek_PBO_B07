@@ -58,7 +58,7 @@
             panel1.Location = new Point(2, 2);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(163, 392);
+            panel1.Size = new Size(204, 491);
             panel1.TabIndex = 0;
             // 
             // label9
@@ -66,19 +66,20 @@
             label9.AutoSize = true;
             label9.BackColor = Color.FromArgb(247, 204, 92);
             label9.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(45, 76);
+            label9.Location = new Point(56, 95);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(99, 25);
+            label9.Size = new Size(118, 30);
             label9.TabIndex = 16;
             label9.Text = "DashBoard";
             // 
             // LogOutButton
             // 
             LogOutButton.BackColor = Color.Red;
-            LogOutButton.Location = new Point(18, 342);
+            LogOutButton.Location = new Point(22, 428);
             LogOutButton.Margin = new Padding(2);
             LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(95, 34);
+            LogOutButton.Size = new Size(119, 42);
             LogOutButton.TabIndex = 14;
             LogOutButton.Text = "Back";
             LogOutButton.UseVisualStyleBackColor = false;
@@ -92,7 +93,7 @@
             panel6.Location = new Point(0, 0);
             panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(163, 58);
+            panel6.Size = new Size(204, 72);
             panel6.TabIndex = 7;
             // 
             // label1
@@ -102,10 +103,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(233, 78, 1);
-            label1.Location = new Point(18, 14);
+            label1.Location = new Point(22, 18);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(93, 26);
+            label1.Size = new Size(108, 32);
             label1.TabIndex = 0;
             label1.Text = "Fruities";
             // 
@@ -113,10 +114,10 @@
             // 
             pictureBox4.BackColor = Color.FromArgb(247, 204, 92);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(5, 70);
+            pictureBox4.Location = new Point(6, 88);
             pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(35, 34);
+            pictureBox4.Size = new Size(44, 42);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
@@ -126,10 +127,10 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(31, 6);
+            label5.Location = new Point(39, 8);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(135, 23);
+            label5.Size = new Size(164, 26);
             label5.TabIndex = 4;
             label5.Text = "DASHBOARD";
             // 
@@ -140,27 +141,29 @@
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(label5);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(169, 2);
+            panel2.Location = new Point(210, 2);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(615, 392);
+            panel2.Size = new Size(770, 491);
             panel2.TabIndex = 1;
             // 
             // panel8
             // 
             panel8.AutoScroll = true;
             panel8.Dock = DockStyle.Bottom;
-            panel8.Location = new Point(0, 77);
+            panel8.Location = new Point(0, 97);
+            panel8.Margin = new Padding(4, 4, 4, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(615, 315);
+            panel8.Size = new Size(770, 394);
             panel8.TabIndex = 6;
             panel8.Paint += panel8_Paint;
             // 
             // panel4
             // 
-            panel4.Location = new Point(3, 32);
+            panel4.Location = new Point(4, 40);
+            panel4.Margin = new Padding(4, 4, 4, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(614, 39);
+            panel4.Size = new Size(768, 49);
             panel4.TabIndex = 5;
             panel4.Paint += panel4_Paint;
             // 
@@ -172,20 +175,21 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.7313461F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Location = new Point(7, 27);
+            tableLayoutPanel1.Location = new Point(9, 34);
             tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(786, 396);
+            tableLayoutPanel1.Size = new Size(982, 495);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // V_DashboardCust
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1000, 562);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "V_DashboardCust";
             Text = "V_DashboardCust";
             panel1.ResumeLayout(false);
