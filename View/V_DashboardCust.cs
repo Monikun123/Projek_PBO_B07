@@ -94,7 +94,7 @@ namespace Projek_PBO_B07.View
                         int paddingX = 0; // Padding antar elemen data
 
                         // PictureBox untuk gambar
-                        String resourcesFolderPath = @"C:\Users\Naufal Kemal A\Source\Repos\Projek_PBO_B071\Resources\";
+                        String resourcesFolderPath = @"C:\Users\ASUS\Downloads\TIARA UAS\Resources\";
 
                         // Membuat PictureBox
                         PictureBox pictureBox = new PictureBox
@@ -210,7 +210,9 @@ namespace Projek_PBO_B07.View
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            V_Login v_login = new V_Login();
+            v_login.Show();
         }
 
         private void label10_Click(object sender, EventArgs e)
