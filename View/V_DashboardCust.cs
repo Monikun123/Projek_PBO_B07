@@ -94,7 +94,7 @@ namespace Projek_PBO_B07.View
                         int paddingX = 0; // Padding antar elemen data
 
                         // PictureBox untuk gambar
-                        String resourcesFolderPath = @"C:\Users\acer\Downloads\clone PBO\Resources\";
+                        String resourcesFolderPath = @"C:\Users\ASUS\Downloads\TIARA UAS\Resources\";
 
                         // Membuat PictureBox
                         PictureBox pictureBox = new PictureBox
