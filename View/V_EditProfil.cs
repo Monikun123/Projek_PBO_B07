@@ -87,16 +87,16 @@ namespace Projek_PBO_B07.View
             }
 
             // Validasi Email: format email sederhana
-            if (string.IsNullOrWhiteSpace(emailupdate.Text))
+            if (string.IsNullOrWhiteSpace(emailupdate.Text) || !emailupdate.Text.EndsWith("@gmail.com"))
             {
-                MessageBox.Show("Email tidak valid. Harap masukkan email yang benar.");
+                MessageBox.Show("Email tidak valid. Harap masukkan email yang benar dan pastikan email mengandung '@gmail.com'.");
                 return false;
             }
 
             // Validasi Password: tidak boleh kosong dan minimal 6 karakter
             if (string.IsNullOrWhiteSpace(passwordupdate.Text))
             {
-                MessageBox.Show("Password harus memiliki setidaknya 6 karakter.");
+                MessageBox.Show("Password tidak boleh kosong.");
                 return false;
             }
 
