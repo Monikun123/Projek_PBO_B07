@@ -52,10 +52,10 @@
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(233, 78, 1);
-            label3.Location = new Point(357, 50);
+            label3.Location = new Point(408, 67);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(142, 31);
+            label3.Size = new Size(179, 38);
             label3.TabIndex = 1;
             label3.Text = "FRUITIES";
             // 
@@ -64,10 +64,10 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(357, 77);
+            label4.Location = new Point(408, 103);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(238, 38);
+            label4.Size = new Size(293, 46);
             label4.TabIndex = 2;
             label4.Text = "Kelola Buah Anda dengan Mudah,\r\nEfisien, dan Terorganisir.";
             // 
@@ -76,20 +76,20 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(481, 142);
+            label5.Location = new Point(550, 189);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(82, 31);
+            label5.Size = new Size(102, 38);
             label5.TabIndex = 3;
             label5.Text = "Login";
             // 
             // emailText
             // 
             emailText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            emailText.Location = new Point(386, 196);
-            emailText.Margin = new Padding(2);
+            emailText.Location = new Point(441, 261);
+            emailText.Margin = new Padding(2, 3, 2, 3);
             emailText.Name = "emailText";
-            emailText.Size = new Size(246, 23);
+            emailText.Size = new Size(281, 27);
             emailText.TabIndex = 4;
             emailText.TextChanged += emailText_TextChanged;
             // 
@@ -98,10 +98,10 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(386, 179);
+            label6.Location = new Point(441, 239);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(47, 19);
+            label6.Size = new Size(58, 23);
             label6.TabIndex = 5;
             label6.Text = "Email";
             label6.Click += label6_Click;
@@ -111,20 +111,20 @@
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(386, 218);
+            label7.Location = new Point(441, 291);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(72, 19);
+            label7.Size = new Size(90, 23);
             label7.TabIndex = 6;
             label7.Text = "Password";
             // 
             // passwordText
             // 
             passwordText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            passwordText.Location = new Point(386, 240);
-            passwordText.Margin = new Padding(2);
+            passwordText.Location = new Point(441, 320);
+            passwordText.Margin = new Padding(2, 3, 2, 3);
             passwordText.Name = "passwordText";
-            passwordText.Size = new Size(246, 23);
+            passwordText.Size = new Size(281, 27);
             passwordText.TabIndex = 7;
             // 
             // loginbutton
@@ -133,10 +133,10 @@
             loginbutton.BackColor = Color.FromArgb(235, 90, 19);
             loginbutton.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginbutton.ForeColor = Color.Black;
-            loginbutton.Location = new Point(386, 275);
-            loginbutton.Margin = new Padding(2);
+            loginbutton.Location = new Point(441, 367);
+            loginbutton.Margin = new Padding(2, 3, 2, 3);
             loginbutton.Name = "loginbutton";
-            loginbutton.Size = new Size(244, 30);
+            loginbutton.Size = new Size(279, 40);
             loginbutton.TabIndex = 8;
             loginbutton.Text = "LOGIN";
             loginbutton.UseVisualStyleBackColor = false;
@@ -149,8 +149,8 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Padding = new Padding(14, 12, 14, 12);
-            pictureBox1.Size = new Size(312, 388);
+            pictureBox1.Padding = new Padding(16, 16, 16, 16);
+            pictureBox1.Size = new Size(357, 517);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -160,10 +160,10 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(247, 204, 92);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-1, -11);
-            panel1.Margin = new Padding(2);
+            panel1.Location = new Point(-1, -15);
+            panel1.Margin = new Padding(2, 3, 2, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(312, 388);
+            panel1.Size = new Size(357, 517);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -171,18 +171,19 @@
             panel2.Controls.Add(button1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(2);
+            panel2.Margin = new Padding(2, 3, 2, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(684, 374);
+            panel2.Size = new Size(782, 499);
             panel2.TabIndex = 9;
             panel2.Paint += panel2_Paint_1;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(235, 90, 19);
-            button1.Location = new Point(676, 12);
+            button1.Location = new Point(663, 13);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(107, 39);
             button1.TabIndex = 0;
             button1.Text = "Guess";
             button1.UseVisualStyleBackColor = false;
@@ -190,9 +191,9 @@
             // 
             // V_Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(684, 374);
+            ClientSize = new Size(782, 499);
             Controls.Add(loginbutton);
             Controls.Add(passwordText);
             Controls.Add(label7);
@@ -203,7 +204,7 @@
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "V_Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
