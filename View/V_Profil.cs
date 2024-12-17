@@ -15,6 +15,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace Projek_PBO_B07.View
 {
+
     public partial class V_Profil : Form
     {
         private int id_user { get; set; }

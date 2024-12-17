@@ -7,6 +7,7 @@ namespace Projek_PBO_B07
 {
     public partial class V_Login : Form
     {
+        private int id_produk { get; set; }
         public V_Login()
         {
             InitializeComponent();
@@ -29,13 +30,13 @@ namespace Projek_PBO_B07
             C_LoginAkun loginakunContext = new C_LoginAkun();
             M_User login = loginakunContext.Validate(emailText.Text, passwordText.Text);
 
-            if (login == null)
-            {
-                MessageBox.Show("Username atau password salah.", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                string role = login.Role;
+                if (login == null)
+                {
+                    MessageBox.Show("Username atau password salah.", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string role = login.Role;
 
                 if (role == "Admin")
                 {
@@ -48,7 +49,7 @@ namespace Projek_PBO_B07
                 else if (role == "User")
                 {
                     MessageBox.Show("Login berhasil! Anda masuk sebagai User.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    V_DashboardCust userDashboard = new V_DashboardCust(login.Id_User);
+                    V_DashboardCust userDashboard = new V_DashboardCust();
 
                     this.Hide();
                     userDashboard.Show();
@@ -83,6 +84,13 @@ namespace Projek_PBO_B07
         private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardCust v_dashboardcust = new V_DashboardCust();
+            v_dashboardcust.Show();
         }
     }
 }

@@ -13,11 +13,11 @@ namespace Projek_PBO_B07.View
 {
     public partial class V_DashboardCust : Form
     {
-        public int id_user { get; set; }
-        public V_DashboardCust(int id_user)
+        
+        public V_DashboardCust()
         {
             InitializeComponent();
-            this.id_user = id_user;
+            
             LoadData();
         }
         private void LoadData()
@@ -94,7 +94,7 @@ namespace Projek_PBO_B07.View
                         int paddingX = 0; // Padding antar elemen data
 
                         // PictureBox untuk gambar
-                        String resourcesFolderPath = @"C:\Users\Naufal Kemal A\source\repos\Projek_PBO_B071\Resources\";
+                        String resourcesFolderPath = @"C:\Users\acer\Downloads\clone PBO\Resources\";
 
                         // Membuat PictureBox
                         PictureBox pictureBox = new PictureBox
@@ -210,13 +210,7 @@ namespace Projek_PBO_B07.View
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            V_Logout v_logout = new V_Logout();
-
-            if (v_logout.ShowDialog() == DialogResult.OK)
-            {
-                this.Show();
-            }
+           
         }
 
         private void label10_Click(object sender, EventArgs e)
