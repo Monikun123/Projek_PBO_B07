@@ -74,7 +74,7 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(233, 78, 1);
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(24, 11);
             label5.Margin = new Padding(1, 0, 1, 0);
             label5.Name = "label5";
@@ -133,14 +133,15 @@
             // 
             // button2
             // 
-            button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.BackColor = Color.FromArgb(233, 78, 1);
+            button2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.Location = new Point(24, 218);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(78, 28);
+            button2.Size = new Size(67, 25);
             button2.TabIndex = 8;
             button2.Text = "Edit";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // panel4
@@ -296,6 +297,7 @@
             ProfilButton.TabIndex = 12;
             ProfilButton.Text = "Profil";
             ProfilButton.UseVisualStyleBackColor = false;
+            ProfilButton.Click += ProfilButton_Click_1;
             // 
             // pictureBox7
             // 

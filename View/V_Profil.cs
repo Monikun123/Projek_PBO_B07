@@ -15,6 +15,7 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace Projek_PBO_B07.View
 {
+
     public partial class V_Profil : Form
     {
         private int id_user { get; set; }
@@ -194,6 +195,11 @@ namespace Projek_PBO_B07.View
         }
 
         private void DashboardButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProfilButton_Click_1(object sender, EventArgs e)
         {
 
         }
