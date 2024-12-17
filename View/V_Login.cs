@@ -48,7 +48,7 @@ namespace Projek_PBO_B07
                 else if (role == "User")
                 {
                     MessageBox.Show("Login berhasil! Anda masuk sebagai User.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    V_DashboardCust userDashboard = new V_DashboardCust(login.Id_User);
+                    V_DashboardCust userDashboard = new V_DashboardCust();
 
                     this.Hide();
                     userDashboard.Show();
@@ -83,6 +83,13 @@ namespace Projek_PBO_B07
         private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            V_DashboardCust v_dashboardcust = new V_DashboardCust();
+            v_dashboardcust.Show();
         }
     }
 }
