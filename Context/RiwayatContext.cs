@@ -35,19 +35,16 @@ namespace Projek_PBO_B07.Context
 
         public static int GetId(M_RiwayatTabel riwayarTabel)
         {
-            // Pastikan tanggal_transaksi adalah DateTime tanpa waktu
             DateTime tanggalTransaksi = riwayarTabel.tanggal_transaksi.Date;
 
-            // Query untuk mendapatkan id_riwayat
             string query = $"SELECT id_riwayat FROM {table} WHERE jumlah_keluar = @jumlah_keluar AND buah_busuk = @buah_busuk AND buah_terjual = @buah_terjual AND tanggal_transaksi = @tanggal_transaksi";
 
-            // Parameter query
             NpgsqlParameter[] parameters =
             {
         new NpgsqlParameter("@jumlah_keluar", riwayarTabel.jumlah_keluar),
         new NpgsqlParameter("@buah_busuk", riwayarTabel.buah_busuk),
         new NpgsqlParameter("@buah_terjual", riwayarTabel.buah_terjual),
-        new NpgsqlParameter("@tanggal_transaksi", tanggalTransaksi) // Menggunakan tanggal_transaksi yang sudah diubah
+        new NpgsqlParameter("@tanggal_transaksi", tanggalTransaksi) 
     };
 
             try

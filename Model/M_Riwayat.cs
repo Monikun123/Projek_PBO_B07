@@ -54,13 +54,11 @@ namespace Projek_PBO_B07.Model
 
             try
             {
-                // Menggunakan DataWrapper untuk menjalankan query
                 DataTable dataTable = DataWrapper.queryExecutor(query);
                 return dataTable;
             }
             catch (Exception ex)
             {
-                // Menangani error dan menampilkan pesan kesalahan
                 Console.WriteLine("Error: " + ex.Message);
                 return null;
             }

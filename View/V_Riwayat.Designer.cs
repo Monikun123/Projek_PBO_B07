@@ -270,6 +270,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(192, 59);
             panel5.TabIndex = 3;
+            panel5.Paint += panel5_Paint;
             // 
             // label8
             // 
@@ -414,7 +415,7 @@
             // dashboard
             // 
             dashboard.Location = new Point(51, 92);
-            dashboard.Margin = new Padding(4, 4, 4, 4);
+            dashboard.Margin = new Padding(4);
             dashboard.Name = "dashboard";
             dashboard.Size = new Size(118, 36);
             dashboard.TabIndex = 0;

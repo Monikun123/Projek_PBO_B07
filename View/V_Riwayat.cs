@@ -14,12 +14,12 @@ namespace Projek_PBO_B07.View
 
         public V_Riwayat(int id_user)
         {
-            
+
             InitializeComponent();
             id_profil = id_user;
             getDataBuahAll();
-            controller = new C_Riwayat();  
-            LoadData();  
+            controller = new C_Riwayat();
+            LoadData();
         }
 
 
@@ -27,23 +27,21 @@ namespace Projek_PBO_B07.View
         {
             try
             {
-                
+
                 DataTable data = controller.GetRiwayatTransaksi();
 
-               
 
-                // Bersihkan panel dan memastikan ada data sebelum menambahkannya ke panel
                 if (data != null && data.Rows.Count > 0)
                 {
-                    int topPosition = 10;  // Menentukan posisi vertikal pertama untuk panel
+                    int topPosition = 10;  
 
                     foreach (DataRow row in data.Rows)
                     {
                         // Membuat panel baru untuk setiap baris data
                         Panel itemPanel = new Panel();
-                        itemPanel.Width = panel8.Width - 20;  
-                        itemPanel.Height = 80; 
-                        itemPanel.Location = new Point(10, topPosition); 
+                        itemPanel.Width = panel8.Width - 20;
+                        itemPanel.Height = 80;
+                        itemPanel.Location = new Point(10, topPosition);
 
                         // Menambahkan label untuk ID
                         Label labelID = new Label();
@@ -84,7 +82,7 @@ namespace Projek_PBO_B07.View
                         panel7.Controls.Add(itemPanel);
 
                         // Update posisi vertikal untuk panel berikutnya
-                        topPosition += itemPanel.Height + 10; 
+                        topPosition += itemPanel.Height + 10;
                     }
                 }
                 else
@@ -94,7 +92,7 @@ namespace Projek_PBO_B07.View
             }
             catch (Exception ex)
             {
-                // Menangani error dan menampilkan pesan kesalahan
+
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
         }
@@ -134,7 +132,7 @@ namespace Projek_PBO_B07.View
             v_DashboardAdmin.Show();
 
         }
-//sddsadasd 
+        //sddsadasd 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -163,6 +161,11 @@ namespace Projek_PBO_B07.View
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }
