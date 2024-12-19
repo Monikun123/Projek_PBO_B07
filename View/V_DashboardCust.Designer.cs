@@ -152,7 +152,7 @@
             panel8.AutoScroll = true;
             panel8.Dock = DockStyle.Bottom;
             panel8.Location = new Point(0, 97);
-            panel8.Margin = new Padding(4, 4, 4, 4);
+            panel8.Margin = new Padding(4);
             panel8.Name = "panel8";
             panel8.Size = new Size(770, 394);
             panel8.TabIndex = 6;
@@ -161,7 +161,7 @@
             // panel4
             // 
             panel4.Location = new Point(4, 40);
-            panel4.Margin = new Padding(4, 4, 4, 4);
+            panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
             panel4.Size = new Size(768, 49);
             panel4.TabIndex = 5;
@@ -189,8 +189,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 562);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "V_DashboardCust";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_DashboardCust";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

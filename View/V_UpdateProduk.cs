@@ -169,7 +169,7 @@ namespace Projek_PBO_B07.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Terjadi kessajndjasdbadsalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

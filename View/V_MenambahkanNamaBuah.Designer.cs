@@ -202,6 +202,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Name = "V_MenambahkanNamaBuah";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_MenambahkanNamaBuah";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

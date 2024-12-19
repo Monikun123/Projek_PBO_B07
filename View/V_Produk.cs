@@ -136,7 +136,6 @@ namespace Projek_PBO_B07.View
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("Event CellContentClick dipanggil");
             if (e.RowIndex < 0) return;
 
             if (e.ColumnIndex == dataGridView1.Columns["Update"].Index)
@@ -156,10 +155,7 @@ namespace Projek_PBO_B07.View
                         getDataBuahAll();
                         LoadDataProduk();
                     }
-                    else
-                    {
-                        MessageBox.Show("Form Update ditutup tanpa status OK");
-                    }
+                 
                     this.Show();
                 }
                 catch (Exception ex)
