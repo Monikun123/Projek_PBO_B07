@@ -79,21 +79,19 @@ namespace Projek_PBO_B07.View
         }
         private bool ValidateInput()
         {
-            // Validasi Nama: tidak boleh kosong
             if (string.IsNullOrWhiteSpace(namaupdate.Text))
             {
                 MessageBox.Show("Nama tidak boleh kosong.");
                 return false;
             }
 
-            // Validasi Email: format email sederhana
+          
             if (string.IsNullOrWhiteSpace(emailupdate.Text) || !emailupdate.Text.EndsWith("@gmail.com"))
             {
                 MessageBox.Show("Email tidak valid. Harap masukkan email yang benar dan pastikan email mengandung '@gmail.com'.");
                 return false;
             }
 
-            // Validasi Password: tidak boleh kosong dan minimal 6 karakter
             if (string.IsNullOrWhiteSpace(passwordupdate.Text))
             {
                 MessageBox.Show("Password tidak boleh kosong.");

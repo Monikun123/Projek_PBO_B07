@@ -91,21 +91,21 @@ namespace Projek_PBO_B07.View
         {
             try
             {
-                // Pastikan kedua textbox terisi
+                
                 if (string.IsNullOrWhiteSpace(TerjualTexbox.Text) || string.IsNullOrWhiteSpace(BusuktextBox.Text))
                 {
                     MessageBox.Show("Harap isi kedua field 'Terjual' dan 'Busuk'.", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Validasi input hanya angka
+                
                 if (!int.TryParse(TerjualTexbox.Text, out int terjual) || !int.TryParse(BusuktextBox.Text, out int busuk))
                 {
                     MessageBox.Show("Input harus berupa angka!", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Validasi nilai tidak negatif
+                
                 if (terjual < 0 || busuk < 0)
                 {
                     MessageBox.Show("Nilai tidak boleh negatif.", "Validasi Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
